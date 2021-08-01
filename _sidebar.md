@@ -4,7 +4,11 @@
 
 - Streamer Setup
 
-    - [Server-Side Rendering (SSR)](thing.md)
+    - Overlay
+
+        - [Different overlays](overlays.md)
+        - [Changing overlay colors](overlays/overlay-colors/)
+
     - [Embed Files](thing.md)
 
 - [Awesome docsify](thing.md)
