@@ -13,7 +13,7 @@ having [the Total Package Overlay](/overlays/presets/total/) consuming your enti
 
 | Name | Description | Crop Left | Crop Right | Crop Top | Crop Bottom |
 | --- | --- | --- | --- | --- | --- |
-| Compact | Includes the charity logo and name, amount raised, goal, and donation events. Donation events shows dollar amount and donor name | ? | ? | ? | ? |
+| Compact | Includes the charity logo and name, amount raised, goal, and donation events. Donation events shows dollar amount and donor name | 0 | 720 | 0 | 996 |
 
 > [Learn how to use this chart with our docs page](/overlays/separate-merged-components/)
 
