@@ -20,3 +20,6 @@ Selecting this will open a dialog called "Properties for 'Browser'".
 
 > If you're using a component and want to remove the extra blank space, you can [trim the edges by following our docs page](/overlays/separate-merged-components)
 
+# Config
+
+Talk about changing font? Maybe? If it's easy?

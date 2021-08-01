@@ -1,6 +1,8 @@
 - General
 
     - [Intro](/)
+    - [Schedule / Events](/schedule)
+    - [Streamers](/streamers)
 
 - Streamer Setup
 
