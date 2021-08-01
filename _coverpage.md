@@ -8,4 +8,4 @@
 - Various events & community engagement
 - [Open to anyone (streamers welcome)](overlays/)
 
-[Join us](#docsify)
+[Join us](https://discord.gg/yQrnFcKF7p)
