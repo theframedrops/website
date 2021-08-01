@@ -2,10 +2,10 @@
 
 # The Frame Drops
 
-> A magical documentation site generator.
+> A collaborative charity livestream with your favorite streamers.
 
-- Simple and lightweight
-- No statically built html files
-- Multiple themes
+- Supporting [The Trevor Project](https://www.thetrevorproject.org/) to save LGBTQ+ youth lives!
+- Various events & community engagement
+- [Open to anyone (streamers welcome)](overlays/)
 
-[Getting Started](#docsify)
+[Join us](#docsify)

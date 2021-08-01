@@ -1,6 +1,6 @@
 - General
 
-    - [Intro](thing.md)
+    - [Intro](/)
 
 - Streamer Setup
 
