@@ -1,7 +1,33 @@
 # Total Overlay
 
-Overlay URL: https://overlays.tiltify.com/RXArz6PhxizEiUT34lEq-CV337_r4xC_
+> Overlay URL: https://overlays.tiltify.com/RXArz6PhxizEiUT34lEq-CV337_r4xC_
+
+The total package overlay is a great way to have a feature-rich overlay for the charity event setup nearly instantly.
+
+This overlay includes [a QR code to quickly donate](/overlays/qr-code/), [donation UI notifications](/overlays/events/),
+and a [donation goal indicator](/overlays/goals/)
 
 ## Overlay Preview
 
 ![](./total_overlay_preview.png)
+
+## Included Components
+
+N/A. This overlay is meant to be an all-in-one. If you need individual components for your overlay, please refer to our
+[component overlays](/overlays/).
+
+## Configuration
+
+This component is one of the few that uses colors other than greyscale. As such, if your brand doesn't use the default blue color, [you can change it by following our docs page](/overlays/colors/)
+
+By doing this, however, the charity logo will be discolored. To fix this, simply add an OBS image source to overlap
+the overlay's Browser Source.
+
+## Implementation Notes
+
+We have the ability to add notification noises when someone donates. We currently have this disabled, but if
+the community wants we can enable it easily (with a range of noises to choose from). If we decide to enable this,
+those that wish to disable the functionality can do so easily within OBS.
+
+While we wish we could change the font size of this overlay, we unfortunately cannot - as it's not an option in
+Tiltify currently.
