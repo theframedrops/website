@@ -1,3 +1,9 @@
 .medium-zoom-overlay {
     background: var(--background) !important;
 }
+
+section.cover {
+    height: auto;
+    min-height: 75vh;
+    padding-top: 1rem;
+}
