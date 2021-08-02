@@ -7,3 +7,17 @@ section.cover {
     min-height: 75vh;
     padding-top: 1rem;
 }
+
+section.cover .cover-main>p:last-child a:last-child, section.cover .cover-main>p:last-child a:last-child:hover {
+    color: var(--background);
+}
+
+section.cover .cover-main>p:last-child a:last-child {
+    border: 2px solid transparent;
+}
+
+section.cover .cover-main>p:last-child a:last-child:hover {
+    border: 2px solid var(--toogleBackground);
+    opacity: 1;
+    filter: brightness(var(--brightness));
+}
