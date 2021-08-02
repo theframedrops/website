@@ -3,7 +3,7 @@
 > Overlay URL: https://overlays.tiltify.com/139juPCIOwS6q0Ugwzq53Opi7ITVuBd-
 
 The compact overlay is a useful middle-ground between using the individual components to roll your own overlay and
-having [the Total Package Overlay](/overlays/presets/total/) consuming your entire allotted overlay space.
+having [the Total Package Overlay](/streamers-setup/overlays/presets/total/) consuming your entire allotted overlay space.
 
 ## Overlay Preview
 
@@ -15,11 +15,11 @@ having [the Total Package Overlay](/overlays/presets/total/) consuming your enti
 | --- | --- | --- | --- | --- | --- |
 | Compact | Includes the charity logo and name, amount raised, goal, and donation events. Donation events shows dollar amount and donor name | 0 | 720 | 0 | 996 |
 
-> [Learn how to use this chart with our docs page](/overlays/separate-merged-components/)
+> [Learn how to use this chart with our docs page](/streamers-setup/overlays/separate-merged-components/)
 
 ## Configuration
 
-This component is one of the few that uses colors other than greyscale. As such, if your brand doesn't use the default blue color, [you can change it by following our docs page](/overlays/colors/)
+This component is one of the few that uses colors other than greyscale. As such, if your brand doesn't use the default blue color, [you can change it by following our docs page](/streamers-setup/overlays/colors/)
 
 To remove the logo (so you can replace it with your own, non hue-shifted version using an OBS Image Source), simply add `?` to your crop-left transform.
 

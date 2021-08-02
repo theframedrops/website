@@ -5,7 +5,7 @@ Many of our component overlays have more than one component included. In the eve
 
 > Make sure that each browser source is set to `width: 1080` and `height: 1920` in the OBS Browser Plugin before moving forward
 > 
-> You can learn more about how to do this [in our "How to add to OBS" docs page](/overlays/add-to-scene/)
+> You can learn more about how to do this [in our "How to add to OBS" docs page](/streamers-setup/overlays/add-to-scene/)
 
 ## OBS Transform
 

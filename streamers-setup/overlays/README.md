@@ -38,8 +38,8 @@ their UI colors. To learn why and how to change these colors to match your brand
 
 | Overlay Name    | Docs Page         | Overlay URL                                                  |
 | --------------- | ----------------- | ------------------------------------------------------------ |
-| Goal Bar        | [Here](/overlays/presets/goals/)   | https://overlays.tiltify.com/jn3sPUC60ZOpUnmmCnFJdci6zYdmNMdt |
-| Events          | [Here](/overlays/presets/events/)  | https://overlays.tiltify.com/ScKcHFK0JoDOb-azVY4WVHJO8ZZXjqWd |
-| QR Code         | [Here](/overlays/presets/qr-code/) | https://overlays.tiltify.com/aLwA1-L2552igyBUNA-WR98xJNLW_mB_ |
-| Compact Overlay | [Here](/overlays/presets/compact/) | https://overlays.tiltify.com/139juPCIOwS6q0Ugwzq53Opi7ITVuBd- |
-| Total Overlay   | [Here](/overlays/presets/total/)   | https://overlays.tiltify.com/RXArz6PhxizEiUT34lEq-CV337_r4xC_ |
+| Goal Bar        | [Here](/streamers-setup/overlays/presets/goals/)   | https://overlays.tiltify.com/jn3sPUC60ZOpUnmmCnFJdci6zYdmNMdt |
+| Events          | [Here](/streamers-setup/overlays/presets/events/)  | https://overlays.tiltify.com/ScKcHFK0JoDOb-azVY4WVHJO8ZZXjqWd |
+| QR Code         | [Here](/streamers-setup/overlays/presets/qr-code/) | https://overlays.tiltify.com/aLwA1-L2552igyBUNA-WR98xJNLW_mB_ |
+| Compact Overlay | [Here](/streamers-setup/overlays/presets/compact/) | https://overlays.tiltify.com/139juPCIOwS6q0Ugwzq53Opi7ITVuBd- |
+| Total Overlay   | [Here](/streamers-setup/overlays/presets/total/)   | https://overlays.tiltify.com/RXArz6PhxizEiUT34lEq-CV337_r4xC_ |

@@ -12,4 +12,4 @@
 | --- | --- | --- | --- | --- | --- |
 | QR Code | When scanned, will bring you to the donation page | 0 | 1520 | 0 | 680 |
 
-> [Learn how to use this chart with our docs page](/overlays/separate-merged-components/)
+> [Learn how to use this chart with our docs page](/streamers-setup/overlays/separate-merged-components/)

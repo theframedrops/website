@@ -4,8 +4,8 @@
 
 The total package overlay is a great way to have a feature-rich overlay for the charity event setup nearly instantly.
 
-This overlay includes [a QR code to quickly donate](/overlays/qr-code/), [donation UI notifications](/overlays/events/),
-and a [donation goal indicator](/overlays/goals/)
+This overlay includes [a QR code to quickly donate](/streamers-setup/overlays/presets/qr-code/), [donation UI notifications](/streamers-setup/overlays/presets/events/),
+and a [donation goal indicator](/streamers-setup/overlays/presets/goals/)
 
 ## Overlay Preview
 
@@ -14,11 +14,11 @@ and a [donation goal indicator](/overlays/goals/)
 ## Included Components
 
 N/A. This overlay is meant to be an all-in-one. If you need individual components for your overlay, please refer to our
-[component overlays](/overlays/).
+[component overlays](/streamers-setup/overlays/).
 
 ## Configuration
 
-This component is one of the few that uses colors other than greyscale. As such, if your brand doesn't use the default blue color, [you can change it by following our docs page](/overlays/colors/)
+This component is one of the few that uses colors other than greyscale. As such, if your brand doesn't use the default blue color, [you can change it by following our docs page](/streamers-setup/overlays/colors/)
 
 By doing this, however, the charity logo will be discolored. To fix this, simply add an OBS image source to overlap
 the overlay's Browser Source.

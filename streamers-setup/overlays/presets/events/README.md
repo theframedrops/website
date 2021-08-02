@@ -23,7 +23,7 @@
 The popup intentionally has space left at the bottom. This is in case someone's name is long enough
 to cause the text to wrap.
 
-> [Learn how to use this chart with our docs page](/overlays/separate-merged-components/)
+> [Learn how to use this chart with our docs page](/streamers-setup/overlays/separate-merged-components/)
 
 ## Implementation Notes
 
