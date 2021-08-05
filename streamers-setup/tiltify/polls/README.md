@@ -1,6 +1,6 @@
 # Campaign Polls
 
-A [poll](https://info.tiltify.com/support/solutions/articles/43000018390-campaign-polls) can be added to the campaign as a way for viewers to vote on a decision. Each choice is weighted by the amount raised for each option in the poll.
+A [poll](https://info.tiltify.com/support/solutions/articles/43000011861-adding-incentives-polls) can be added to the campaign as a way for viewers to vote on a decision. Each choice is weighted by the amount raised for each option in the poll.
 
 ![A list of polls in the campaign dashboard.](./tiltify_polls_list.png)
 

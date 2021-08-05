@@ -1,6 +1,6 @@
 # Campaign Milestones
 
-A [fundraising milestone](https://info.tiltify.com/support/solutions/articles/43000008825-campaign-milestones) can be added to mark a subgoal of the total campaign progress. These can be used to mark significant amounts of progress on the fundraiser.
+A [fundraising milestone](https://info.tiltify.com/support/solutions/articles/43000008808-adding-milestones) can be added to mark a subgoal of the total campaign progress. These can be used to mark significant amounts of progress on the fundraiser.
 
 ![A list of milestones in the Tiltify dashboard.](./tiltify_milestones_list.png)
 

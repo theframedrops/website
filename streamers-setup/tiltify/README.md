@@ -10,6 +10,8 @@ You can see our team Tiltify page here: https://tiltify.com/+the-frame-drops/pro
 To join our Tiltify team, you'll need an invite code. To access this code, please [Join our Discord](https://discord.gg/yQrnFcKF7p)
 and mention that you'd like to be a streamer. We'll add you to a special channel where we'll provide the invite code and can help you
 
+## Setup
+
 Once you receive your invite code, you'll need to sign into a Tiltify account. If you do not currently have one, you can
 easily create one using your Twitch account to login (no password needed).
 
@@ -22,7 +24,7 @@ Once you've gotten the invite code and logged into a Tiltify account, you should
 
 !["You've been invited to join The Frame Drops to help them fundraise for a great cause!"](./frame_drops_invite.png)
 
-## Campaign
+### Campaign
 
 While joining the team on Tiltify allows you access to join the team as a streamer, the actual event in question is
 called a "Campaign" in Tiltify.
@@ -75,3 +77,6 @@ Select the "Campaigns" option.
 From here, you'll see a list of all of the campaigns, both published and unpublished.
 
 ![Currently only one campaign of "Giga Stream for LGBTQ+" is present](./tiltify_campaigns.png)
+
+## Tiltify Features
+

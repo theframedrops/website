@@ -1,4 +1,4 @@
 # Donor Rewards
 
 > Tiltify support page:
-> https://info.tiltify.com/support/solutions/articles/43000008836-campaign-schedules
+> https://info.tiltify.com/a/solutions/articles/43000008835?portalId=43000014313
