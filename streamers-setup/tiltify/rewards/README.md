@@ -4,6 +4,9 @@
 viewers incentives to donate to the campaign. You can think of these as Twitch point reward redemptions that utilize charity
 donations to activate.
 
+> For a way to do something similar to community pooled channel point rewards Twitch provides using charity donations,
+> see our page on [targets](/streamers-setup/tiltify/targets/).
+
 ![A list of rewards. One rewards reads "Do a dance" with a $5 amount, unlimited quantities, but not active](./tiltify_rewards_list.png)
 
 ## Adding a Reward
