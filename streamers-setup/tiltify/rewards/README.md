@@ -29,7 +29,7 @@ You're also able to allow viewers to input text (similar to how you can do so wi
 While one of the listed options is "Shipping", we will not be enabling this for our project due to complexities involving
 shipping, keeping streamers accountable, and more.
 
-To ask for a reward to be added to the campaign, send a message to the #streamers channel in Discord with the above information.
+To ask for a reward to be added to the campaign, send a message to [the #streamers channel in Discord](https://discord.gg/yQrnFcKF7p) with the above information.
 
 ### Community Note
 

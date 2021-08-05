@@ -21,6 +21,8 @@ Each target has the following options:
 
 ![Target options screen](./tiltify_targets_options.png)
 
+To ask for a target to be added to the campaign, send a message to [the #streamers channel in Discord](https://discord.gg/yQrnFcKF7p) with the above information.
+
 ### Community Note
 
 Since we will have multiple streamers, we will need to distinguish the different targets to distinguish "community wide" targets and

@@ -12,7 +12,7 @@ Each milestone has the following options:
 
 ![The milestone configuration page.](./tiltify_milestones_options.png)
 
-To ask for a milestone to be added to the campaign, send a message to the `#streamers` channel in Discord with the above information.
+To ask for a milestone to be added to the campaign, send a message to [the `#streamers` channel in Discord](https://discord.gg/yQrnFcKF7p) with the above information.
 
 ## Appearance
 
