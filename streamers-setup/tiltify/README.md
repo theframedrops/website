@@ -10,6 +10,19 @@ You can see our team Tiltify page here: https://tiltify.com/+the-frame-drops/pro
 To join our Tiltify team, you'll need an invite code. To access this code, please [Join our Discord](https://discord.gg/yQrnFcKF7p)
 and mention that you'd like to be a streamer. We'll add you to a special channel where we'll provide the invite code and can help you
 
+## Features
+
+Titlify provides us multiple features to inform donors and enable more community engagement to our charity event.
+
+These include:
+
+- [Easy-to-setup OBS Overlays to show donation goals, events, and more](/streamers-setup/overlays/)
+- [Schedule of upcoming events during the campaign](/streamers-setup/tiltify/schedule/)
+- [Milestones to indicate progress to donors](/streamers-setup/tiltify/milestones/)
+- [Polls powered by donations](/streamers-setup/tiltify/polls/)
+- [Rewards enabled by an individual's donations, like channel points](/streamers-setup/tiltify/rewards/)
+- [Targets enabled by the community's donations, like community pooled channel points](/streamers-setup/tiltify/rewards/)
+
 ## Setup
 
 Once you receive your invite code, you'll need to sign into a Tiltify account. If you do not currently have one, you can
@@ -77,6 +90,3 @@ Select the "Campaigns" option.
 From here, you'll see a list of all of the campaigns, both published and unpublished.
 
 ![Currently only one campaign of "Giga Stream for LGBTQ+" is present](./tiltify_campaigns.png)
-
-## Tiltify Features
-
