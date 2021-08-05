@@ -14,7 +14,7 @@ https://donate.theframedrops.com
 
 We'll update redirect to go to our donation page once it's published!
 
-To join our Tiltify team, you'll need an invite code. To access this code, please [Join our Discord](https://discord.gg/yQrnFcKF7p)
+To join our Tiltify team, you'll need an invite code. To access this code, please [Join our Discord](https://discord.theframedrops.com)
 and mention that you'd like to be a streamer. We'll add you to a special channel where we'll provide the invite code and can help you
 
 ## Features

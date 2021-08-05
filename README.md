@@ -8,5 +8,5 @@ Our goal is help others, have fun, and have good conversation to bring awareness
 
 We currently do not have a set-in-stone date or set list of events (although we have lots of ideas), we'll have them soon.
 
-Join us in [our Discord](https://discord.gg/yQrnFcKF7p) to get notified when these details are nailed down or just to chat
+Join us in [our Discord](https://discord.theframedrops.com) to get notified when these details are nailed down or just to chat
 and hang out in preparation for the big event.

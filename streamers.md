@@ -14,5 +14,5 @@ Are you a streamer? We'd love to have you as part of the stream!
 You'll be able to help us figure out the schedule, list of events, and more! Even if you simply want to help with donations
 but do individual content, you're more than welcome to be included as a member of the crew!
 
-[Join our Discord](https://discord.gg/yQrnFcKF7p) and let us know you'd like to join! We'll add you to the list and help
+[Join our Discord](https://discord.theframedrops.com) and let us know you'd like to join! We'll add you to the list and help
 you get setup.

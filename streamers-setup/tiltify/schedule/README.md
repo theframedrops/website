@@ -19,7 +19,7 @@ Each schedule item has the following options:
 We'll be working with community streamers to figure out what events will be occurring and when. Some of these events will
 be group events with everyone - while others may be specific to a streamer or a subset of Frame Drop streamers.
 
-To suggest an event to be added to the campaign, send a message to [the #streamers channel in Discord](https://discord.gg/yQrnFcKF7p) with your idea.
+To suggest an event to be added to the campaign, send a message to [the #streamers channel in Discord](https://discord.theframedrops.com) with your idea.
 
 ## Community Note
 

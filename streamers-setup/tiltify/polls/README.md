@@ -12,7 +12,7 @@ Each poll has the following options:
 
 ![The poll configuration page.](./tiltify_polls_options.png)
 
-To ask for a poll to be added to the campaign, send a message to [the `#streamers` channel in Discord](https://discord.gg/yQrnFcKF7p) with the above information.
+To ask for a poll to be added to the campaign, send a message to [the `#streamers` channel in Discord](https://discord.theframedrops.com) with the above information.
 
 ## Appearance
 
