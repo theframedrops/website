@@ -16,8 +16,10 @@ To ask for a milestone to be added to the campaign, send a message to the `#stre
 
 ## Appearance
 
-All milestones will be listed in the campaign overview, and the closest milestone will be shown on the donation page.
+The closest milestone will be shown on the donation page in the information sidebar.
 
-| Campaign Overview | Donation Page |
-|-------------------|---------------|
-|![A list of milestones in the campaign overview.](./all_milestones.png)|![The closest milestone shown on the donation page.](./next_milestone.png)|
+![The closest milestone shown on the donation page.](./next_milestone.png)
+
+Listed next to the "Next Milestone", viewers can check to "View all milestones" to see all the milestones listed.
+
+![A list of milestones in the campaign overview.](./all_milestones.png)
