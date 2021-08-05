@@ -7,6 +7,13 @@ For our livestream, we've chosen to support [The Trevor Project](https://www.the
 
 You can see our team Tiltify page here: https://tiltify.com/+the-frame-drops/profile
 
+While our campaign isn't live _yet_ (we're still in the planning phase), you can directly link to our donation
+page with the redirect:
+
+https://donate.theframedrops.com
+
+We'll update redirect to go to our donation page once it's published!
+
 To join our Tiltify team, you'll need an invite code. To access this code, please [Join our Discord](https://discord.gg/yQrnFcKF7p)
 and mention that you'd like to be a streamer. We'll add you to a special channel where we'll provide the invite code and can help you
 

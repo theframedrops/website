@@ -8,4 +8,4 @@
 - Various events & community engagement
 - [Open to anyone (streamers welcome)](overlays/)
 
-[Join us](https://discord.gg/yQrnFcKF7p)
+[Join us on Discord](https://discord.gg/yQrnFcKF7p)
