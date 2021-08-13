@@ -2,6 +2,22 @@
     background: var(--background) !important;
 }
 
+.cover-main {
+    z-index: 0 !important;
+}
+
+
+@media screen and (max-width: 768px) {
+    body.ready:not(.close) .sidebar-toggle {
+        background-color: rgba(110, 41, 215, 0.2);
+        border-radius: 0 30px 0 0;
+    }
+
+    body.close .sidebar-toggle {
+        transition: none !important;
+    }
+}
+
 section.cover {
     height: auto;
     min-height: 75vh;
