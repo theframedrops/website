@@ -1,9 +1,10 @@
 # Schedule / Events
 
-We're currently working on figuring out a date(s) and time(s) that fit [participating streamers](/streamers-setup)'s schedules.
+We're currently working on figuring out a date(s) and time(s) that fit [participating streamers](/streamers-setup)'s
+schedules.
 
-Likewise, we're also still working out what events we'll have. It's increasingly likely that we'll have multiple groups of
-folks that can break into individual groups for specific events.
+Likewise, we're also still working out what events we'll have. It's increasingly likely that we'll have multiple groups
+of folks that can break into individual groups for specific events.
 
 [Join our Discord](https://discord.theframedrops.com) to get notified when these details are nailed down.
 
@@ -30,7 +31,7 @@ Vue.component('event-modal', {
     emits: ['close'],
     template: `
   <v-dialog
-      v-model="event"
+      :value="event"
       @input="setDialogOpenVal($event)"
       transition="dialog-bottom-transition"
     >
@@ -47,7 +48,7 @@ Vue.component('event-modal', {
       </v-img>
 
       <v-card-subtitle class="pb-0">
-        {{event?.start.toLocaleString()}}
+        {{event?.start?.toLocaleString()}}
       </v-card-subtitle>
 
       <v-card-text class="text--primary">
@@ -89,7 +90,7 @@ new Vue({
   }),
   mounted () {
     this.$refs.calendar.checkChange()
-    const params = new URLSearchParams(new URL(location.href).hash.replace(/.*?(?=\?)/, ''));
+    const params = this.getParams()
     if (!params.has('eventId')) return;
     const eventId = params.get('eventId');
     const matchEvent = this.events.find(e => `${e.id}`.trim() === `${eventId}`.trim());
@@ -97,8 +98,18 @@ new Vue({
     this.setActiveEvent({event: matchEvent})
   },
   methods: {
+    getParams() {
+        return new URLSearchParams((new URL(location.href)).hash.replace(/.*?(?=\?)/, ''));
+    },
     setActiveEvent({event}) {
        this.activeEvent = event;
+        const currentParams = this.getParams();
+        if (event) {
+            currentParams.set('eventId', event.id);
+        } else {
+            currentParams.delete('eventId')
+        }
+        location.hash = (new URL(location.href).hash).replace(/\?.*?$/, "?" + currentParams.toString());
     },
     getEventColor (event) {
       return event.color
