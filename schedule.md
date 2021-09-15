@@ -60,7 +60,7 @@ Vue.component('event-modal', {
         <v-btn
             color="orange"
             text
-            @click="showCopySnack = true"
+            @click="copyURL()"
         >
           Share
         </v-btn>
@@ -68,45 +68,64 @@ Vue.component('event-modal', {
         <v-btn
             color="orange"
             text
+            @click="downloadIcs()"
         >
-          Explore
+          Save Event
         </v-btn>
       </v-card-actions>
       </v-card>
     </v-dialog>
     <v-snackbar
-      v-model="showCopySnack"
+      :value="!!snackbarMsg"
     >
-      Event URL copied. Paste elsewhere to share event information
+      {{snackbarMsg}}
 
       <template v-slot:action="{ attrs }">
         <v-btn
           color="pink"
           text
           v-bind="attrs"
-          @click="showCopySnack = false"
+          @click="snackbarMsg = ''"
         >
           Close
         </v-btn>
       </template>
     </v-snackbar>
-<div>
+    </div>
     `,
     methods: {
         setDialogOpenVal(val) {
             if (val) return; 
             this.$emit('close')
         },
+        copyURL() {
+            navigator.clipboard.writeText(location.href);
+            this.snackbarMsg = "Event URL copied. Paste elsewhere to share event information";
+        },
+        downloadIcs() {
+            const cal = ics();
+            cal.addEvent(
+                this.event.name, 
+                this.event.description, 
+                location.href, 
+                this.event.start, 
+                this.event.end
+            );
+            cal.download('charity_stream_event');
+            this.snackbarMsg = "ICS file is downloaded. You'll need to import this into your calendar app"
+        }
     },
     data() {
         return {
-            showCopySnack: false
+            snackbarMsg: "",
+            snackbarTimeout: null
         }
     },
     watch: {
-        showCopySnack(val) {
+        snackbarMsg(val) {
             if (!val) return;
-            setTimeout(() => this.showCopySnack = false, 5000);
+            clearTimeout(this.snackbarTimeout);
+            this.snackbarTimeout = setTimeout(() => this.snackbarMsg = val, 5000); 
         }
     }
 });
@@ -119,8 +138,8 @@ new Vue({
     activeEvent: null
   }),
   mounted () {
-    this.$refs.calendar.checkChange()
-    const params = this.getParams()
+    this.$refs.calendar.checkChange();
+    const params = this.getParams();
     if (!params.has('eventId')) return;
     const eventId = params.get('eventId');
     const matchEvent = this.events.find(e => `${e.id}`.trim() === `${eventId}`.trim());
@@ -144,9 +163,9 @@ new Vue({
     getEventColor (event) {
       return event.color
     },
-fetchEvents() {
-return this.events;
-}
+    fetchEvents() {
+       return this.events;
+    }
   },
 })
 </script>
