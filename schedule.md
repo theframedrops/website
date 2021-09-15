@@ -89,6 +89,12 @@ new Vue({
   }),
   mounted () {
     this.$refs.calendar.checkChange()
+    const params = new URLSearchParams(new URL(location.href).hash.replace(/.*?(?=\?)/, ''));
+    if (!params.has('eventId')) return;
+    const eventId = params.get('eventId');
+    const matchEvent = this.events.find(e => `${e.id}`.trim() === `${eventId}`.trim());
+    if (!matchEvent) return;
+    this.setActiveEvent({event: matchEvent})
   },
   methods: {
     setActiveEvent({event}) {

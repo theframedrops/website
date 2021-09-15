@@ -82,3 +82,11 @@ section.cover .cover-main>p:last-child a:last-child:hover {
 html {
     overflow: hidden;
 }
+
+.v-calendar-daily__head {
+    margin: 0
+}
+
+.v-calendar-daily__scroll-area {
+    overflow: visible;
+}
