@@ -9,7 +9,7 @@ of folks that can break into individual groups for specific events.
 [Join our Discord](https://discord.theframedrops.com) to get notified when these details are nailed down.
 
 <div id="calendar">
-  <v-app>
+  <v-app v-if="renderPlz">
     <event-modal :event="activeEvent" @close="setActiveEvent({event: null})"></event-modal>
     <v-calendar
         @click:event="setActiveEvent($event)"
@@ -135,17 +135,23 @@ new Vue({
   vuetify: new Vuetify(),
   data: () => ({
     events: window.Schedule,
-    activeEvent: null
+    activeEvent: null,
+    renderPlz: false
   }),
   mounted () {
-    this.$refs.calendar.checkChange();
+    if (!location.hash.includes('caltest')) return;
+    this.renderPlz = true;
     const params = this.getParams();
     if (!params.has('eventId')) return;
     const eventId = params.get('eventId');
     const matchEvent = this.events.find(e => `${e.id}`.trim() === `${eventId}`.trim());
     if (!matchEvent) return;
     this.setActiveEvent({event: matchEvent})
-  },
+    
+    setTimeout(() => {    
+this.$refs.calendar.checkChange();
+}, 0);
+    },
   methods: {
     getParams() {
         return new URLSearchParams((new URL(location.href)).hash.replace(/.*?(?=\?)/, ''));
