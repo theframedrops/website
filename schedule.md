@@ -30,6 +30,7 @@ Vue.component('event-modal', {
     props: ['event'],
     emits: ['close'],
     template: `
+<div>
   <v-dialog
       :value="event"
       @input="setDialogOpenVal($event)"
@@ -59,6 +60,7 @@ Vue.component('event-modal', {
         <v-btn
             color="orange"
             text
+            @click="showCopySnack = true"
         >
           Share
         </v-btn>
@@ -72,12 +74,40 @@ Vue.component('event-modal', {
       </v-card-actions>
       </v-card>
     </v-dialog>
+    <v-snackbar
+      v-model="showCopySnack"
+    >
+      Event URL copied. Paste elsewhere to share event information
+
+      <template v-slot:action="{ attrs }">
+        <v-btn
+          color="pink"
+          text
+          v-bind="attrs"
+          @click="showCopySnack = false"
+        >
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
+<div>
     `,
     methods: {
         setDialogOpenVal(val) {
             if (val) return; 
             this.$emit('close')
         },
+    },
+    data() {
+        return {
+            showCopySnack: false
+        }
+    },
+    watch: {
+        showCopySnack(val) {
+            if (!val) return;
+            setTimeout(() => this.showCopySnack = false, 5000);
+        }
     }
 });
 
