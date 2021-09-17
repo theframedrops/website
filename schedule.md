@@ -49,11 +49,12 @@ Vue.component('event-modal', {
       </v-img>
 
       <v-card-subtitle class="pb-0">
-        {{event?.start?.toLocaleString()}}
+        <span aria-hidden="true">{{timeRangeShortDate}}</span>
+        <span class="sr-only">{{timeRangeLongDate}}</span>
+        {{timeRangeStr}}
       </v-card-subtitle>
 
-      <v-card-text class="text--primary">
-        {{event?.description}}
+      <v-card-text class="text--primary" v-html="event?.description || ''">
       </v-card-text>
 
       <v-card-actions>
@@ -121,6 +122,20 @@ Vue.component('event-modal', {
             snackbarTimeout: null
         }
     },
+    computed: {
+        timeRangeStr() {
+            if (!this.event) return "";
+            return dayjs(this.event.start).format('h:mm a') + " to " + dayjs(this.event.end).format('h:mm a') 
+        },
+        timeRangeShortDate() {
+            if (!this.event) return "";
+            return dayjs(this.event.start).format('ddd D,') 
+        },
+        timeRangeLongDate() {
+            if (!this.event) return "";
+            return dayjs(this.event.start).format('dddd D,') 
+        }
+    },
     watch: {
         snackbarMsg(val) {
             if (!val) return;
@@ -183,6 +198,16 @@ this.$refs.calendar.checkChange();
 
 .v-dialog > .v-card > .v-card__text {
     box-sizing: border-box;
+    text-align: left;
+    white-space: pre-line;
+}
+
+.v-responsive__content {
+background: rgba(0,0,0,0.75);
+}
+
+.markdown-section :is(.brown, .green, .blue) strong {
+color: white !important;
 }
 
 .v-dialog {
