@@ -11,6 +11,8 @@ of folks that can break into individual groups for specific events.
 <div id="calendar">
   <v-app v-if="renderPlz" :dark="darkMode">
     <event-modal :darkMode="darkMode" :event="activeEvent" @close="setActiveEvent({event: null})"></event-modal>
+    <v-manual-calendar :events="events" @pick="setActiveEvent($event)"></v-manual-calendar>
+    <div aria-hidden="true">
     <v-calendar
         :dark="darkMode"
         @click:event="setActiveEvent($event)"
@@ -23,6 +25,7 @@ of folks that can break into individual groups for specific events.
         :event-color="getEventColor"
         @change="fetchEvents"
     ></v-calendar>
+    </div>
     </v-app>
 </div>
 
@@ -150,6 +153,26 @@ Vue.component('event-modal', {
     }
 });
 
+Vue.component('v-manual-calendar', {
+    props: ['events'],
+    emits: ['pick'],
+    template: `
+        <ul class="sr-only sr-only-focusable manual-list" aria-label="List of activities in the event" tabIndex="0">
+            <li v-for="event in events" :key="event.id">
+                <button @click="selectEvent(event)">
+                    {{event.name}} - starts at {{dayjs(event.start).format('h:mm A dddd D')}}, ends at {{dayjs(event.end).format('h:mm A dddd D')}}
+                </button>
+            </li>
+        </ul>
+    `,
+    methods: {
+        selectEvent(event) {
+            this.$emit('pick', {event});
+        },
+        dayjs
+    }
+});
+
 Vue.use(PartialVuetify.default.Vuetify, {
       components: PartialVuetify.default.components,
 });
@@ -189,6 +212,11 @@ new Vue({
     setTimeout(() => {    
         this.$refs.calendar.checkChange();
     }, 0);
+  },
+  updated() {
+    document.querySelectorAll('.v-calendar').forEach(cEl => {
+        cEl.querySelectorAll('button').forEach(bEl => bEl.tabIndex = -1)
+    })
   },
   methods: {
     getParams() {
@@ -275,6 +303,26 @@ color: white !important;
 }
 
 .v-card__subtitle {
-opacity: 0.8;
+    opacity: 0.8;
+}
+
+.manual-list {
+    list-style-position: unset;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.manual-list button {
+    background: #e8defd;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    margin: 1rem 0;
+}
+
+
+.manual-list button:hover, .manual-list button:focus {              
+    background: #462b63;
+    color: white;
 }
 </style>

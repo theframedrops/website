@@ -108,3 +108,14 @@ html {
     clip-path: inset(50%);
     border: 0;
 }
+
+.sr-only-focusable:active, .sr-only-focusable:focus, .sr-only-focusable:focus-within {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    -webkit-clip-path: none;
+    clip-path: none;
+}
