@@ -9,7 +9,7 @@ of folks that can break into individual groups for specific events.
 [Join our Discord](https://discord.theframedrops.com) to get notified when these details are nailed down.
 
 <div id="calendar">
-  <v-app v-if="renderPlz" :dark="darkMode">
+  <v-app :dark="darkMode">
     <event-modal :darkMode="darkMode" :event="activeEvent" @close="setActiveEvent({event: null})"></event-modal>
     <v-manual-calendar :events="events" @pick="setActiveEvent($event)"></v-manual-calendar>
     <div aria-hidden="true">
@@ -185,7 +185,6 @@ new Vue({
   data: () => ({
     events: window.Schedule,
     activeEvent: null,
-    renderPlz: false,
     darkMode: false
   }),
   mounted () {
@@ -200,8 +199,6 @@ new Vue({
       attributeFilter: ['aria-pressed'],
     });
 
-    if (!location.hash.includes('caltest')) return;
-    this.renderPlz = true;
     const params = this.getParams();
     if (!params.has('eventId')) return;
     const eventId = params.get('eventId');
