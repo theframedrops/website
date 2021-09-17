@@ -9,9 +9,10 @@ of folks that can break into individual groups for specific events.
 [Join our Discord](https://discord.theframedrops.com) to get notified when these details are nailed down.
 
 <div id="calendar">
-  <v-app v-if="renderPlz">
-    <event-modal :event="activeEvent" @close="setActiveEvent({event: null})"></event-modal>
+  <v-app v-if="renderPlz" :dark="darkMode">
+    <event-modal :darkMode="darkMode" :event="activeEvent" @close="setActiveEvent({event: null})"></event-modal>
     <v-calendar
+        :dark="darkMode"
         @click:event="setActiveEvent($event)"
         ref="calendar"
         color="primary"
@@ -27,17 +28,18 @@ of folks that can break into individual groups for specific events.
 
 <script>
 Vue.component('event-modal', {
-    props: ['event'],
+    props: ['event', 'darkMode'],
     emits: ['close'],
     template: `
 <div>
   <v-dialog
-        attach="#dialog-entry"
+      attach="#dialog-entry"
       :value="event"
       @input="setDialogOpenVal($event)"
       transition="dialog-bottom-transition"
     >
  <v-card
+          :dark="darkMode" 
           class="mx-auto"
           max-width="400"
       >
@@ -60,7 +62,7 @@ Vue.component('event-modal', {
 
       <v-card-actions>
         <v-btn
-            color="orange"
+            color="primary"
             text
             @click="copyURL()"
         >
@@ -68,7 +70,7 @@ Vue.component('event-modal', {
         </v-btn>
 
         <v-btn
-            color="orange"
+            color="primary"
             text
             @click="downloadIcs()"
         >
@@ -79,12 +81,14 @@ Vue.component('event-modal', {
     </v-dialog>
     <v-snackbar
       :value="!!snackbarMsg"
+      :light="!darkMode"
+      :dark="darkMode"
     >
       {{snackbarMsg}}
 
       <template v-slot:action="{ attrs }">
         <v-btn
-          color="pink"
+          color="primary"
           text
           v-bind="attrs"
           @click="snackbarMsg = ''"
@@ -148,13 +152,25 @@ Vue.component('event-modal', {
 
 new Vue({
   el: '#calendar',
-  vuetify: new Vuetify(),
+  vuetify: new Vuetify({theme: {disable: true}}),
   data: () => ({
     events: window.Schedule,
     activeEvent: null,
-    renderPlz: false
+    renderPlz: false,
+    darkMode: false
   }),
   mounted () {
+    const themeListener = new MutationObserver((mutations) => {
+      const currentValue = mutations[0].target.attributes['aria-pressed'].value;
+    
+      this.darkMode = currentValue === 'true';
+    });
+    
+    themeListener.observe(document.getElementById('docsify-darklight-theme'), {
+      attributes: true,
+      attributeFilter: ['aria-pressed'],
+    });
+
     if (!location.hash.includes('caltest')) return;
     this.renderPlz = true;
     const params = this.getParams();
@@ -162,12 +178,12 @@ new Vue({
     const eventId = params.get('eventId');
     const matchEvent = this.events.find(e => `${e.id}`.trim() === `${eventId}`.trim());
     if (!matchEvent) return;
-    this.setActiveEvent({event: matchEvent})
+    this.setActiveEvent({event: matchEvent});
     
     setTimeout(() => {    
-this.$refs.calendar.checkChange();
-}, 0);
-    },
+        this.$refs.calendar.checkChange();
+    }, 0);
+  },
   methods: {
     getParams() {
         return new URLSearchParams((new URL(location.href)).hash.replace(/.*?(?=\?)/, ''));
@@ -211,7 +227,48 @@ background: rgba(0,0,0,0.75);
 color: white !important;
 }
 
+/* Originally ripped from v-app */
+
 .v-dialog {
     width: initial;
+}
+
+.mx-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+.align-end {
+    align-items: flex-end !important;
+}
+
+.white--text {
+    color: #fff !important;
+    caret-color: #fff !important;
+}
+
+.v-responsive__sizer ~ .v-responsive__content {
+    margin-left: -100%;
+}
+
+.primary--text {
+    color: var(--accent) !important;
+    caret-color: var(--accent) !important;
+}
+
+.v-calendar, .v-card, .v-snack__wrapper {
+    background-color: var(--background) !important;
+}
+
+.v-card__text, .v-card__subtitle, .v-snack__wrapper {
+    color: var(--textColor) !important;
+}
+
+:is(.v-card__text, .v-card__subtitle) a {
+    color: var(--accent) !important;
+}
+
+.v-card__subtitle {
+opacity: 0.8;
 }
 </style>

@@ -1,3 +1,7 @@
+:root {
+    --siteFont: PT Sans;
+}
+
 .medium-zoom-overlay {
     background: var(--background) !important;
 }
