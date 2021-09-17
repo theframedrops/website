@@ -1,12 +1,13 @@
 # Schedule / Events
 
-We're currently working on figuring out a date(s) and time(s) that fit [participating streamers](/streamers-setup)'s
-schedules.
+The Frame Drops will be hosted from September 25th to the 26th. Different [participating streamers](/streamers) will be
+live at different times, but we're centered around those dates in general.
 
-Likewise, we're also still working out what events we'll have. It's increasingly likely that we'll have multiple groups
-of folks that can break into individual groups for specific events.
+We have a calendar of events below, but more events are on the way soon! We already have committals of different events
+that aren't yet listed.
 
-[Join our Discord](https://discord.theframedrops.com) to get notified when these details are nailed down.
+[Join our Discord](https://discord.theframedrops.com) to participate in our events, get notified when new events are announced,
+or even help us organize your own event for the charity stream!
 
 <div id="calendar">
   <v-app :dark="darkMode">
