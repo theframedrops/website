@@ -32,6 +32,7 @@ Vue.component('event-modal', {
     template: `
 <div>
   <v-dialog
+        attach="#dialog-entry"
       :value="event"
       @input="setDialogOpenVal($event)"
       transition="dialog-bottom-transition"
