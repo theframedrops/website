@@ -150,9 +150,15 @@ Vue.component('event-modal', {
     }
 });
 
+Vue.use(PartialVuetify.default.Vuetify, {
+      components: PartialVuetify.default.components,
+});
+
 new Vue({
   el: '#calendar',
-  vuetify: new Vuetify({theme: {disable: true}}),
+  vuetify: new PartialVuetify.default.Vuetify({
+    theme: {disable: true}
+  }),
   data: () => ({
     events: window.Schedule,
     activeEvent: null,
