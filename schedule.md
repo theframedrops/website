@@ -217,7 +217,7 @@ new Vue({
   },
   methods: {
     getParams() {
-        return new URLSearchParams((new URL(location.href)).hash.replace(/.*?(?=\?)/, ''));
+        return new URLSearchParams((new URL(location.href)).hash.replace(/^[^\?]*$|.*(?=\?)/, ''));
     },
     setActiveEvent({event}) {
        this.activeEvent = event;
@@ -227,7 +227,7 @@ new Vue({
         } else {
             currentParams.delete('eventId')
         }
-        location.hash = (new URL(location.href).hash).replace(/\?.*?$/, "?" + currentParams.toString());
+        location.hash = (new URL(location.href).hash).replace(/(?:\?.*?$)|$/, "?" + currentParams.toString());
     },
     getEventColor (event) {
       return event.color
