@@ -36,12 +36,12 @@ We'll probably get murdered a whole lot, and chaos will probably be plentiful, b
         id: 'minecraft-achievement-hunt',
         color: "green",
         start: getDate('2021 09 25 10:00 AM'),
-        end: getDate('2021 09 25 12:00 PM'),
+        end: getDate('2021 09 25 12:30 PM'),
         name: "Minecraft Achievement Hunt",
         timed: true,
         backgroundImage: "/assets/minecraft.jpg",
         description: `
-The objective of achievement hunt is what it sounds like: each 3-4ish person team will race to get the most achievements possible, with every achievement awarding a certain amount of points (TBD)
+The objective of achievement hunt is what it sounds like: each 3-4 person team will race to get the most achievements possible. The first team to score an achievement receives an additional point.
 
 <a href="https://twitch.tv/fennifith">@fennifith on Twitch</a> is hosting & this is open to all
         `.trim()
