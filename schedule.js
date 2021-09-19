@@ -75,6 +75,20 @@ Cave Poker is a Minecraft poker game, without specific cards, where players can 
 
 <a href="https://twitch.tv/fennifith">@fennifith on Twitch</a> hosts & event is open to all
         `.trim()
+    },
+    {
+        id: 'minecraft-mine-a-chunk',
+        color: "green",
+        start: getDate('2021 09 26 1:00 PM'),
+        end: getDate('2021 09 26 4:30 PM'),
+        name: "Minecraft Mine-a-Chunk",
+        timed: true,
+        backgroundImage: "/assets/minecraft.jpg",
+        description: `
+Mine-a-Chunk is a group speedrun challenge event where we try to mine out a 16x16 "chunk" of blocks within Minecraft
+
+<a href="https://twitch.tv/AkillezII">@AkillezII on Twitch</a> hosts this event & it is open to all
+        `.trim()
     }
 ]
 
