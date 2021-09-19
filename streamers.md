@@ -59,7 +59,7 @@ new Vue({
 	padding: 4px;
 	box-shadow: 0 0 0 3px var(--accent);
 	border-radius: 50%;
-	margin-right: 10px;
+	margin-right: 24px;
 }
 
 .streamer .streamer-name {
