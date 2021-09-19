@@ -89,6 +89,20 @@ Mine-a-Chunk is a group speedrun challenge event where we try to mine out a 16x1
 
 <a href="https://twitch.tv/AkillezII">@AkillezII on Twitch</a> hosts this event & it is open to all
         `.trim()
+    },
+    {
+        id: 'minecraft-uhc',
+        color: "green",
+        start: getDate('2021 09 26 1:00 PM'),
+        end: getDate('2021 09 26 4:30 PM'),
+        name: "Minecraft Mine-a-Chunk",
+        timed: true,
+        backgroundImage: "/assets/minecraft.jpg",
+        description: `
+"Ulta-Hardcore" modes of Minecraft is a challenge event where teams go against one-another to win in a fight mode!
+
+<a href="https://twitch.tv/NekoOverflow">@NekoOverflow on Twitch</a> hosts this event & it is open to all
+        `.trim()
     }
 ]
 
