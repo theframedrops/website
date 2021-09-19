@@ -56,6 +56,7 @@ new Vue({
 }
 .streamer > img {
 	width: 80px;
+	height: 80px;
 	padding: 4px;
 	box-shadow: 0 0 0 3px var(--accent);
 	border-radius: 50%;
