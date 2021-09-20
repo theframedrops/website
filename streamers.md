@@ -21,13 +21,12 @@ async function doAsync() {
 Vue.component('v-streamers-list', {
 	template: `
 		<div>
-			<div class="streamer" v-for="streamer in streamers" :key="streamer.displayName" v-on:click="window.location.href = streamer.url;">
+			<div class="streamer" v-for="streamer in streamers" :key="streamer.displayName" v-bind:live="streamer.isLive" v-on:click="window.location.href = streamer.url;">
 				<img :src="streamer.profilePictureUrl"/>
 				<div>
 					<span class="streamer-name">{{ streamer.displayName }}</span>
 					<a :href="streamer.url">{{ streamer.url }}</a>
 				</div>
-				<span class="streamer-live" v-if="streamer.isLive">LIVE</span>
 			</div>
 		</div>
     `,
@@ -50,10 +49,12 @@ new Vue({
 <style>
 .streamer {
 	display: flex;
+	position: relative;
 	align-items: center;
 	padding: 16px 0;
 	cursor: pointer;
 }
+
 .streamer > img {
 	width: 80px;
 	height: 80px;
@@ -61,6 +62,24 @@ new Vue({
 	box-shadow: 0 0 0 3px var(--accent);
 	border-radius: 50%;
 	margin-right: 24px;
+}
+
+.streamer[live] > img {
+	box-shadow: 0 0 0 3px #FF0000;
+}
+
+.streamer[live] > img::after {
+	position: absolute;
+	bottom: 8px;
+	left: 40px;
+	transform: translateX(-50%);
+
+	content: 'LIVE';
+	padding: 4px 6px;
+	border-radius: 6px;
+	font-weight: 700;
+	color: #FFFFFF;
+	background-color: #D50000;
 }
 
 .streamer .streamer-name {
@@ -71,14 +90,6 @@ new Vue({
 
 .streamer > div {
 	flex-grow: 1;
-}
-
-.streamer-live {
-	padding: 4px 6px;
-	border-radius: 6px;
-	font-weight: 700;
-	color: #FFFFFF;
-	background-color: #D50000;
 }
 </style>
 
