@@ -63,6 +63,22 @@ We'll be competing on the same problems and trying to see who can get the lowest
         `.trim()
     },
     {
+        id: 'minecraft-uhc',
+        color: "green",
+        start: getDate('2021 09 25 3:00 PM'),
+        end: getDate('2021 09 25 5:00 PM'),
+        name: "Minecraft Ultra Hardcore (UHC)",
+        timed: true,
+        backgroundImage: "/assets/minecraft.jpg",
+        description: `
+"Ultra Hardcore (UHC) is a custom game mode where players do not regenerate health or respawn. Players must use potions, suspicious stews, golden apples, or enchanted golden apples to regenerate health.
+
+We may also enable modifiers that make the game even more lively or play in teams, depending on streamer interest.
+
+<a href="https://twitch.tv/NekoOverflow">@NekoOverflow on Twitch</a> hosts this event & it is open to all
+        `.trim()
+    },
+    {
         id: 'minecraft-cave-poker',
         color: "green",
         start: getDate('2021 09 26 10:00 AM'),
@@ -88,20 +104,6 @@ Cave Poker is a Minecraft poker game, without specific cards, where players can 
 Mine-a-Chunk is a group speedrun challenge event where we try to mine out a 16x16 "chunk" of blocks within Minecraft
 
 <a href="https://twitch.tv/AkillezII">@AkillezII on Twitch</a> hosts this event & it is open to all
-        `.trim()
-    },
-    {
-        id: 'minecraft-uhc',
-        color: "green",
-        start: getDate('2021 09 26 1:00 PM'),
-        end: getDate('2021 09 26 4:30 PM'),
-        name: "Minecraft Mine-a-Chunk",
-        timed: true,
-        backgroundImage: "/assets/minecraft.jpg",
-        description: `
-"Ulta-Hardcore" modes of Minecraft is a challenge event where teams go against one-another to win in a fight mode!
-
-<a href="https://twitch.tv/NekoOverflow">@NekoOverflow on Twitch</a> hosts this event & it is open to all
         `.trim()
     }
 ]
