@@ -113,7 +113,7 @@ Vue.component('event-modal', {
             this.snackbarMsg = "Event URL copied. Paste elsewhere to share event information";
         },
         downloadIcs() {
-            const cal = ics();
+            const cal = ics(this.event.id);
             cal.addEvent(
                 this.event.name, 
                 this.event.description, 
