@@ -71,7 +71,7 @@ We'll be competing on the same problems and trying to see who can get the lowest
         timed: true,
         backgroundImage: "/assets/minecraft.jpg",
         description: `
-"Ultra Hardcore (UHC) is a custom game mode where players do not regenerate health or respawn. Players must use potions, suspicious stews, golden apples, or enchanted golden apples to regenerate health.
+Ultra Hardcore (UHC) is a custom game mode where players do not regenerate health or respawn. Players must use potions, suspicious stews, golden apples, or enchanted golden apples to regenerate health.
 
 We may also enable modifiers that make the game even more lively or play in teams, depending on streamer interest.
 
