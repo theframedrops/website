@@ -68,7 +68,7 @@ new Vue({
 	box-shadow: 0 0 0 3px #FF0000;
 }
 
-.streamer[live] > img::after {
+.streamer[live]::after {
 	position: absolute;
 	bottom: 8px;
 	left: 40px;
