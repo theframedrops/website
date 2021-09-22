@@ -259,6 +259,15 @@ background: rgba(0,0,0,0.75);
 color: white !important;
 }
 
+.markdown-section .orange {
+background-color: #ffb445 !important;
+}
+
+.markdown-section :is(.orange) :is(strong, *) {
+color: black !important;
+}
+
+
 /* Originally ripped from v-app */
 
 .v-dialog {

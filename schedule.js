@@ -30,6 +30,8 @@ The objective of this Terraria stream is to get from 0 to as far as possible dur
 We'll probably get murdered a whole lot, and chaos will probably be plentiful, but we'll persevere!
 
 <a href="https://twitch.tv/garablacktail">@garablacktail on Twitch</a> is hosting this event and is open to all
+
+<a href="https://discord.theframedrops.com">Participate in this event by joining our Discord channel/server</a>
         `.trim()
     },
     {
@@ -44,6 +46,8 @@ We'll probably get murdered a whole lot, and chaos will probably be plentiful, b
 The objective of achievement hunt is what it sounds like: each 3-4 person team will race to get the most achievements possible. The first team to score an achievement receives an additional point.
 
 <a href="https://twitch.tv/fennifith">@fennifith on Twitch</a> is hosting & this is open to all
+
+<a href="https://discord.theframedrops.com">Participate in this event by joining our Discord server</a>
         `.trim()
     },
     {
@@ -60,6 +64,8 @@ Code Golfing is the concept of solving a coding problem in any language in as fe
 We'll be competing on the same problems and trying to see who can get the lowest score!
 
 <a href="https://twitch.tv/crutchcorn">@crutchcorn on Twitch</a> is hosting and is open to all
+
+<a href="https://discord.theframedrops.com">Participate in this event by joining our Discord server</a>
         `.trim()
     },
     {
@@ -76,6 +82,24 @@ Ultra Hardcore (UHC) is a custom game mode where players do not regenerate healt
 We may also enable modifiers that make the game even more lively or play in teams, depending on streamer interest.
 
 <a href="https://twitch.tv/NekoOverflow">@NekoOverflow on Twitch</a> hosts this event & it is open to all
+        `.trim()
+    },
+    {
+        id: 'lifeslide',
+        color: "orange",
+        start: getDate('2021 09 26 8:00 AM'),
+        end: getDate('2021 09 26 10:00 AM'),
+        name: "Lifeslide Competition",
+        timed: true,
+        backgroundImage: "/assets/lifeslide.jpg",
+        description: `
+Lifeslide is an atmospheric paper plane flight simulator with arcade gameplay.
+
+We'll be competing in Lifeslide's "challenge mode" to see who can fly the riskiest in order to gain the most points!
+
+We're <a href="https://twitch.tv/dreamteckstudio">joined by the developers of Lifeslide streaming on Twitch</a> and in VC competing with us!
+
+Anyone is welcome to join our competition
         `.trim()
     },
     {
