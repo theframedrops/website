@@ -84,6 +84,23 @@ We may also enable modifiers that make the game even more lively or play in team
 <a href="https://twitch.tv/NekoOverflow">@NekoOverflow on Twitch</a> hosts this event & it is open to all
         `.trim()
     },
+
+    {
+        id: 'jackbox',
+        color: "red",
+        start: getDate('2021 09 25 5:30 PM'),
+        end: getDate('2021 09 25 8:00 PM'),
+        name: "Jackbox Games",
+        timed: true,
+        backgroundImage: "/assets/jackbox.jpg",
+        description: `
+Jackbox games are a series of various party minigames that encourage making jokes and community participation.
+
+There are a total of 7 Jackbox games currently, each with multiple subgames. We have a wide range of games to choose from!
+
+<a href="https://twitch.tv/crutchcorn">@crutchcorn on Twitch</a> hosts this event & it is open to all
+        `.trim()
+    },
     {
         id: 'lifeslide',
         color: "orange",

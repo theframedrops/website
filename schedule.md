@@ -255,12 +255,24 @@ new Vue({
 background: rgba(0,0,0,0.75);
 }
 
-.markdown-section :is(.brown, .green, .blue) strong {
+.markdown-section :is(.brown, .green, .blue, .red) strong {
 color: white !important;
 }
 
 .markdown-section .orange {
 background-color: #ffb445 !important;
+}
+
+.markdown-section .blue {
+background-color: #005ba3 !important;
+}
+
+.markdown-section .green {
+background-color: #1d7e21 !important;
+}
+
+.markdown-section .red {
+background-color: #980a00 !important;
 }
 
 .markdown-section :is(.orange) :is(strong, *) {
