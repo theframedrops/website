@@ -5,7 +5,7 @@ Tiltify helps us provide a set of overlays that participating streamers can use 
 This is done by using OBS's Browser Source and a URL associated with each overlay. As such, they can be configured
 differently on a per-scene basis and combined with things like filters.
 
-> Not sure how to add an OBS Browser Source? Check [our docs page on how to add a browser source to your scene](./add-to-scene)
+> Not sure how to add an OBS Browser Source? Check [our docs page on how to add a browser source to your scene](/streamers-setup/overlays/add-to-scene/)
 
 We provide two different sets of overlays.
 
@@ -14,32 +14,32 @@ want to do as little tweaking as possible.
 
 Pre-fab Overlays:
 
-- [Total Package Overlay](./total)
-- [Compact Overlay Bar](./total)
+- [Total Package Overlay](/streamers-setup/overlays/presets/total/)
+- [Compact Overlay Bar](/streamers-setup/overlays/presets/compact/)
 
 However, for streamers with extremely custom overlays that really want to fine-tune their overlays, we provide individual
 components to use in existing overlays.
 
 Component Overlays:
 
-- [Goal Indicators](./goals)   
-- [Event Displays](./events)  
-- [QR Code](./qr-code)
+- [Goal Indicators](/streamers-setup/overlays/presets/goals/)
+- [Event Displays](/streamers-setup/overlays/presets/events/)
+- [QR Code](/streamers-setup/overlays/presets/qr-code/)
 
 ## Config
 
 We are limited to only have five (5) overlays (altogether), and as such combine multiple components into a single overlay URL.
-If you want to only use one component that's in an overlay with another, [see how to separate merged components in our docs page](./separate-merged-components).
+If you want to only use one component that's in an overlay with another, [see how to separate merged components in our docs page](/streamers-setup/overlays/separate-merged-components/).
 
 Likewise, while most of our components are greyscale to avoid branding problems, some components may have blue as part of
-their UI colors. To learn why and how to change these colors to match your branding, [read through our docs page on changing overlay colors](./colors)
+their UI colors. To learn why and how to change these colors to match your branding, [read through our docs page on changing overlay colors](/streamers-setup/overlays/colors/)
 
 ## Quick Reference
 
 | Overlay Name    | Docs Page         | Overlay URL                                                  |
 | --------------- | ----------------- | ------------------------------------------------------------ |
-| Goal Bar        | [Here](/streamers-setup/overlays/presets/goals/)   | https://overlays.tiltify.com/jn3sPUC60ZOpUnmmCnFJdci6zYdmNMdt |
-| Events          | [Here](/streamers-setup/overlays/presets/events/)  | https://overlays.tiltify.com/ScKcHFK0JoDOb-azVY4WVHJO8ZZXjqWd |
-| QR Code         | [Here](/streamers-setup/overlays/presets/qr-code/) | https://overlays.tiltify.com/aLwA1-L2552igyBUNA-WR98xJNLW_mB_ |
-| Compact Overlay | [Here](/streamers-setup/overlays/presets/compact/) | https://overlays.tiltify.com/139juPCIOwS6q0Ugwzq53Opi7ITVuBd- |
-| Total Overlay   | [Here](/streamers-setup/overlays/presets/total/)   | https://overlays.tiltify.com/RXArz6PhxizEiUT34lEq-CV337_r4xC_ |
+| Goal Bar        | [Here](/streamers-setup/overlays/presets/goals/)   | [https://overlays.tiltify.com/jn3sPUC60ZOpUnmmCnFJdci6zYdmNMdt](https://overlays.tiltify.com/jn3sPUC60ZOpUnmmCnFJdci6zYdmNMdt) |
+| Events          | [Here](/streamers-setup/overlays/presets/events/)  | [https://overlays.tiltify.com/ScKcHFK0JoDOb-azVY4WVHJO8ZZXjqWd](https://overlays.tiltify.com/ScKcHFK0JoDOb-azVY4WVHJO8ZZXjqWd) |
+| QR Code         | [Here](/streamers-setup/overlays/presets/qr-code/) | [https://overlays.tiltify.com/aLwA1-L2552igyBUNA-WR98xJNLW_mB_](https://overlays.tiltify.com/aLwA1-L2552igyBUNA-WR98xJNLW_mB_) |
+| Compact Overlay | [Here](/streamers-setup/overlays/presets/compact/) | [https://overlays.tiltify.com/139juPCIOwS6q0Ugwzq53Opi7ITVuBd-](https://overlays.tiltify.com/139juPCIOwS6q0Ugwzq53Opi7ITVuBd-) |
+| Total Overlay   | [Here](/streamers-setup/overlays/presets/total/)   | [https://overlays.tiltify.com/RXArz6PhxizEiUT34lEq-CV337_r4xC_](https://overlays.tiltify.com/RXArz6PhxizEiUT34lEq-CV337_r4xC_) |

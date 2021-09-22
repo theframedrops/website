@@ -1,6 +1,6 @@
 # Total Overlay
 
-> Overlay URL: https://overlays.tiltify.com/RXArz6PhxizEiUT34lEq-CV337_r4xC_
+> Overlay URL: [https://overlays.tiltify.com/RXArz6PhxizEiUT34lEq-CV337_r4xC_](https://overlays.tiltify.com/RXArz6PhxizEiUT34lEq-CV337_r4xC_)
 
 The total package overlay is a great way to have a feature-rich overlay for the charity event setup nearly instantly.
 
@@ -9,7 +9,7 @@ and a [donation goal indicator](/streamers-setup/overlays/presets/goals/)
 
 ## Overlay Preview
 
-![](./total_overlay_preview.png)
+![An overlay including donation messages, goal UI, QR code, name of stream, and charity](./total_overlay_preview.png)
 
 ## Included Components
 

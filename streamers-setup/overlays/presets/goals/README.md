@@ -1,16 +1,16 @@
 # Goals Components
 
-> Overlay URL:  https://overlays.tiltify.com/jn3sPUC60ZOpUnmmCnFJdci6zYdmNMdt
+> Overlay URL:  [https://overlays.tiltify.com/jn3sPUC60ZOpUnmmCnFJdci6zYdmNMdt](https://overlays.tiltify.com/jn3sPUC60ZOpUnmmCnFJdci6zYdmNMdt)
 
 ## Components Preview
 
 **Progress Bar**:
 
-![](./goals_overlay_preview.png)
+![A progress bar showing the donation goal and current amount, without text](./goals_overlay_preview.png)
 
 **Dynamic Text**:
 
-![](./goals_text_overlay_preview.png)
+![Text reading "Amount raised: $300"](./goals_text_overlay_preview.png)
 
 ## Included Components
 

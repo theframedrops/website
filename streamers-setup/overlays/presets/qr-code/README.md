@@ -1,10 +1,10 @@
 # QR Code Component
 
-> Overlay URL: https://overlays.tiltify.com/aLwA1-L2552igyBUNA-WR98xJNLW_mB_
+> Overlay URL: [https://overlays.tiltify.com/aLwA1-L2552igyBUNA-WR98xJNLW_mB_](https://overlays.tiltify.com/aLwA1-L2552igyBUNA-WR98xJNLW_mB_)
 
 ## Component Preview
 
-![](./qr_overlay_preview.png)
+![A QR code that, when scanned, will direct you to donation page](./qr_overlay_preview.png)
 
 ## Included Components
 

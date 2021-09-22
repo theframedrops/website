@@ -1,13 +1,13 @@
 # Compact Overlay
 
-> Overlay URL: https://overlays.tiltify.com/139juPCIOwS6q0Ugwzq53Opi7ITVuBd-
+> Overlay URL: [https://overlays.tiltify.com/139juPCIOwS6q0Ugwzq53Opi7ITVuBd-](https://overlays.tiltify.com/139juPCIOwS6q0Ugwzq53Opi7ITVuBd-)
 
 The compact overlay is a useful middle-ground between using the individual components to roll your own overlay and
 having [the Total Package Overlay](/streamers-setup/overlays/presets/total/) consuming your entire allotted overlay space.
 
 ## Overlay Preview
 
-![](./compact_overlay_preview.png)
+![A single bar at the top of the screen showing donation progress bar, name of charity, and most recent donor and amount](./compact_overlay_preview.png)
 
 ## Included Components
 
