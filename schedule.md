@@ -1,10 +1,12 @@
 # Schedule / Events
 
-The Frame Drops will be hosted from September 25th to the 26th. Different [participating streamers](/streamers) will be
+The Frame Drops will be hosted on the weekend time of September 25th to the 26th. Different [participating streamers](/streamers) will be
 live at different times, but we're centered around those dates in general.
 
 We have a calendar of events below, but more events are on the way soon! We already have committals of different events
 that aren't yet listed.
+
+**The dates listed on the calendar below adapt to your system's set timezone.** Assuming your computer automatically sets the time, these dates should be accurate for your usage, regardless of where you are in the world
 
 [Join our Discord](https://discord.theframedrops.com) to participate in our events, get notified when new events are announced,
 or even help us organize your own event for the charity stream!
@@ -20,8 +22,8 @@ or even help us organize your own event for the charity stream!
         ref="calendar"
         color="primary"
         type="custom-daily"
-        start="2021-09-25"
-        end="2021-09-26"
+        :start="startDateStr"
+        :end="endDateStr"
         :events="events"
         :event-color="getEventColor"
         @change="fetchEvents"
@@ -186,7 +188,9 @@ new Vue({
   data: () => ({
     events: window.Schedule,
     activeEvent: null,
-    darkMode: false
+    darkMode: false,
+    startDateStr: dayjs(window.Schedule[0].start).format('YYYY-MM-DD'),
+    endDateStr: dayjs(window.Schedule[window.Schedule.length - 1].end).format('YYYY-MM-DD')
   }),
   mounted () {
     const themeListener = new MutationObserver((mutations) => {
