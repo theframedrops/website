@@ -5,7 +5,7 @@
  * @prop {Date} start - Time event ends
  * @prop {Date} end - Time event ends
  * @prop {String} name - Name of event
- * @prop {yes} timed. Required, just set "true"
+ * @prop {true} timed. Required, just set "true"
  * @prop {String} description - More information about description
  * @prop {String} backgroundImage - Image to show in details header. Required.
  */
@@ -147,6 +147,8 @@ Mine-a-Chunk is a group speedrun challenge event where we try to mine out a 16x1
 <a href="https://twitch.tv/AkillezII">@AkillezII on Twitch</a> hosts this event & it is open to all
         `.trim()
     }
-]
+].sort((day1, day2) =>
+    day1.start - day2.start
+)
 
 export default val;
