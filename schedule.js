@@ -118,14 +118,80 @@ They've already gotten to Pontiff so watch as they struggle to get past him!
         id: 'variety',
         color: "brown",
         start: getDate('2021 09 26 12:00 AM'),
-        end: getDate('2021 09 26 7:30 AM'),
+        end: getDate('2021 09 26 3:00 AM'),
         name: "Variety Gaming",
         timed: true,
         backgroundImage: "/assets/variety_gaming.png",
         description: `
-<a href="https://twitch.tv/akillezii">@AkillezII on Twitch</a> and <a href="https://twitch.tv/reikaze">@Reikaze on Twitch</a> are going to take turns streaming a variety of gaming content on their channels!
+<a href="https://twitch.tv/akillezii">@AkillezII on Twitch</a> is going to streaming a variety of gaming content on their channel!
+        `.trim()
+    },
+    {
+        id: 'powerstone',
+        color: "orange",
+        start: getDate('2021 09 26 3:00 AM'),
+        end: getDate('2021 09 26 3:30 AM'),
+        name: "Power Stone",
+        timed: true,
+        backgroundImage: "/assets/power_stone.jpg",
+        description: `
+<a href="https://twitch.tv/reikaze">@Reikaze on Twitch</a> is going to be playing some Power Stone, a 3d brawler for the Dreamcast!
 
-Not sure which one is live? You can check <a href="https://twitch.tv/crutchcorn">@crutchcorn on Twitch</a> to see which one of them is currently streaming. crutch will be sleeping, but will be mirroring whomever is live
+Go check them out!
+        `.trim()
+    },
+    {
+        id: 'tetris',
+        color: "red",
+        start: getDate('2021 09 26 3:30 AM'),
+        end: getDate('2021 09 26 4:00 AM'),
+        name: "Tetris",
+        timed: true,
+        backgroundImage: "/assets/tetris.png",
+        description: `
+<a href="https://twitch.tv/reikaze">@Reikaze on Twitch</a> is going to be playing some Tetris. Undecided right now if going to do Puyo or 99 - so join them to decide!
+        `.trim()
+    },
+    {
+        id: 'mariokart8',
+        color: "blue",
+        start: getDate('2021 09 26 4:00 AM'),
+        end: getDate('2021 09 26 4:30 AM'),
+        name: "Mario Kart 8",
+        timed: true,
+        backgroundImage: "/assets/mariokart8.jpg",
+        description: `
+<a href="https://twitch.tv/reikaze">@Reikaze on Twitch</a> is going to be playing some Mario Kart 8 Deluxe.
+
+He's probably going to play multiplayer - so go against him... If you dare >:) 
+        `.trim()
+    },
+    {
+        id: 'pcbuildsimulator',
+        color: "brown",
+        start: getDate('2021 09 26 4:30 AM'),
+        end: getDate('2021 09 26 5:00 AM'),
+        name: "PC Build Simulator",
+        timed: true,
+        backgroundImage: "/assets/buildsimulator.jpg",
+        description: `
+<a href="https://twitch.tv/reikaze">@Reikaze on Twitch</a> is going to be playing some PC Build Simulator.
+
+He's a hardware engineer, so it's bound to be a fun and informative time!
+        `.trim()
+    },
+    {
+        id: 'mc-redstone-processor',
+        color: "green",
+        start: getDate('2021 09 26 5:00 AM'),
+        end: getDate('2021 09 26 7:00 AM'),
+        name: "Building Processor in MC Redstone",
+        timed: true,
+        backgroundImage: "/assets/minecraft.jpg",
+        description: `
+<a href="https://twitch.tv/reikaze">@Reikaze on Twitch</a> is going to build a processor in Minecraft using Redstone!
+
+Want to learn redstone? Have questions about hardware engineering? Join and find out!
         `.trim()
     },
     {
