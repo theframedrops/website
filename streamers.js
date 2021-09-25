@@ -11,7 +11,8 @@ const val = [
 	"nyannbeari",
 	"pixelpirate_",
 	"theempressaria",
-	"veund01"
+	"veund01",
+	"reikaze"
 ];
 
 export default val;

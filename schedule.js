@@ -84,7 +84,6 @@ We may also enable modifiers that make the game even more lively or play in team
 <a href="https://twitch.tv/NekoOverflow">@NekoOverflow on Twitch</a> hosts this event & it is open to all
         `.trim()
     },
-
     {
         id: 'jackbox',
         color: "red",
@@ -99,6 +98,34 @@ Jackbox games are a series of various party minigames that encourage making joke
 There are a total of 7 Jackbox games currently, each with multiple subgames. We have a wide range of games to choose from!
 
 <a href="https://twitch.tv/crutchcorn">@crutchcorn on Twitch</a> hosts this event & it is open to all
+        `.trim()
+    },
+    {
+        id: 'darksouls3',
+        color: "yellow",
+        start: getDate('2021 09 25 8:30 PM'),
+        end: getDate('2021 09 26 12:00 AM'),
+        name: "Dark Souls 3",
+        timed: true,
+        backgroundImage: "/assets/ds3.jpg",
+        description: `
+<a href="https://twitch.tv/crutchcorn">@crutchcorn on Twitch</a> is going to be playing Dark Souls 3 with one of his friends.
+
+They've already gotten to Pontiff so watch as they struggle to get past him!
+        `.trim()
+    },
+    {
+        id: 'variety',
+        color: "brown",
+        start: getDate('2021 09 26 12:00 AM'),
+        end: getDate('2021 09 26 7:30 AM'),
+        name: "Variety Gaming",
+        timed: true,
+        backgroundImage: "/assets/variety_gaming.png",
+        description: `
+<a href="https://twitch.tv/akillezii">@AkillezII on Twitch</a> and <a href="https://twitch.tv/reikaze">@Reikaze on Twitch</a> are going to take turns streaming a variety of gaming content on their channels!
+
+Not sure which one is live? You can check <a href="https://twitch.tv/crutchcorn">@crutchcorn on Twitch</a> to see which one of them is currently streaming. crutch will be sleeping, but will be mirroring whomever is live
         `.trim()
     },
     {

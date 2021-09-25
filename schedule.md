@@ -279,7 +279,7 @@ background-color: #1d7e21 !important;
 background-color: #980a00 !important;
 }
 
-.markdown-section :is(.orange) :is(strong, *) {
+.markdown-section :is(.orange, .yellow) :is(strong, *) {
 color: black !important;
 }
 
