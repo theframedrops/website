@@ -1,6 +1,7 @@
 const val = [
-	"akillezii",
+	"bearikeen",
 	"boobookashoo",
+	"carmen_the_frog",
 	"crutchcorn",
 	"fennifith",
 	"garablacktail",
@@ -8,7 +9,6 @@ const val = [
 	"heckinchloe",
 	"ljtechdotca",
 	"nekooverflow",
-	"nyannbeari",
 	"pixelpirate_",
 	"theempressaria",
 	"veund01",
