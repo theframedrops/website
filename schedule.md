@@ -1,10 +1,9 @@
 # Schedule / Events
 
-The Frame Drops will be hosted on the weekend time of September 25th to the 26th. Different [participating streamers](/streamers) will be
+The next Frame Drops will be hosted on the weekend of January 1st. Different [participating streamers](/streamers) will be
 live at different times, but we're centered around those dates in general.
 
-We have a calendar of events below, but more events are on the way soon! We already have committals of different events
-that aren't yet listed.
+We have a calendar of events below!
 
 **The dates listed on the calendar below adapt to your system's set timezone.** Assuming your computer automatically sets the time, these dates should be accurate for your usage, regardless of where you are in the world
 
