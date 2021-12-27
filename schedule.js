@@ -10,7 +10,7 @@
  * @prop {String} backgroundImage - Image to show in details header. Required.
  */
 
-const getDate = str => dayjs(str + ' -7:00', 'YYYY MM DD h:mm A Z').toDate()
+const getDate = str => dayjs(str + ' -8:00', 'YYYY MM DD h:mm A Z').toDate()
 
 /**
  * @type {Event[]}
