@@ -1,6 +1,6 @@
 # Goals Components
 
-> Overlay URL:  [https://overlays.tiltify.com/jn3sPUC60ZOpUnmmCnFJdci6zYdmNMdt](https://overlays.tiltify.com/jn3sPUC60ZOpUnmmCnFJdci6zYdmNMdt)
+> Overlay URL:  [https://overlays.tiltify.com/nNCvD3F8Y4zZuU4L6tOYXWNcKAWneaSc](https://overlays.tiltify.com/nNCvD3F8Y4zZuU4L6tOYXWNcKAWneaSc)
 
 ## Components Preview
 

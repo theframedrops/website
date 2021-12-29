@@ -1,6 +1,6 @@
 # QR Code Component
 
-> Overlay URL: [https://overlays.tiltify.com/aLwA1-L2552igyBUNA-WR98xJNLW_mB_](https://overlays.tiltify.com/aLwA1-L2552igyBUNA-WR98xJNLW_mB_)
+> Overlay URL: [https://overlays.tiltify.com/8m7Xsk_lC7PXtuc9O-ST00Jf8Si_a7nr](https://overlays.tiltify.com/8m7Xsk_lC7PXtuc9O-ST00Jf8Si_a7nr)
 
 ## Component Preview
 

@@ -36,10 +36,10 @@ their UI colors. To learn why and how to change these colors to match your brand
 
 ## Quick Reference
 
-| Overlay Name    | Docs Page         | Overlay URL                                                  |
-| --------------- | ----------------- | ------------------------------------------------------------ |
-| Goal Bar        | [Here](/streamers-setup/overlays/presets/goals/)   | [https://overlays.tiltify.com/jn3sPUC60ZOpUnmmCnFJdci6zYdmNMdt](https://overlays.tiltify.com/jn3sPUC60ZOpUnmmCnFJdci6zYdmNMdt) |
-| Events          | [Here](/streamers-setup/overlays/presets/events/)  | [https://overlays.tiltify.com/ScKcHFK0JoDOb-azVY4WVHJO8ZZXjqWd](https://overlays.tiltify.com/ScKcHFK0JoDOb-azVY4WVHJO8ZZXjqWd) |
-| QR Code         | [Here](/streamers-setup/overlays/presets/qr-code/) | [https://overlays.tiltify.com/aLwA1-L2552igyBUNA-WR98xJNLW_mB_](https://overlays.tiltify.com/aLwA1-L2552igyBUNA-WR98xJNLW_mB_) |
-| Compact Overlay | [Here](/streamers-setup/overlays/presets/compact/) | [https://overlays.tiltify.com/139juPCIOwS6q0Ugwzq53Opi7ITVuBd-](https://overlays.tiltify.com/139juPCIOwS6q0Ugwzq53Opi7ITVuBd-) |
-| Total Overlay   | [Here](/streamers-setup/overlays/presets/total/)   | [https://overlays.tiltify.com/RXArz6PhxizEiUT34lEq-CV337_r4xC_](https://overlays.tiltify.com/RXArz6PhxizEiUT34lEq-CV337_r4xC_) |
+| Overlay Name    | Docs Page         | Overlay URL                                                                                                                    |
+| --------------- | ----------------- |--------------------------------------------------------------------------------------------------------------------------------|
+| Goal Bar        | [Here](/streamers-setup/overlays/presets/goals/)   | [https://overlays.tiltify.com/nNCvD3F8Y4zZuU4L6tOYXWNcKAWneaSc](https://overlays.tiltify.com/nNCvD3F8Y4zZuU4L6tOYXWNcKAWneaSc) |
+| Events          | [Here](/streamers-setup/overlays/presets/events/)  | [https://overlays.tiltify.com/PRr9IgEWF5LxRLGEz-nKmbpGg8fETOC0](https://overlays.tiltify.com/PRr9IgEWF5LxRLGEz-nKmbpGg8fETOC0) |
+| QR Code         | [Here](/streamers-setup/overlays/presets/qr-code/) | [https://overlays.tiltify.com/8m7Xsk_lC7PXtuc9O-ST00Jf8Si_a7nr](https://overlays.tiltify.com/8m7Xsk_lC7PXtuc9O-ST00Jf8Si_a7nr) |
+| Compact Overlay | [Here](/streamers-setup/overlays/presets/compact/) | [https://overlays.tiltify.com/BX77aXnYmTvYr-bDDXyKTWojwxSqjRcS](https://overlays.tiltify.com/BX77aXnYmTvYr-bDDXyKTWojwxSqjRcS) |
+| Total Overlay   | [Here](/streamers-setup/overlays/presets/total/)   | [https://overlays.tiltify.com/BOBbt48cTpyO360wb54NgYK2Zq57b0J3](https://overlays.tiltify.com/BOBbt48cTpyO360wb54NgYK2Zq57b0J3) |

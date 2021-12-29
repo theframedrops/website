@@ -1,6 +1,6 @@
 # Compact Overlay
 
-> Overlay URL: [https://overlays.tiltify.com/139juPCIOwS6q0Ugwzq53Opi7ITVuBd-](https://overlays.tiltify.com/139juPCIOwS6q0Ugwzq53Opi7ITVuBd-)
+> Overlay URL: [https://overlays.tiltify.com/BX77aXnYmTvYr-bDDXyKTWojwxSqjRcS](https://overlays.tiltify.com/BX77aXnYmTvYr-bDDXyKTWojwxSqjRcS)
 
 The compact overlay is a useful middle-ground between using the individual components to roll your own overlay and
 having [the Total Package Overlay](/streamers-setup/overlays/presets/total/) consuming your entire allotted overlay space.
