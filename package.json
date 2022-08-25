@@ -1,15 +1,26 @@
 {
-  "name": "website",
-  "version": "1.0.0",
-  "description": "> An awesome project.",
-  "main": "index.js",
+  "name": "@example/docs",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "dev": "docsify serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "docsify-cli": "^4.4.3",
-    "docsify-darklight-theme": "^3.2.0"
+    "@algolia/client-search": "^4.13.1",
+    "@docsearch/css": "^3.1.0",
+    "@docsearch/react": "^3.1.0",
+    "@types/react": "^17.0.45",
+    "preact": "^10.7.3",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   },
-  "license": "MIT"
+  "devDependencies": {
+    "@astrojs/preact": "^1.0.2",
+    "@astrojs/react": "^1.0.0",
+    "astro": "^1.0.9"
+  }
 }
