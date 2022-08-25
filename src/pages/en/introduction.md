@@ -1,7 +1,7 @@
 ---
 title: Introduction
-description: Docs intro
-layout: ../../layouts/MainLayout.astro
+description: A collaborative charity livestream with your favorite streamers.
+layout: '@/layouts/MainLayout.astro'
 ---
 
 The Frame Drops is a charity livestream event aimed at raising funds for the [Cancer Research Institute](https://www.cancerresearch.org).

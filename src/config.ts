@@ -31,13 +31,15 @@ export const COMMUNITY_INVITE_URL = `https://discord.theframedrops.com`;
 
 export const SIDEBAR = {
 	en: [
-		{ text: '', header: true },
-		{ text: 'Section Header', header: true },
+		{ text: 'General', header: true },
 		{ text: 'Introduction', link: 'en/introduction' },
-		{ text: 'Page 2', link: 'en/page-2' },
-		{ text: 'Page 3', link: 'en/page-3' },
+		{ text: 'Schedule / Events', link: 'en/schedule' },
+		{ text: 'Streamers', link: 'en/streamers' },
+		{ text: 'Code of Conduct', link: 'en/code-of-conduct' },
 
-		{ text: 'Another Section', header: true },
-		{ text: 'Page 4', link: 'en/page-4' },
+		{ text: 'Streamer Setup', header: true },
+		{ text: 'Introduction', link: 'en/streamer-setup/' },
+		{ text: 'Overlays', link: 'en/streamer-setup/overlays/' },
+		{ text: 'Tiltify', link: 'en/streamer-setup/tiltify/' },
 	],
 };
