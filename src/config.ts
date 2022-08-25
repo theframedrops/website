@@ -39,7 +39,23 @@ export const SIDEBAR = {
 
 		{ text: 'Streamer Setup', header: true },
 		{ text: 'Introduction', link: 'en/streamer-setup/' },
-		{ text: 'Overlays', link: 'en/streamer-setup/overlays/' },
-		{ text: 'Tiltify', link: 'en/streamer-setup/tiltify/' },
+		{ text: 'Overlays', link: 'en/streamer-setup/overlays/', children: [
+			{ text: 'Add to Scene', link: 'en/streamer-setup/overlays/add-to-scene/' },
+			{ text: 'Separate Merged Components', link: 'en/streamer-setup/overlays/separate-merged-components/' },
+			{ text: 'Overlay Colors', link: 'en/streamer-setup/overlays/colors/' },
+			{ text: 'Presets', header: true },
+			{ text: 'Total Package Overlay', link: 'en/streamer-setup/overlays/presets/total/' },
+			{ text: 'Compact Overlay Bar', link: 'en/streamer-setup/overlays/presets/compact/' },
+			{ text: 'Goal Indicators', link: 'en/streamer-setup/overlays/presets/goals/' },
+			{ text: 'Event Displays', link: 'en/streamer-setup/overlays/presets/events/' },
+			{ text: 'QR Code', link: 'en/streamer-setup/overlays/presets/qr-code/' },
+		] },
+		{ text: 'Tiltify', link: 'en/streamer-setup/tiltify/', children: [
+			{ text: 'Event Schedule', link: 'en/streamer-setup/tiltify/schedule/' },
+			{ text: 'Campaign Milestones', link: 'en/streamer-setup/tiltify/milestones/' },
+			{ text: 'Campaign Polls', link: 'en/streamer-setup/tiltify/polls/' },
+			{ text: 'Donor Rewards', link: 'en/streamer-setup/tiltify/rewards/' },
+			{ text: 'Event Targets', link: 'en/streamer-setup/tiltify/targets/' },
+		] },
 	],
 };

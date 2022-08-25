@@ -1,0 +1,88 @@
+---
+const {text, link, children} = Astro.props;
+const currentPage = Astro.url.pathname;
+const currentPageMatch = currentPage.slice(1);
+
+const hasMatch = (
+	currentPageMatch === link ||
+	(children || []).some((c: any) => currentPageMatch === c.link)
+);
+---
+
+<li class="nav-link">
+	<a
+		href={`${Astro.site?.pathname ?? ""}${link}`}
+		aria-current={`${currentPageMatch === link ? 'page' : 'false'}`}
+	>
+		{text}
+		{children && (
+			<span style="float: right;">{hasMatch ? "🞁" : "🞃"}</span>
+		)}
+	</a>
+
+	{children && hasMatch && (
+		<ul>
+			{children.map((c: any) => c.header
+				? (
+					<li><h3 class="inner-title">{c.text}</h3></li>
+				)
+				: (
+					<li>
+						<a
+							href={`${Astro.site?.pathname ?? ""}${c.link}`}
+							class="inner"
+							aria-current={`${currentPageMatch === c.link ? 'page' : 'false'}`}
+						>
+							{c.text}
+						</a>
+					</li>
+				)
+			)}
+		</ul>
+	)}
+</li>
+
+<style>
+	.nav-link a {
+		font-size: 1rem;
+		margin: 0 1px;
+		padding: 0.3rem 1rem;
+		font: inherit;
+		color: inherit;
+		text-decoration: none;
+		display: block;
+	}
+
+	.nav-link a.inner {
+		margin-left: 1rem;
+		font-style: italic;
+		border-left: 4px solid var(--theme-divider);
+	}
+
+	.nav-link a:hover,
+	.nav-link a:focus {
+		background-color: var(--theme-bg-hover);
+		border-left-color: var(--theme-accent);
+	}
+
+	.nav-link a[aria-current='page'] {
+		color: var(--theme-text-accent);
+		background-color: var(--theme-bg-accent);
+		border-left-color: var(--theme-accent);
+		font-weight: 600;
+	}
+
+	:global(:root.theme-dark) .nav-link a[aria-current='page'] {
+		color: hsla(var(--color-base-white), 100%, 1);
+	}
+
+	.inner-title {
+		font-size: 0.9rem;
+		font-weight: 700;
+		padding: 0.1rem 1rem;
+		text-transform: uppercase;
+		margin-bottom: 0.5rem;
+		margin-top: 1rem;
+		margin-left: calc(1rem + 4px);
+	}
+</style>
