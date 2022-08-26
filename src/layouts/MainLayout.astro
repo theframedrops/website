@@ -121,5 +121,11 @@ const githubEditUrl = CONFIG.GITHUB_EDIT_URL && CONFIG.GITHUB_EDIT_URL + current
 				<RightSidebar {headings} {githubEditUrl} />
 			</aside>
 		</main>
+
+		<script>
+			import mediumZoom from 'medium-zoom';
+
+			mediumZoom('section.main-section img:not([no-zoom])');
+		</script>
 	</body>
 </html>

@@ -5,7 +5,7 @@ layout: '@/layouts/MainLayout.astro'
 
 <div style="text-align: center; margin-bottom: 4rem;">
 
-<img src="/logo.png" alt="The Frame Drops" style="margin-bottom: 2rem;"/>
+<img no-zoom src="/logo.png" alt="The Frame Drops" style="margin-bottom: 2rem;"/>
 
 <h1 style="font-size: 1.7rem;">The Frame Drops</h1>
 
