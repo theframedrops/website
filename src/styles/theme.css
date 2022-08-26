@@ -112,7 +112,7 @@ body {
 	--theme-code-bg: hsla(var(--color-gray-5), 1);
 	--theme-code-text: hsla(var(--color-base-white), 100%, 1);
 	--theme-navbar-bg: hsl(264, 28%, 10%);
-	--theme-gradient-bg: linear-gradient(80deg, rgb(99 0 8) 0%, rgb(47 28 0) 18%, rgb(35 34 0) 36%, rgb(0 27 9) 54%, rgb(0 17 51) 72%, rgb(31 0 45) 100%);
+	--theme-gradient-bg: linear-gradient(80deg, rgb(50 0 8) 0%, rgb(47 28 0) 18%, rgb(35 34 0) 36%, rgb(0 27 9) 54%, rgb(0 17 51) 72%, rgb(31 0 45) 100%);
 	--theme-selection-color: hsla(var(--color-base-white), 100%, 1);
 	--theme-selection-bg: hsla(var(--color-accent), var(--theme-accent-opacity));
 
