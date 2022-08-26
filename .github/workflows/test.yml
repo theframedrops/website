@@ -1,0 +1,14 @@
+name: Github Pages Astro Check
+
+on: push
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v2
+      - name: Install and build your site
+        uses: withastro/action@v0
+      - name: Run "astro check"
+        run: npm run astro check
