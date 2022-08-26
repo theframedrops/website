@@ -31,7 +31,6 @@ import CalendarModal from './CalendarModal.vue';
 
 import dayjs from "dayjs";
 import dayjsFormatPlugin from "dayjs/plugin/advancedFormat";
-import mod from 'zod/lib';
 dayjs.extend(dayjsFormatPlugin);
 
 const props = defineProps<{
@@ -48,18 +47,18 @@ const eventEnd = dayjs(props.event.end).format("h:mm A");
 let modalOpen = ref(false);
 
 onMounted(() => {
-	if (typeof globalThis.window !== undefined && globalThis.window?.location.hash === '#' + slugify(props.event.name))
+	if (typeof globalThis.window !== undefined && globalThis.window?.location.search === '?event=' + slugify(props.event.name))
 		modalOpen.value = true;
 });
 
 function handleOpen() {
 	modalOpen.value = true;
-	window.location.hash = '#' + slugify(props.event.name);
+	window.history.replaceState(null, null, '?event=' + slugify(props.event.name));
 }
 
 function handleClose() {
 	modalOpen.value = false;
-	window.location.hash = '';
+	window.history.replaceState({}, document.title, window.location.pathname);
 }
 </script>
 

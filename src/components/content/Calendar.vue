@@ -192,6 +192,17 @@ Cave Poker is a Minecraft poker game, without specific cards, where players can 
 Mine-a-Chunk is a group speedrun challenge event where we try to mine out a 16x16 "chunk" of blocks within Minecraft
 <a href="https://twitch.tv/AkillezII">@AkillezII on Twitch</a> hosts this event & it is open to all
 		`.trim()
+	},
+		{
+		start: ('2021 09 27 1:00 PM'),
+		end: ('2021 09 27 4:30 PM'),
+		name: "Minecraft Mine-a-Chunk",
+		timed: true,
+		backgroundImage: "/assets/minecraft.jpg",
+		description: `
+Mine-a-Chunk is a group speedrun challenge event where we try to mine out a 16x16 "chunk" of blocks within Minecraft
+<a href="https://twitch.tv/AkillezII">@AkillezII on Twitch</a> hosts this event & it is open to all
+		`.trim()
 	}
 ];
 
@@ -252,6 +263,7 @@ const days = events.reduce((days, event) => {
 	grid-auto-flow: column;
 	grid-auto-columns: 1fr;
 	overflow-x: auto;
+	margin: 2rem 0;
 }
 
 .schedule ul {
@@ -277,6 +289,10 @@ const days = events.reduce((days, event) => {
 	background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='3rem' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='23' x1='0' y2='23' x2='24' stroke='currentColor' stroke-width='1'/%3E%3C/svg%3E");
 	background-repeat: repeat;
 	background-size: cover contain;
+}
+
+.schedule li {
+	margin: 0;
 }
 
 .day {

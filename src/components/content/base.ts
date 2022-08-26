@@ -12,5 +12,6 @@ export interface Event {
 export function slugify(s: string) {
 	return s.toLowerCase()
 		.replace(/\s/g, "-")
-		.replace(/[^a-z\-]/, "");
+		.replace(/[^a-z0-9\-]/g, "")
+		.replace(/\-+$/g, "");
 }
