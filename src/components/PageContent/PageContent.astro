@@ -1,6 +1,7 @@
 ---
 import MoreMenu from '../RightSidebar/MoreMenu.astro';
 import TableOfContents from '../RightSidebar/TableOfContents';
+import Breadcrumbs from './Breadcrumbs.astro';
 
 const { frontmatter, headings, githubEditUrl } = Astro.props;
 const title = frontmatter.title;
@@ -8,6 +9,7 @@ const title = frontmatter.title;
 
 <article id="article" class="content">
 	<section class="main-section">
+		<Breadcrumbs/>
 		<h1 class="content-title" id="overview">{title}</h1>
 		<nav class="block sm:hidden">
 			<TableOfContents client:media="(max-width: 50em)" {headings} />

@@ -1,0 +1,34 @@
+---
+import { getLanguageFromURL } from '../../languages';
+import { SIDEBAR } from '../../config';
+
+
+const currentPage = Astro.url.pathname;
+const currentPageMatch = currentPage.slice(1);
+const langCode = getLanguageFromURL(currentPage) as keyof typeof SIDEBAR;
+
+const breadcrumbs = SIDEBAR[langCode].reduce((col, item) => {
+	if (item.link && currentPageMatch.startsWith(item.link)) {
+		col.push(item);
+	}
+
+	for (const child of (item.children || [])) {
+		if (child.link && currentPageMatch.startsWith(child.link)) {
+			col.push(child);
+		}
+	}
+
+	return col;
+}, [] as any[]);
+---
+
+{breadcrumbs.length > 1 && (
+	<div>
+		{breadcrumbs.map((b, i) => (
+			<span>
+				{i > 0 && "›"}
+				<a href={`${Astro.site?.pathname ?? ""}${b.link}`}>{b.text}</a>
+			</span>
+		))}
+	</div>
+)}
