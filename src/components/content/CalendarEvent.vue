@@ -7,6 +7,7 @@
 			left: `calc(${props.event.indent} * 1rem)`,
 			right: `calc(-${props.event.indent} * 1rem)`,
 		}"
+		@click="handleOpen"
 	>
 		<div class="event">
 			<h3>{{props.event.name}}</h3>
@@ -15,10 +16,18 @@
 			</p>
 		</div>
 	</div>
+
+	<CalendarModal
+		:modalOpen="modalOpen"
+		:event="props.event"
+		@close="handleClose"
+	/>
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue';
 import type { Event } from './base';
+import CalendarModal from './CalendarModal.vue';
 
 import dayjs from "dayjs";
 import dayjsFormatPlugin from "dayjs/plugin/advancedFormat";
@@ -34,6 +43,16 @@ const hourEnd = Math.min(dayjs(props.event.end).diff(relative, "minute"), 24*60)
 
 const eventStart = dayjs(props.event.start).format("h:mm A");
 const eventEnd = dayjs(props.event.end).format("h:mm A");
+
+let modalOpen = ref(false);
+
+function handleOpen() {
+	modalOpen.value = true;
+}
+
+function handleClose() {
+	modalOpen.value = false;
+}
 </script>
 
 <style>
@@ -41,7 +60,7 @@ const eventEnd = dayjs(props.event.end).format("h:mm A");
 	position: absolute;
 	left: 0;
 	right: 0;
-	padding: 0.5rem;
+	padding: 0.5rem 1rem;
 }
 
 .event {
@@ -59,6 +78,10 @@ const eventEnd = dayjs(props.event.end).format("h:mm A");
 	transition: background-color .2s, box-shadow .2s;
 }
 
+:root.theme-dark .event {
+	background-color: var(--theme-bg);
+}
+
 .event h3 {
 	all: unset;
 	display: block;
@@ -74,6 +97,10 @@ const eventEnd = dayjs(props.event.end).format("h:mm A");
 .event p {
 	color: var(--theme-text-secondary);
 	font-size: .6rem;
+}
+
+.event:hover h3 {
+	text-decoration: underline;
 }
 
 .event:hover, .event:focus {

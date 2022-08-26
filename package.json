@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "dayjs": "^1.11.5",
+    "file-saver": "^2.0.5",
+    "ics": "^2.37.0",
     "medium-zoom": "^1.0.6",
     "preact": "^10.7.3",
     "vue": "^3.2.37"
@@ -19,6 +21,7 @@
     "@astrojs/mdx": "^0.10.1",
     "@astrojs/preact": "^1.0.2",
     "@astrojs/vue": "^1.0.0",
+    "@types/file-saver": "^2.0.5",
     "astro": "^1.0.9"
   }
 }

@@ -1,6 +1,4 @@
 export interface Event {
-	id: string;
-	color: string;
 	startRelative?: string;
 	start: string;
 	end: string;
@@ -10,3 +8,9 @@ export interface Event {
 	backgroundImage?: string;
 	description: string;
 };
+
+export function slugify(s: string) {
+	return s.toLowerCase()
+		.replace(/\s/g, "-")
+		.replace(/[^a-z\-]/, "");
+}
