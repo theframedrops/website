@@ -19,7 +19,6 @@ const lang = currentPage && getLanguageFromURL(currentPage);
 		<div class="logo flex">
 			<a href="/"><img src="/text_logo.png" /></a>
 		</div>
-		<div style="flex-grow: 1;"></div>
 		{KNOWN_LANGUAGE_CODES.length > 1 && <LanguageSelect lang={lang} client:idle />}
 		{"ALGOLIA" in CONFIG && (
 			<div class="search-item">
@@ -73,6 +72,12 @@ const lang = currentPage && getLanguageFromURL(currentPage);
 	.logo a:hover,
 	.logo a:focus {
 		color: var(--theme-text-accent);
+	}
+
+	.logo img {
+		max-width: calc(40vw + 100px);
+    	min-width: 300px;
+		width: 80%;
 	}
 
 	.logo h1 {
