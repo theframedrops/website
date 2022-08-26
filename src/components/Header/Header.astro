@@ -5,6 +5,7 @@ import SkipToContent from './SkipToContent.astro';
 import SidebarToggle from './SidebarToggle';
 import LanguageSelect from './LanguageSelect';
 import Search from './Search';
+import Button from '../PageContent/Button.astro';
 
 const { currentPage } = Astro.props;
 const lang = currentPage && getLanguageFromURL(currentPage);
@@ -20,18 +21,34 @@ const lang = currentPage && getLanguageFromURL(currentPage);
 			<a href="/"><img src="/text_logo.png" /></a>
 		</div>
 		{KNOWN_LANGUAGE_CODES.length > 1 && <LanguageSelect lang={lang} client:idle />}
-		{"ALGOLIA" in CONFIG && (
-			<div class="search-item">
-				<Search client:idle />
-			</div>
-		)}
+		<Button href="https://donate.theframedrops.com/">Donate</Button>
 	</nav>
 </header>
 
+{currentPage === '/en/introduction' && (
+	<div class="banner">
+		<img no-zoom src="/logo.png" alt="The Frame Drops" style="margin-bottom: 1rem;"/>
+		<h2 style="max-width: unset; font-size: 1.7rem;">The Frame Drops</h2>
+		<p style="font-size: 1.3rem; margin-bottom: 2rem;">A collaborative charity livestream with your favorite streamers.</p>
+		<p>Various events &amp; community engagement</p>
+		<p>Open to anyone (streamers welcome)</p>
+		<Button href="https://discord.theframedrops.com/">Join us on Discord</Button>
+	</div>
+)}
+
 <style>
+	.banner {
+		text-align: center;
+		margin-top: -2rem;
+		margin-bottom: 2rem;
+		padding: 2rem;
+		background: var(--theme-gradient-bg);
+	}
+
 	header {
 		z-index: 11;
-		height: var(--theme-navbar-height);
+		height: auto;
+		min-height: var(--theme-navbar-height);
 		width: 100%;
 		background: var(--theme-navbar-bg);
 		display: flex;
@@ -40,6 +57,9 @@ const lang = currentPage && getLanguageFromURL(currentPage);
 		overflow: hidden;
 		position: sticky;
 		top: 0;
+
+		box-shadow: 0 0 2rem #0003;
+		margin-bottom: 2rem;
 	}
 
 	.logo {
