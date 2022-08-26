@@ -312,6 +312,7 @@ h2.heading {
 }
 
 .heading-link {
+	font-family: var(--font-alt);
 	font-size: 1rem;
 	padding: 0.1rem 0 0.1rem 1rem;
 	border-left: 4px solid var(--theme-divider);

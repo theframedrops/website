@@ -1,7 +1,7 @@
 ---
 import ThemeToggleButton from './ThemeToggleButton';
 import * as CONFIG from '../../config';
-const { editHref } = Astro.props;
+const editHref = CONFIG.GITHUB_EDIT_URL;
 const showMoreSection = CONFIG.COMMUNITY_INVITE_URL || editHref;
 ---
 

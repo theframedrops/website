@@ -5,6 +5,7 @@
 	--font-mono: 'IBM Plex Mono', Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console',
 		'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono',
 		'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
+	--font-alt: 'Asap', sans-serif;
 
 	/*
    * Variables with --color-base prefix define
@@ -84,7 +85,7 @@
 
 body {
 	background: var(--theme-bg);
-	background: linear-gradient(180deg, var(--theme-bg), hsla(var(--color-accent), 0.05));
+	background: linear-gradient(180deg, var(--theme-bg), hsla(var(--color-accent), 0.1));
 	color: var(--theme-text);
 }
 
