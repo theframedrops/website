@@ -32,7 +32,7 @@ export const COMMUNITY_INVITE_URL = `https://discord.theframedrops.com`;
 export const SIDEBAR = {
 	en: [
 		{ text: 'General', header: true },
-		{ text: 'Introduction', link: 'en/introduction' },
+		{ text: 'Introduction', link: '' },
 		{ text: 'Schedule / Events', link: 'en/schedule' },
 		{ text: 'Streamers', link: 'en/streamers' },
 		{ text: 'Code of Conduct', link: 'en/code-of-conduct' },

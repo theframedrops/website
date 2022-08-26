@@ -4,7 +4,7 @@ description: A calendar of all planned streams and events.
 layout: '@/layouts/MainLayout.astro'
 ---
 
-The next Frame Drops will be hosted on a weekend (TBD) in November. Different [participating streamers](/en/streamers) will be
+The next Frame Drops will be hosted throughout November 4th — 6th. Different [participating streamers](/en/streamers) will be
 live at different times, but we're centered around those dates in general.
 
 <!--We have a calendar of events below!

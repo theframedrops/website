@@ -6,7 +6,7 @@ layout: '@/layouts/MainLayout.astro'
 The Frame Drops is a charity livestream event aimed at raising funds for the [Cancer Research Institute](https://www.cancerresearch.org).
 The Cancer Research Institute helps support immunotherapy research by funding [grants and fellowships](https://www.cancerresearch.org/scientists/cri-funding-directory) to provide crucial resources for laboratory work and clinical trials, including personnel, equipment, and supplies.
 
-We'll be live during a weekend (TBD) in the month of November and have [some fun events scheduled](/en/schedule).
+We'll be live throughout November 4th — 6th and have [some fun events scheduled](/en/schedule).
 
 This event is open to everyone. If you're a streamer that would like to join us, [we'd love to have you](/en/streamer-setup/).
 Likewise, if you're a viewer, we'd love to have you as part of a group event as participants in streams themselves!
