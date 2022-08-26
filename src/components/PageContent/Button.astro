@@ -6,7 +6,8 @@ const props = Astro.props;
 
 <style>
 	.button {
-		display: inline-block;
+		display: inline-flex;
+		align-items: center;
 		margin: 1rem 0;
 		padding: 0.4rem 1rem;
 		text-decoration: none;
@@ -15,8 +16,12 @@ const props = Astro.props;
 		font-weight: 600;
 
 		background-color: var(--theme-accent);
-		color: var(--theme-bg);
+		color: #FFF;
 		transition: box-shadow 0.2s, background-color 0.2s;
+	}
+
+	:global(:root.theme-dark) .button {
+		color: #000;
 	}
 
 	.button + .button {
@@ -30,6 +35,18 @@ const props = Astro.props;
 	.button:focus {
 		background-color: hsl(var(--color-base-accent), 35%);
 		box-shadow: 0 0 0 0.2rem hsla(var(--color-accent), 0.5);
+	}
+
+	.button :global(img),
+	.button :global(svg) {
+		height: 1rem;
+		width: auto;
+		filter: contrast(0) brightness(2);
+	}
+
+	:global(:root.theme-dark) .button :global(img),
+	:global(:root.theme-dark) .button :global(svg) {
+		filter: contrast(0) brightness(0);
 	}
 
 	:global(:root.theme-dark) .button:focus {
