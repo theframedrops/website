@@ -26,7 +26,7 @@ We'll be live during a weekend (TBD) in the month of November and have [some fun
 This event is open to everyone. If you're a streamer that would like to join us, [we'd love to have you](/en/streamer-setup/).
 Likewise, if you're a viewer, we'd love to have you as part of a group event as participants in streams themselves!
 
-Our goal is help others, have fun, and have good conversation to bring awareness and understanding for the causes we support.
+Our goal is help others, have fun, and have good conversation to bring awareness for the causes we support.
 
 Join us in [our Discord](https://discord.theframedrops.com) to join in on the event, participate in activities, and add to our growing
 list of events.
