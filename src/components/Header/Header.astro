@@ -5,12 +5,13 @@ import SidebarToggle from './SidebarToggle';
 import LanguageSelect from './LanguageSelect';
 import Button from '../PageContent/Button.astro';
 import ChatIcon from '../icons/chat.astro';
+import gradient from './gradient.png';
 
 const { currentPage } = Astro.props;
 const lang = currentPage && getLanguageFromURL(currentPage);
 ---
 
-<header>
+<header style={`--background: url(${gradient});`}>
 	<SkipToContent />
 	<nav class="nav-wrapper" title="Top Navigation">
 		<div class="menu-toggle">
@@ -64,7 +65,10 @@ const lang = currentPage && getLanguageFromURL(currentPage);
 		height: auto;
 		min-height: var(--theme-navbar-height);
 		width: 100%;
-		background: var(--theme-navbar-bg);
+		background: var(--background), var(--theme-navbar-bg);
+		background-position: center left;
+		background-repeat: no-repeat;
+		background-size: contain;
 		display: flex;
 		align-items: center;
 		justify-content: center;
