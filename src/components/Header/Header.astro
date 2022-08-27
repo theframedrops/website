@@ -62,8 +62,7 @@ const lang = currentPage && getLanguageFromURL(currentPage);
 
 	header {
 		z-index: 11;
-		height: auto;
-		min-height: var(--theme-navbar-height);
+		height: var(--theme-navbar-height);
 		width: 100%;
 		background: var(--background), var(--theme-navbar-bg);
 		background-position: center left;
@@ -113,8 +112,8 @@ const lang = currentPage && getLanguageFromURL(currentPage);
 	}
 
 	.logo img {
-		max-width: calc(40vw + 100px);
-		width: 80%;
+		max-width: 80%;
+		max-height: calc(0.6 * var(--theme-navbar-height));
 	}
 
 	.logo h1 {
