@@ -5,7 +5,7 @@ import EditIcon from '../icons/edit.astro';
 import ChatIcon from '../icons/chat.astro';
 
 const editHref = CONFIG.GITHUB_EDIT_URL;
-const showMoreSection = CONFIG.COMMUNITY_INVITE_URL || editHref;
+const showMoreSection = CONFIG.DISCORD_URL || editHref;
 ---
 
 {showMoreSection && <h2 class="heading">More</h2>}
@@ -18,9 +18,9 @@ const showMoreSection = CONFIG.COMMUNITY_INVITE_URL || editHref;
 			</a>
 		</li>
 	)}
-	{CONFIG.COMMUNITY_INVITE_URL && (
+	{CONFIG.DISCORD_URL && (
 		<li class={`heading-link depth-2`}>
-			<a href={CONFIG.COMMUNITY_INVITE_URL} target="_blank">
+			<a href={CONFIG.DISCORD_URL} target="_blank">
 				<ChatIcon />
 				<span>Join us on Discord</span>
 			</a>

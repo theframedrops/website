@@ -1,4 +1,5 @@
 ---
+import { DISCORD_URL } from '@/config';
 import { getLanguageFromURL, KNOWN_LANGUAGE_CODES } from '../../languages';
 import SkipToContent from './SkipToContent.astro';
 import SidebarToggle from './SidebarToggle';
@@ -31,7 +32,7 @@ const lang = currentPage && getLanguageFromURL(currentPage);
 		<p class="big">A collaborative charity livestream with your favorite streamers.</p>
 		<p>Various events &amp; community engagement</p>
 		<p>Open to anyone (streamers welcome)</p>
-		<Button href="https://discord.theframedrops.com/">
+		<Button href={DISCORD_URL}>
 			<ChatIcon />
 			Join us on Discord
 		</Button>
