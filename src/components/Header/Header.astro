@@ -1,16 +1,18 @@
 ---
+import { DISCORD_URL } from '@/config';
 import { getLanguageFromURL, KNOWN_LANGUAGE_CODES } from '../../languages';
 import SkipToContent from './SkipToContent.astro';
 import SidebarToggle from './SidebarToggle';
 import LanguageSelect from './LanguageSelect';
 import Button from '../PageContent/Button.astro';
 import ChatIcon from '../icons/chat.astro';
+import gradient from './gradient.png';
 
 const { currentPage } = Astro.props;
 const lang = currentPage && getLanguageFromURL(currentPage);
 ---
 
-<header>
+<header style={`--background: url(${gradient});`}>
 	<SkipToContent />
 	<nav class="nav-wrapper" title="Top Navigation">
 		<div class="menu-toggle">
@@ -24,13 +26,13 @@ const lang = currentPage && getLanguageFromURL(currentPage);
 	</nav>
 </header>
 
-{currentPage === '/en/introduction' && (
+{currentPage === '/' && (
 	<div class="banner">
 		<img no-zoom src="/logo.png" alt="The Frame Drops" style="margin-bottom: 1rem;"/>
 		<p class="big">A collaborative charity livestream with your favorite streamers.</p>
 		<p>Various events &amp; community engagement</p>
 		<p>Open to anyone (streamers welcome)</p>
-		<Button href="https://discord.theframedrops.com/">
+		<Button href={DISCORD_URL}>
 			<ChatIcon />
 			Join us on Discord
 		</Button>
@@ -61,10 +63,12 @@ const lang = currentPage && getLanguageFromURL(currentPage);
 
 	header {
 		z-index: 11;
-		height: auto;
-		min-height: var(--theme-navbar-height);
+		height: var(--theme-navbar-height);
 		width: 100%;
-		background: var(--theme-navbar-bg);
+		background: var(--background), var(--theme-navbar-bg);
+		background-position: center left;
+		background-repeat: no-repeat;
+		background-size: contain;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -109,8 +113,8 @@ const lang = currentPage && getLanguageFromURL(currentPage);
 	}
 
 	.logo img {
-		max-width: calc(40vw + 100px);
-		width: 80%;
+		max-width: 80%;
+		max-height: calc(0.6 * var(--theme-navbar-height));
 	}
 
 	.logo h1 {

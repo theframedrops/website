@@ -1,4 +1,7 @@
 ---
+import DropDownIcon from "../icons/drop_down.astro";
+import DropUpIcon from "../icons/drop_up.astro";
+
 const {text, link, children} = Astro.props;
 const currentPage = Astro.url.pathname;
 const currentPageMatch = currentPage.slice(1);
@@ -16,7 +19,7 @@ const hasMatch = (
 	>
 		{text}
 		{children && (
-			<span style="float: right;">{hasMatch ? "🞁" : "🞃"}</span>
+			<span style="float: right;">{hasMatch ? <DropUpIcon/> : <DropDownIcon/>}</span>
 		)}
 	</a>
 

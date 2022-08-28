@@ -3,9 +3,10 @@ title: Compact Overlay
 layout: '@/layouts/MainLayout.astro'
 ---
 
+import { OVERLAY_URLS } from '@/config';
 import compact_overlay_preview from './compact_overlay_preview.png';
 
-> Overlay URL: [https://overlays.tiltify.com/BX77aXnYmTvYr-bDDXyKTWojwxSqjRcS](https://overlays.tiltify.com/BX77aXnYmTvYr-bDDXyKTWojwxSqjRcS)
+> Overlay URL: <a href={OVERLAY_URLS.COMPACT}>{OVERLAY_URLS.COMPACT}</a>
 
 The compact overlay is a useful middle-ground between using the individual components to roll your own overlay and
 having [the Total Package Overlay](/en/streamer-setup/overlays/presets/total/) consuming your entire allotted overlay space.

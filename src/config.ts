@@ -19,7 +19,17 @@ export const KNOWN_LANGUAGES = {
 export const GITHUB_EDIT_URL = `https://github.com/theframedrops/website`;
 
 // Uncomment this to add an "Join our Community" button to every page of documentation.
-export const COMMUNITY_INVITE_URL = `https://discord.theframedrops.com`;
+export const DISCORD_URL = `https://discord.theframedrops.com`;
+
+export const DONATE_URL = `https://donate.theframedrops.com`;
+
+export const OVERLAY_URLS = {
+	GOAL_BAR: 'https://overlays.tiltify.com/nNCvD3F8Y4zZuU4L6tOYXWNcKAWneaSc',
+	EVENTS: 'https://overlays.tiltify.com/PRr9IgEWF5LxRLGEz-nKmbpGg8fETOC0',
+	QR_CODE: 'https://overlays.tiltify.com/8m7Xsk_lC7PXtuc9O-ST00Jf8Si_a7nr',
+	COMPACT: 'https://overlays.tiltify.com/BX77aXnYmTvYr-bDDXyKTWojwxSqjRcS',
+	TOTAL: 'https://overlays.tiltify.com/BOBbt48cTpyO360wb54NgYK2Zq57b0J3',
+};
 
 // Uncomment this to enable site search.
 // See "Algolia" section of the README for more information.
@@ -32,7 +42,7 @@ export const COMMUNITY_INVITE_URL = `https://discord.theframedrops.com`;
 export const SIDEBAR = {
 	en: [
 		{ text: 'General', header: true },
-		{ text: 'Introduction', link: 'en/introduction' },
+		{ text: 'Introduction', link: '' },
 		{ text: 'Schedule / Events', link: 'en/schedule' },
 		{ text: 'Streamers', link: 'en/streamers' },
 		{ text: 'Code of Conduct', link: 'en/code-of-conduct' },

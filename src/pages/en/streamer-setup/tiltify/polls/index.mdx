@@ -3,6 +3,7 @@ title: Campaign Polls
 layout: '@/layouts/MainLayout.astro'
 ---
 
+import { DISCORD_URL } from '@/config';
 import tiltify_polls_list from './tiltify_polls_list.png';
 import tiltify_polls_options from './tiltify_polls_options.png';
 import active_poll from './active_poll.png';
@@ -19,7 +20,7 @@ Each poll has the following options:
 
 <img src={tiltify_polls_options} alt="The poll configuration page."/>
 
-To ask for a poll to be added to the campaign, send a message to [the `#streamers` channel in Discord](https://discord.theframedrops.com) with the above information.
+To ask for a poll to be added to the campaign, send a message to <a href={DISCORD_URL}>the #streamers channel in Discord</a> with the above information.
 
 ## Appearance
 

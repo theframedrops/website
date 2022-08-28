@@ -4,6 +4,7 @@ description: Tiltify is a fundraising tool that allows you to have teams of peop
 layout: '@/layouts/MainLayout.astro'
 ---
 
+import { DISCORD_URL } from '@/config';
 import frame_drops_invite from './frame_drops_invite.png';
 import tiltify_campaigns from './tiltify_campaigns.png';
 import tiltify_dashboard from './tiltify_dashboard.png';
@@ -23,9 +24,9 @@ page with the redirect:
 
 https://donate.theframedrops.com
 
-We'll update redirect to go to our donation page once it's published!
+We'll update the redirect to go to our donation page once it's published!
 
-To join our Tiltify team, you'll need an invite code. To access this code, please [Join our Discord](https://discord.theframedrops.com)
+To join our Tiltify team, you'll need an invite code. To access this code, please <a href={DISCORD_URL}>Join our Discord</a>
 and mention that you'd like to be a streamer. We'll add you to a special channel where we'll provide the invite code and can help you
 
 ## Features

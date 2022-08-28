@@ -3,6 +3,7 @@ title: Campaign Milestones
 layout: '@/layouts/MainLayout.astro'
 ---
 
+import { DISCORD_URL } from '@/config';
 import tiltify_milestones_list from './tiltify_milestones_list.png';
 import tiltify_milestones_options from './tiltify_milestones_options.png';
 import next_milestone from './next_milestone.png';
@@ -20,7 +21,7 @@ Each milestone has the following options:
 
 <img src={tiltify_milestones_options} alt="The milestone configuration page."/>
 
-To ask for a milestone to be added to the campaign, send a message to [the `#streamers` channel in Discord](https://discord.theframedrops.com) with the above information.
+To ask for a milestone to be added to the campaign, send a message to <a href={DISCORD_URL}>the #streamers channel in Discord</a> with the above information.
 
 ## Appearance
 

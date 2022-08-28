@@ -4,6 +4,8 @@ description: Tiltify helps us provide a set of overlays that participating strea
 layout: '@/layouts/MainLayout.astro'
 ---
 
+import { OVERLAY_URLS } from '@/config';
+
 Tiltify helps us provide a set of overlays that participating streamers can use to easily track donations on.
 
 This is done by using OBS's Browser Source and a URL associated with each overlay. As such, they can be configured
@@ -42,8 +44,8 @@ their UI colors. To learn why and how to change these colors to match your brand
 
 | Overlay Name    | Docs Page         | Overlay URL                                                                                                                    |
 | --------------- | ----------------- |--------------------------------------------------------------------------------------------------------------------------------|
-| Goal Bar        | [Here](/en/streamer-setup/overlays/presets/goals/)   | [https://overlays.tiltify.com/nNCvD3F8Y4zZuU4L6tOYXWNcKAWneaSc](https://overlays.tiltify.com/nNCvD3F8Y4zZuU4L6tOYXWNcKAWneaSc) |
-| Events          | [Here](/en/streamer-setup/overlays/presets/events/)  | [https://overlays.tiltify.com/PRr9IgEWF5LxRLGEz-nKmbpGg8fETOC0](https://overlays.tiltify.com/PRr9IgEWF5LxRLGEz-nKmbpGg8fETOC0) |
-| QR Code         | [Here](/en/streamer-setup/overlays/presets/qr-code/) | [https://overlays.tiltify.com/8m7Xsk_lC7PXtuc9O-ST00Jf8Si_a7nr](https://overlays.tiltify.com/8m7Xsk_lC7PXtuc9O-ST00Jf8Si_a7nr) |
-| Compact Overlay | [Here](/en/streamer-setup/overlays/presets/compact/) | [https://overlays.tiltify.com/BX77aXnYmTvYr-bDDXyKTWojwxSqjRcS](https://overlays.tiltify.com/BX77aXnYmTvYr-bDDXyKTWojwxSqjRcS) |
-| Total Overlay   | [Here](/en/streamer-setup/overlays/presets/total/)   | [https://overlays.tiltify.com/BOBbt48cTpyO360wb54NgYK2Zq57b0J3](https://overlays.tiltify.com/BOBbt48cTpyO360wb54NgYK2Zq57b0J3) |
+| Goal Bar        | [Here](/en/streamer-setup/overlays/presets/goals/)   | <a href={OVERLAY_URLS.GOAL_BAR}>{OVERLAY_URLS.GOAL_BAR}</a> |
+| Events          | [Here](/en/streamer-setup/overlays/presets/events/)  | <a href={OVERLAY_URLS.EVENTS}>{OVERLAY_URLS.EVENTS}</a> |
+| QR Code         | [Here](/en/streamer-setup/overlays/presets/qr-code/) | <a href={OVERLAY_URLS.QR_CODE}>{OVERLAY_URLS.QR_CODE}</a> |
+| Compact Overlay | [Here](/en/streamer-setup/overlays/presets/compact/) | <a href={OVERLAY_URLS.COMPACT}>{OVERLAY_URLS.COMPACT}</a> |
+| Total Overlay   | [Here](/en/streamer-setup/overlays/presets/total/)   | <a href={OVERLAY_URLS.TOTAL}>{OVERLAY_URLS.TOTAL}</a> |
