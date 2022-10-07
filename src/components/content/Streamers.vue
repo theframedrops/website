@@ -3,7 +3,7 @@
 		<img v-if="!!streamer.profilePictureUrl" :src="streamer.profilePictureUrl"/>
 		<div>
 			<span class="streamer-name">{{ streamer.displayName }}</span>
-			<a :href="streamer.url">{{ streamer.url }}</a>
+			<a :href="'https://' + streamer.url">{{ streamer.url }}</a>
 		</div>
 	</div>
 </template>
@@ -24,11 +24,15 @@ const streamers = ref([
 	"nekooverflow",
 	"njcoffeejunkie",
 	"pixelpirate_",
+	"qarnax_",
+	"reikaze",
+	"thelonghairedfellow",
 	"veund01",
-	"reikaze"
+	"vivisectorgaming",
+	"0zenith0"
 ].map(s => ({
 	displayName: s,
-	url: `https://twitch.tv/${s}`,
+	url: `twitch.tv/${s}`,
 	profilePictureUrl: '',
 	isLive: false,
 })));
@@ -41,8 +45,9 @@ const streamers = ref([
 	display: flex;
 	position: relative;
 	align-items: center;
-	padding: 16px 0;
+	padding: .5rem 0;
 	cursor: pointer;
+	margin: 0 !important;
 }
 
 .streamer > img {

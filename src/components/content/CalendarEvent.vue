@@ -31,7 +31,12 @@ import CalendarModal from './CalendarModal.vue';
 
 import dayjs from "dayjs";
 import dayjsFormatPlugin from "dayjs/plugin/advancedFormat";
+import dayjsUtcPlugin from "dayjs/plugin/utc";
+import dayjsTimezonePlugin from "dayjs/plugin/timezone";
 dayjs.extend(dayjsFormatPlugin);
+dayjs.extend(dayjsUtcPlugin);
+dayjs.extend(dayjsTimezonePlugin);
+
 
 const props = defineProps<{
 	event: Event;
@@ -42,7 +47,7 @@ const hourStart = Math.max(dayjs(props.event.start).diff(relative, "minute"), 0)
 const hourEnd = Math.min(dayjs(props.event.end).diff(relative, "minute"), 24*60);
 
 const eventStart = dayjs(props.event.start).format("h:mm A");
-const eventEnd = dayjs(props.event.end).format("h:mm A");
+const eventEnd = dayjs(props.event.end).format("h:mm A z");
 
 let modalOpen = ref(false);
 
@@ -67,14 +72,14 @@ function handleClose() {
 	position: absolute;
 	left: 0;
 	right: 0;
-	padding: 0.5rem 1rem;
+	padding: 0.2rem 0.3rem;
 }
 
 .event {
 	width: 100%;
 	height: 100%;
 	min-height: 2rem;
-	padding: .2rem 1rem;
+	padding: .2rem .6rem;
 
 	border: 1px solid var(--theme-text-accent);
 	box-shadow: 0 3px .6rem hsla(var(--color-accent), 0.3);

@@ -21,6 +21,27 @@
 					<p v-html="props.event.description"></p>
 
 					<div class="modal-buttons">
+						<a :href="DISCORD_URL">
+							<svg
+								aria-hidden="true"
+								focusable="false"
+								data-prefix="fas"
+								data-icon="comment-alt"
+								class="svg-inline--fa fa-comment-alt fa-w-16"
+								role="img"
+								xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 512 512"
+								height="1em"
+								width="1em"
+							>
+								<path
+									fill="currentColor"
+									d="M448 0H64C28.7 0 0 28.7 0 64v288c0 35.3 28.7 64 64 64h96v84c0 9.8 11.2 15.5 19.1 9.7L304 416h144c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64z"
+								/>
+							</svg>
+
+							Join us on Discord
+						</a>
 						<button @click="handleSave">
 							Save Event
 						</button>
@@ -32,6 +53,7 @@
 </template>
 
 <script lang="ts" setup>
+import { DISCORD_URL } from '@/config';
 import { Event, slugify } from './base';
 
 import { createEvent } from 'ics';
@@ -39,7 +61,11 @@ import { saveAs } from 'file-saver';
 
 import dayjs from "dayjs";
 import dayjsFormatPlugin from "dayjs/plugin/advancedFormat";
+import dayjsUtcPlugin from "dayjs/plugin/utc";
+import dayjsTimezonePlugin from "dayjs/plugin/timezone";
 dayjs.extend(dayjsFormatPlugin);
+dayjs.extend(dayjsUtcPlugin);
+dayjs.extend(dayjsTimezonePlugin);
 
 defineEmits<{
 	(event: "close"): void;
@@ -51,7 +77,7 @@ const props = defineProps<{
 }>();
 
 const eventStart = dayjs(props.event.start).format("h:mm A");
-const eventEnd = dayjs(props.event.end).format("h:mm A");
+const eventEnd = dayjs(props.event.end).format("h:mm A (zzz)");
 
 function handleSave() {
 	const start = dayjs(props.event.start);
@@ -166,32 +192,53 @@ function handleSave() {
 	margin-top: 1rem;
 }
 
-.modal-buttons button {
+.modal-buttons a, .modal-buttons button {
+	all: unset;
+
 	display: inline-flex;
 	align-items: center;
 	margin-right: 1rem;
-	padding: 0.4rem 1rem;
+	padding: 0.2rem 1rem;
 	text-decoration: none;
 	border-radius: 1.2rem;
 	cursor: pointer;
 
+	font-size: 1rem;
+	font-family: var(--font-body);
 	font-weight: 600;
 
 	background-color: var(--theme-accent);
-	color: #FFF;
 	transition: box-shadow 0.2s, background-color 0.2s;
 }
 
-:root.theme-dark .modal-buttons button {
+.modal-buttons a, .modal-buttons button,
+.modal-buttons a::selection, .modal-buttons button::selection {
+	color: #FFF;
+}
+
+:root.theme-dark .modal-buttons a,
+:root.theme-dark .modal-buttons button,
+:root.theme-dark .modal-buttons a::selection,
+:root.theme-dark .modal-buttons button::selection {
 	color: #000;
 }
 
+.modal-buttons a:hover, .modal-buttons a:focus,
 .modal-buttons button:hover, .modal-buttons button:focus {
 	text-decoration: underline;
 }
 
+.modal-buttons a:focus,
 .modal-buttons button:focus {
 	background-color: hsl(var(--color-base-accent), 35%);
 	box-shadow: 0 0 0 0.2rem hsla(var(--color-accent), 0.5);
+}
+
+.modal-buttons a svg, .modal-buttons button svg {
+	margin-right: .6em;
+}
+
+.link-big {
+	font-weight: bold;
 }
 </style>
