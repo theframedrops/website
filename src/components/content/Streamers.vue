@@ -1,9 +1,11 @@
 <template>
-	<div class="streamer" v-for="streamer in streamers" :key="streamer.displayName" v-bind:live="streamer.isLive" v-on:click="window.location.href = streamer.url">
-		<img v-if="!!streamer.profilePictureUrl" :src="streamer.profilePictureUrl"/>
-		<div>
-			<span class="streamer-name">{{ streamer.displayName }}</span>
-			<a :href="'https://' + streamer.url">{{ streamer.url }}</a>
+	<div class="streamer-grid">
+		<div class="streamer" v-for="streamer in streamers" :key="streamer.displayName" v-bind:live="streamer.isLive" v-on:click="handleClick(streamer)">
+			<img :src="streamer.profilePictureUrl || 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D'"/>
+			<div>
+				<span class="streamer-name">{{ streamer.displayName }}</span>
+				<a :href="'https://' + streamer.url">{{ streamer.url }}</a>
+			</div>
 		</div>
 	</div>
 </template>
@@ -37,10 +39,38 @@ const streamers = ref([
 	isLive: false,
 })));
 
-// TODO: api fetch from twitch-is-live
+// hopefully this is an effective "don't run during SSR" check
+if (typeof globalThis.window !== 'undefined') (async () => {
+	console.log("FETCHING USERNAMES");
+	const usernames = streamers.value.map(s => s.displayName).join('/');
+	console.log(usernames);
+	const result = await fetch(`https://tfd-twitch-is-live.herokuapp.com/channels/${usernames}`).then(r => r.json());
+	console.log(result);
+
+	streamers.value = streamers.value.map(s => ({
+		...s,
+		...result[s.displayName],
+	})).sort(
+		// order live users at the top of the list
+		(a, b) => b.isLive - a.isLive
+	);
+
+	console.log(streamers.value);
+})();
+
+function handleClick(streamer: typeof streamers.value[number]) {
+	window.location.href = 'https://' + streamer.url;
+}
 </script>
 
 <style>
+@media (min-width: 1390px) {
+	.streamer-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
 .streamer {
 	display: flex;
 	position: relative;
@@ -65,7 +95,7 @@ const streamers = ref([
 
 .streamer[live='true']::after {
 	position: absolute;
-	bottom: 8px;
+	bottom: -4px;
 	left: 40px;
 	transform: translateX(-50%);
 
