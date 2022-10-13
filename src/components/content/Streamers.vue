@@ -41,11 +41,8 @@ const streamers = ref([
 
 // hopefully this is an effective "don't run during SSR" check
 if (typeof globalThis.window !== 'undefined') (async () => {
-	console.log("FETCHING USERNAMES");
 	const usernames = streamers.value.map(s => s.displayName).join('/');
-	console.log(usernames);
 	const result = await fetch(`https://tfd-twitch-is-live.herokuapp.com/channels/${usernames}`).then(r => r.json());
-	console.log(result);
 
 	streamers.value = streamers.value.map(s => ({
 		...s,
@@ -54,8 +51,6 @@ if (typeof globalThis.window !== 'undefined') (async () => {
 		// order live users at the top of the list
 		(a, b) => b.isLive - a.isLive
 	);
-
-	console.log(streamers.value);
 })();
 
 function handleClick(streamer: typeof streamers.value[number]) {

@@ -2,20 +2,27 @@
 import DropDownIcon from "../icons/drop_down.astro";
 import DropUpIcon from "../icons/drop_up.astro";
 
+function normalizePath(url: string) : string {
+	return url.toLowerCase()
+		// remove any trailing "/" or "/index.html" from URL
+		.replaceAll(/\/(index\.html)?$/g, "")
+		// if the path starts with a "/", remove it
+		.replace(/^\//, "");
+}
+
 const {text, link, children} = Astro.props;
-const currentPage = Astro.url.pathname;
-const currentPageMatch = currentPage.slice(1);
+const currentPage = normalizePath(Astro.url.pathname);
 
 const hasMatch = (
-	currentPageMatch === link ||
-	(children || []).some((c: any) => currentPageMatch === c.link)
+	currentPage === normalizePath(link) ||
+	(children || []).some((c: any) => c.link !== undefined && currentPage === normalizePath(c.link))
 );
 ---
 
 <li class="nav-link">
 	<a
 		href={`${Astro.site?.pathname ?? ""}${link}`}
-		aria-current={`${currentPageMatch === link ? 'page' : 'false'}`}
+		aria-current={`${currentPage === normalizePath(link) ? 'page' : 'false'}`}
 	>
 		{text}
 		{children && (
@@ -34,7 +41,7 @@ const hasMatch = (
 						<a
 							href={`${Astro.site?.pathname ?? ""}${c.link}`}
 							class="inner"
-							aria-current={`${currentPageMatch === c.link ? 'page' : 'false'}`}
+							aria-current={`${currentPage === normalizePath(c.link) ? 'page' : 'false'}`}
 						>
 							{c.text}
 						</a>
