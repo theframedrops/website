@@ -69,6 +69,16 @@ Endless Parkour is an infinite, endless parkour map featuring unique biomes, str
 		`.trim()
 	},
 	{
+		start: '2022 11 05 10:00 PM',
+		end: '2022 11 06 1:00 AM',
+		name: "Trifox Speedrunning Attempts",
+		timed: true,
+		backgroundImage: "/assets/trifox.jpg",
+		description: `
+Trifox is a A twin-stick action-adventure game inspired by classic platformers that came out on October 14th 2022 - it's a new game, but that won't deter <a href="https://twitch.tv/selcouthmind">@selcouthmind on Twitch</a> from speedrunning it.
+		`.trim()
+	},
+	{
 		start: '2022 11 05 10:30 PM',
 		end: '2022 11 06 12:00 AM',
 		name: "Tetris Effect: Connected",
