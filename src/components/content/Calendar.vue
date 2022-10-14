@@ -31,7 +31,7 @@ const events: Event[] = [
 		end: '2022 11 04 9:00 PM',
 		name: "Minecraft Minigolf",
 		timed: true,
-		backgroundImage: "/assets/minecraft.jpg",
+		backgroundImage: "/assets/mc-minigolf.png",
 		description: `
 Minecraft Minigolf features an 18-hole minigolf course built on fennifith's survival server. We'll play through the course and track scores - and possibly explore some other minigames in the area!
 <br><a href="https://twitch.tv/fennifith">@fennifith on Twitch</a> is hosting this event and it is open to all.
@@ -53,7 +53,7 @@ Minecraft Advancement Hunt is a team competition to score the most custom advanc
 		end: '2022 11 05 9:30 PM',
 		name: "Minecraft Mega Bedwars",
 		timed: true,
-		backgroundImage: "/assets/minecraft.jpg",
+		backgroundImage: "/assets/mc-bedwars.png",
 		description: `
 Mega Bedwars is a team bedwars competition set in a custom dimension - based on the outer end island terrain!
 <br><a href="https://twitch.tv/fennifith">@fennifith on Twitch</a> is hosting this event and it is open to all.
