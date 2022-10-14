@@ -4,8 +4,8 @@
 		:style="{
 			height: `calc(${(hourEnd - hourStart) / 10} * .5rem)`,
 			top: `calc(${hourStart/10} * .5rem)`,
-			left: `calc(${props.event.indent} * 1rem)`,
-			right: `calc(-${props.event.indent} * 1rem)`,
+			left: `calc(${props.event.indent} * .5rem)`,
+			right: `calc(-${props.event.indent} * .5rem)`,
 		}"
 		@click="handleOpen"
 	>
@@ -36,7 +36,6 @@ import dayjsTimezonePlugin from "dayjs/plugin/timezone";
 dayjs.extend(dayjsFormatPlugin);
 dayjs.extend(dayjsUtcPlugin);
 dayjs.extend(dayjsTimezonePlugin);
-
 
 const props = defineProps<{
 	event: Event;

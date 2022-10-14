@@ -16,11 +16,13 @@
 import type { Event } from './base';
 import CalendarEvent from './CalendarEvent.vue';
 
-import dayjs from "dayjs";
+import dayjs, { Dayjs } from "dayjs";
 import dayjsFormatPlugin from "dayjs/plugin/advancedFormat";
 import dayjsUtcPlugin from "dayjs/plugin/utc";
+import dayjsTimezonePlugin from "dayjs/plugin/timezone";
 dayjs.extend(dayjsFormatPlugin);
 dayjs.extend(dayjsUtcPlugin);
+dayjs.extend(dayjsTimezonePlugin);
 
 // Event times are listed in UTC
 const events: Event[] = [
@@ -121,7 +123,37 @@ Chaotic Caving is a timed spelunking adventure where teams compete to cave for s
 <a href="https://escape.codingame.com/">Coding Escape</a> is a set of multiplayer escape room puzzles that combines combines programming, creativity and non-coding exercises.
 <br><a href="https://twitch.tv/qarnax_">@Qarnax_ on Twitch</a> is hosting this event and it is open to all.
 		`.trim()
-	}
+	},
+	{
+        start: '2022 11 05 3:00 AM',
+        end: '2022 11 05 8:00 AM',
+        name: "Programming with OdatNurd #1",
+        timed: true,
+        backgroundImage: "/assets/code.jpg",
+        description: `
+<a href="https://twitch.tv/OdatNurd">@OdatNurd on Twitch</a> is an amazing developer with a super friendly community. You won't want to miss the insights he provides while he develops neat stuff on stream!
+        `.trim()
+    },
+    {
+        start: '2022 11 06 3:00 AM',
+        end: '2022 11 06 7:00 AM',
+        name: "Programming with OdatNurd #2",
+        timed: true,
+        backgroundImage: "/assets/code.jpg",
+        description: `
+<a href="https://twitch.tv/OdatNurd">@OdatNurd on Twitch</a> is an amazing developer with a super friendly community. You won't want to miss the insights he provides while he develops neat stuff on stream!
+        `.trim()
+    },
+    {
+        start: '2022 11 07 3:00 AM',
+        end: '2022 11 07 7:00 AM',
+        name: "Programming with OdatNurd #3",
+        timed: true,
+        backgroundImage: "/assets/code.jpg",
+        description: `
+<a href="https://twitch.tv/OdatNurd">@OdatNurd on Twitch</a> is an amazing developer with a super friendly community. You won't want to miss the insights he provides while he develops neat stuff on stream!
+        `.trim()
+    }
 ].map(({ start, end, ...rest }) => ({
 	// convert start/end times from UTC to local timezone
 	start: dayjs(start).utc(true).local().format("YYYY MM DD h:mm A"),
@@ -135,8 +167,8 @@ type CalendarDay = {
 };
 
 const days = events.reduce((days, event) => {
-	const pushEvent = (e: Event, relative?: string) => {
-		const eventDate = dayjs(e.start).format("YYYY-MM-DD");
+	const pushEvent = (start: Dayjs, end: Dayjs) => {
+		const eventDate = start.format("YYYY-MM-DD");
 
 		// find/create a day for the event
 		let day = days.find((d) => d.date === eventDate);
@@ -148,20 +180,20 @@ const days = events.reduce((days, event) => {
 			days.push(day);
 		}
 
-		const indent = day.events.filter(e2 => {
-			const timeBeforeStart = dayjs(e2.start).diff(event.start, "minutes");
-			const timeUntilEnd = dayjs(event.start).diff(e2.end, "minutes");
-
-			if (timeBeforeStart <= -60 && timeUntilEnd < 0) {
-				return true;
+		// look for any previous intersecting events & find their indent
+		const prevIndent = day.events.find(e => {
+			if (dayjs(e.start).isBefore(start)) {
+				return dayjs(e.end).isAfter(start);
+			} else {
+				return dayjs(e.start).isBefore(end);
 			}
-			return false;
-		}).length;
+		})?.indent || 0;
+		const indent = prevIndent + 1;
 
 		// push the event into the day list
 		day.events.push({
 			...event,
-			startRelative: relative,
+			startRelative: eventDate,
 			indent,
 		});
 	};
@@ -170,10 +202,10 @@ const days = events.reduce((days, event) => {
 	const eventDateEnd = dayjs(event.end).format("YYYY-MM-DD");
 
 	if (eventDateStart !== eventDateEnd && dayjs(event.end).hour() > 0) {
-		pushEvent({ ...event, end: eventDateStart + " 23:59 PM"}, eventDateStart);
-		pushEvent({ ...event, start: eventDateEnd + " 00:00 AM"}, eventDateEnd);
+		pushEvent(dayjs(event.start), dayjs(event.start).endOf('day'));
+		pushEvent(dayjs(event.end).startOf('day'), dayjs(event.end));
 	} else {
-		pushEvent(event, eventDateStart);
+		pushEvent(dayjs(event.start), dayjs(event.end));
 	}
 
 	return days;
