@@ -1,7 +1,7 @@
 <template>
 	<div class="streamer-grid">
 		<div class="streamer" v-for="streamer in streamers" :key="streamer.displayName" v-bind:live="streamer.isLive" v-on:click="handleClick(streamer)">
-			<img :src="streamer.profilePictureUrl || 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D'"/>
+			<img no-zoom :src="streamer.profilePictureUrl || 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D'"/>
 			<div>
 				<span class="streamer-name">{{ streamer.displayName }}</span>
 				<a :href="'https://' + streamer.url">{{ streamer.url }}</a>
@@ -18,6 +18,7 @@ const streamers = ref([
 	"boobookashoo",
 	"carmen_the_frog",
 	"crutchcorn",
+	"dolanproductionz",
 	"fennifith",
 	"garablacktail",
 	"godpandus",
