@@ -103,6 +103,18 @@ Chaotic Caving is a timed spelunking adventure where teams compete to cave for s
 		`.trim()
 	},
 	{
+		start: '2022 11 06 6:00 PM',
+		end: '2022 11 06 9:00 PM',
+		name: "Xonotic DM/CA/CTF",
+		timed: true,
+		backgroundImage: "/assets/xonotic.png",
+		description: `
+<a href="https://xonotic.org">Xonotic</a> is an arena-style first person shooter that combines interesting and unique features with well-balanced physics and gameplay.
+We'll be running a few rounds of DM, Clan Arena, and Capture the Flag modes!
+<br><a href="https://twitch.tv/fennifith">@fennifith on Twitch</a> is hosting this event and it is open to all.
+		`.trim()
+	},
+	{
 		start: '2022 11 05 10:00 AM',
 		end: '2022 11 05 11:30 AM',
 		name: "Computer Science Sketchful",
