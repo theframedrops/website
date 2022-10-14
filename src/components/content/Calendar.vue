@@ -92,9 +92,20 @@ Tetris Effect: Connected is the latest Tetris game with dazzling graphics, chall
 		`.trim()
 	},
 	{
+		start: '2022 11 04 6:30 PM',
+		end: '2022 11 04 8:00 PM',
+		name: "Minecraft Chaotic Caving",
+		timed: true,
+		backgroundImage: "/assets/mc-chaotic-caving.png",
+		description: `
+Chaotic Caving is a timed spelunking adventure where teams compete to cave for special ores, find unique boss fights, loot boxes, and custom equipment scattered about the world!
+<br><a href="https://twitch.tv/fennifith">@fennifith on Twitch</a> is hosting this event and it is open to all.
+		`.trim()
+	},
+	{
 		start: '2022 11 06 9:00 PM',
 		end: '2022 11 06 10:30 PM',
-		name: "Minecraft Chaotic Caving",
+		name: "Minecraft Chaotic Caving #2",
 		timed: true,
 		backgroundImage: "/assets/mc-chaotic-caving.png",
 		description: `
