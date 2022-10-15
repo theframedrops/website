@@ -84,7 +84,7 @@ function handleClick(streamer: typeof streamers.value[number]) {
 	width: 80px;
 	height: 80px;
 	padding: 4px;
-	box-shadow: 0 0 0 3px var(--accent);
+	box-shadow: 0 0 0 3px var(--theme-text-accent);
 	border-radius: 50%;
 	margin-right: 24px;
 }
@@ -95,7 +95,7 @@ function handleClick(streamer: typeof streamers.value[number]) {
 
 .streamer[live='true']::after {
 	position: absolute;
-	bottom: -4px;
+	bottom: 0;
 	left: 40px;
 	transform: translateX(-50%);
 

@@ -82,15 +82,11 @@ function handleClose() {
 
 	border: 1px solid var(--theme-text-accent);
 	box-shadow: 0 3px .6rem hsla(var(--color-accent), 0.3);
-	background-color: hsl(var(--color-base-accent), 97%);
+	background-color: var(--theme-bg-highlight);
 	overflow: hidden;
 
 	cursor: pointer;
 	transition: background-color .2s, box-shadow .2s;
-}
-
-:root.theme-dark .event {
-	background-color: var(--theme-bg);
 }
 
 .event h3 {
