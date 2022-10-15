@@ -24,11 +24,11 @@ export const DISCORD_URL = `https://discord.theframedrops.com`;
 export const DONATE_URL = `https://donate.theframedrops.com`;
 
 export const OVERLAY_URLS = {
-	GOAL_BAR: 'https://overlays.tiltify.com/nNCvD3F8Y4zZuU4L6tOYXWNcKAWneaSc',
-	EVENTS: 'https://overlays.tiltify.com/PRr9IgEWF5LxRLGEz-nKmbpGg8fETOC0',
-	QR_CODE: 'https://overlays.tiltify.com/8m7Xsk_lC7PXtuc9O-ST00Jf8Si_a7nr',
-	COMPACT: 'https://overlays.tiltify.com/BX77aXnYmTvYr-bDDXyKTWojwxSqjRcS',
-	TOTAL: 'https://overlays.tiltify.com/BOBbt48cTpyO360wb54NgYK2Zq57b0J3',
+	GOAL_BAR: 'https://overlays.tiltify.com/zIM4K3ClcR4AZ31RlX8JX7Iw4gGq-sSp',
+	EVENTS: 'https://overlays.tiltify.com/jVlYxQg9VnH4T-JMLAixvbZD3ET_kdm_',
+	QR_CODE: 'https://overlays.tiltify.com/hG-rNs4Q95pDjqRsb34bGkXU7Aw1SIy9',
+	COMPACT: 'https://overlays.tiltify.com/jRFYEmVubY_kUrr8nXvIrTLgAphmP810',
+	TOTAL: 'https://overlays.tiltify.com/_p4t7ooy5hF0EgOK0APsjbg3UTuyJowS',
 };
 
 // Uncomment this to enable site search.
