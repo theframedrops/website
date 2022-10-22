@@ -55,7 +55,7 @@ Minecraft Advancement Hunt is a team competition to score the most custom advanc
 		timed: true,
 		backgroundImage: "/assets/trifox.jpg",
 		description: `
-Trifox is a A twin-stick action-adventure game inspired by classic platformers that came out on October 14th 2022.
+Trifox is a twin-stick action-adventure game inspired by classic platformers that came out on October 14th 2022.
 <br><a href="https://twitch.tv/crutchcorn">@crutchcorn on Twitch</a> is a huge fan of platformers, and will be playing the game for the first time with developer commentary!
 		`.trim()
 	},
