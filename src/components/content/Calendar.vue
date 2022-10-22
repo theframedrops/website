@@ -49,6 +49,17 @@ Minecraft Advancement Hunt is a team competition to score the most custom advanc
 		`.trim()
 	},
 	{
+		start: '2022 11 05 6:00 PM',
+		end: '2022 11 05 8:00 PM',
+		name: "Trifox First Playthrough w/ Dev Commentary",
+		timed: true,
+		backgroundImage: "/assets/trifox.jpg",
+		description: `
+Trifox is a A twin-stick action-adventure game inspired by classic platformers that came out on October 14th 2022.
+<br><a href="https://twitch.tv/crutchcorn">@crutchcorn on Twitch</a> is a huge fan of platformers, and will be playing the game for the first time with developer commentary!
+		`.trim()
+	},
+	{
 		start: '2022 11 05 8:00 PM',
 		end: '2022 11 05 9:30 PM',
 		name: "Minecraft Mega Bedwars",
