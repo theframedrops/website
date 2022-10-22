@@ -211,6 +211,16 @@ We'll be <a href="https://dreamteck.io">joined by the developers of Lifeslide</a
         description: `
 <a href="https://twitch.tv/cleaverechsd">@cleaverechsd on Twitch</a> will be playing various video games for charity!
         `.trim()
+    },
+    {
+        start: '2022 11 06 4:00 PM',
+        end: '2022 11 06 6:00 PM',
+        name: "Gaming with GlitchButSmol",
+        timed: true,
+        backgroundImage: "/assets/variety_gaming.png",
+        description: `
+<a href="https://twitch.tv/glitchbutsmol">@GlitchButSmol on Twitch</a> will be playing various video games for charity!
+        `.trim()
     }
 ].map(({ start, end, ...rest }) => ({
 	// convert start/end times from UTC to local timezone
