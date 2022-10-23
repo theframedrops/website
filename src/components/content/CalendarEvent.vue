@@ -1,7 +1,7 @@
 <template>
 	<li
-	class="event-container"
-	:style="{
+		class="event-container"
+		:style="{
 			height: `calc(${(props.event.height)} * .5rem)`,
 			top: `calc(${props.event.top} * .5rem)`,
 			left: `${props.event.leftPercentage}%`,
@@ -76,19 +76,19 @@ function handleClose() {
 }
 
 .event-container-button {
-background: unset;
-    border: unset;
-    height: 100%;
-    width: 100%;
-    padding: unset;
-    border-radius: unset;
-    gap: unset;
-    font-size: unset;
-    align-items: unset;
-    display: unset;
-    color: unset;
-    appearance: none;
-    text-align: unset;
+	background: unset;
+	border: unset;
+	height: 100%;
+	width: 100%;
+	padding: unset;
+	border-radius: unset;
+	gap: unset;
+	font-size: unset;
+	align-items: unset;
+	display: unset;
+	color: unset;
+	appearance: none;
+	text-align: unset;
 	font-family: unset;
 }
 
