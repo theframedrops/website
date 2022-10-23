@@ -6,7 +6,7 @@
 			top: `calc(${props.event.top} * .5rem)`,
 			left: `${props.event.leftPercentage}%`,
 			width: `${props.event.widthPercentage}%`,
-			'--overlappingCount': props.event.overlappingDays.length,
+			zIndex: props.event.zIndex || `auto`,
 		}"
 	>
 	<button

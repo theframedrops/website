@@ -13,6 +13,7 @@ export interface Event {
 	top: number;
 	leftPercentage: number;
 	widthPercentage: number;
+	zIndex?: 'auto' | number;
 	relative: Dayjs;
 };
 

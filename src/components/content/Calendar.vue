@@ -296,6 +296,7 @@ const days = events
         startRelative: eventDate,
         overlappingDays,
         relative,
+		zIndex: 'auto' as const
       };
 
       for (let overlappingDay of overlappingDays) {
@@ -321,7 +322,7 @@ const days = events
   .map((day) => {
     day.events = day.events.map((event) => {
       const getWidthPercentage = (event) =>
-        100 / (event.overlappingDays.length + 1);
+	  event.overlappingDays.length ? (100 / (event.overlappingDays.length + 1)) * 1.5 : 100;
 
       const widthPercentage = getWidthPercentage(event);
 
@@ -347,22 +348,21 @@ const days = events
           ) {
             let newLeft = 0;
             if (leftPercentage === null) {
-              newLeft = overlapWidthPercentage;
+              newLeft = (overlapWidthPercentage / 1.5);
             } else {
-              newLeft = leftPercentage + overlapWidthPercentage;
+              newLeft = leftPercentage + (overlapWidthPercentage / 1.5);
             }
 
-            if (newLeft >= 100) {
-              leftPercentage = null;
-            } else {
-              leftPercentage = newLeft;
-            }
+			const maxLeft = 100 - widthPercentage;
+
+			leftPercentage = Math.min(newLeft, maxLeft);
           }
         }
       }
 
       if (leftPercentage) {
         event.leftPercentage = leftPercentage;
+		event.zIndex = leftPercentage;
       }
 
       event.widthPercentage = widthPercentage;
