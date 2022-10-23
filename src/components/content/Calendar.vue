@@ -25,7 +25,7 @@ dayjs.extend(dayjsUtcPlugin);
 dayjs.extend(dayjsTimezonePlugin);
 
 // Event times are listed in UTC
-const events: Omit<Event, "height" | "width" | "top" | "relative" | "left">[] =
+const events: Omit<Event, "height" | "width" | "top" | "relative" | "overlappingDays" | "widthPercentage" | "leftPercentage">[] =
   [
     {
       start: "2022 11 04 8:00 PM",
