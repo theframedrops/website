@@ -221,6 +221,17 @@ We'll be <a href="https://dreamteck.io">joined by the developers of Lifeslide</a
         description: `
 <a href="https://twitch.tv/glitchbutsmol">@GlitchButSmol on Twitch</a> will be playing various video games for charity!
         `.trim()
+    },
+    {
+        start: '2022 11 06 12:00 AM',
+        end: '2022 11 06 10:00 AM',
+        name: "Dark Souls Cursed Speedrun",
+        timed: true,
+        backgroundImage: "/assets/dark_souls.png",
+        description: `
+Dark Souls is the notoriously difficult action RPG from FromSoft.
+<a href="https://twitch.tv/crutchcorn">@crutchcorn on Twitch</a> will be attempting to complete the game in one sitting with a friend, while chat is able to make donations in order to add things to the screen or otherwise make the game more challenging. It'll be a blast torturing this poor undead.
+        `.trim()
     }
 ].map(({ start, end, ...rest }) => ({
 	// convert start/end times from UTC to local timezone
