@@ -99,7 +99,7 @@ function handleClose() {
 	width: 100%;
 	height: 100%;
 	min-height: 2rem;
-	padding: .2rem .6rem;
+	padding: .4rem .6rem;
 
 	border: 1px solid var(--theme-text-accent);
 	box-shadow: 0 3px .6rem hsla(var(--color-accent), 0.3);
