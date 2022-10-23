@@ -159,69 +159,69 @@ We'll be running a few rounds of DM, Clan Arena, and Capture the Flag modes!
 		`.trim()
 	},
 	{
-        start: '2022 11 05 3:00 AM',
-        end: '2022 11 05 8:00 AM',
-        name: "Programming with OdatNurd #1",
-        timed: true,
-        backgroundImage: "/assets/code.jpg",
-        description: `
+		start: '2022 11 05 3:00 AM',
+		end: '2022 11 05 8:00 AM',
+		name: "Programming with OdatNurd #1",
+		timed: true,
+		backgroundImage: "/assets/code.jpg",
+		description: `
 <a href="https://twitch.tv/OdatNurd">@OdatNurd on Twitch</a> is an amazing developer with a super friendly community. You won't want to miss the insights he provides while he develops neat stuff on stream!
-        `.trim()
-    },
+		`.trim()
+	},
 	{
-        start: '2022 11 05 8:00 AM',
-        end: '2022 11 05 10:00 AM',
-        name: "Lifeslide Speedrun w/ Dev Commentary",
-        timed: true,
-        backgroundImage: "/assets/lifeslide.jpg",
-        description: `
+		start: '2022 11 05 8:00 AM',
+		end: '2022 11 05 10:00 AM',
+		name: "Lifeslide Speedrun w/ Dev Commentary",
+		timed: true,
+		backgroundImage: "/assets/lifeslide.jpg",
+		description: `
 Lifeslide is an atmospheric paper plane flight simulator with arcade gameplay.
 
 <a href="https://twitch.tv/crutchcorn">@crutchcorn on Twitch</a> will be attempting to do speedrun attempts throughout the two-hour block.
 
 We'll be <a href="https://dreamteck.io">joined by the developers of Lifeslide</a> who will be in VC hanging out and chatting with us!
 		`.trim()
-    },
-    {
-        start: '2022 11 06 3:00 AM',
-        end: '2022 11 06 7:00 AM',
-        name: "Programming with OdatNurd #2",
-        timed: true,
-        backgroundImage: "/assets/code.jpg",
-        description: `
+	},
+	{
+		start: '2022 11 06 3:00 AM',
+		end: '2022 11 06 7:00 AM',
+		name: "Programming with OdatNurd #2",
+		timed: true,
+		backgroundImage: "/assets/code.jpg",
+		description: `
 <a href="https://twitch.tv/OdatNurd">@OdatNurd on Twitch</a> is an amazing developer with a super friendly community. You won't want to miss the insights he provides while he develops neat stuff on stream!
-        `.trim()
-    },
-    {
-        start: '2022 11 07 3:00 AM',
-        end: '2022 11 07 7:00 AM',
-        name: "Programming with OdatNurd #3",
-        timed: true,
-        backgroundImage: "/assets/code.jpg",
-        description: `
+		`.trim()
+	},
+	{
+		start: '2022 11 07 3:00 AM',
+		end: '2022 11 07 7:00 AM',
+		name: "Programming with OdatNurd #3",
+		timed: true,
+		backgroundImage: "/assets/code.jpg",
+		description: `
 <a href="https://twitch.tv/OdatNurd">@OdatNurd on Twitch</a> is an amazing developer with a super friendly community. You won't want to miss the insights he provides while he develops neat stuff on stream!
-        `.trim()
-    },
-    {
-        start: '2022 11 06 10:00 AM',
-        end: '2022 11 06 4:00 PM',
-        name: "Gaming with CleaverEchsD",
-        timed: true,
-        backgroundImage: "/assets/variety_gaming.png",
-        description: `
+		`.trim()
+	},
+	{
+		start: '2022 11 06 10:00 AM',
+		end: '2022 11 06 4:00 PM',
+		name: "Gaming with CleaverEchsD",
+		timed: true,
+		backgroundImage: "/assets/variety_gaming.png",
+		description: `
 <a href="https://twitch.tv/cleaverechsd">@cleaverechsd on Twitch</a> will be playing various video games for charity!
-        `.trim()
-    },
-    {
-        start: '2022 11 06 4:00 PM',
-        end: '2022 11 06 6:00 PM',
-        name: "Gaming with GlitchButSmol",
-        timed: true,
-        backgroundImage: "/assets/variety_gaming.png",
-        description: `
+		`.trim()
+	},
+	{
+		start: '2022 11 06 4:00 PM',
+		end: '2022 11 06 6:00 PM',
+		name: "Gaming with GlitchButSmol",
+		timed: true,
+		backgroundImage: "/assets/variety_gaming.png",
+		description: `
 <a href="https://twitch.tv/glitchbutsmol">@GlitchButSmol on Twitch</a> will be playing various video games for charity!
-        `.trim()
-    }
+		`.trim()
+	}
 ].map(({ start, end, ...rest }) => ({
 	// convert start/end times from UTC to local timezone
 	start: dayjs(start).utc(true).local().format("YYYY MM DD h:mm A"),

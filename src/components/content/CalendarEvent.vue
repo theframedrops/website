@@ -1,7 +1,7 @@
 <template>
-	<li 
-	class="event-container"
-	:style="{
+	<li
+		class="event-container"
+		:style="{
 			height: `calc(${(hourEnd - hourStart) / 10} * .5rem)`,
 			top: `calc(${hourStart/10} * .5rem)`,
 			left: `calc(${props.event.indent} * .5rem)`,
@@ -79,19 +79,19 @@ function handleClose() {
 }
 
 .event-container-button {
-background: unset;
-    border: unset;
-    height: 100%;
-    width: 100%;
-    padding: unset;
-    border-radius: unset;
-    gap: unset;
-    font-size: unset;
-    align-items: unset;
-    display: unset;
-    color: unset;
-    appearance: none;
-    text-align: unset;
+	background: unset;
+	border: unset;
+	height: 100%;
+	width: 100%;
+	padding: unset;
+	border-radius: unset;
+	gap: unset;
+	font-size: unset;
+	align-items: unset;
+	display: unset;
+	color: unset;
+	appearance: none;
+	text-align: unset;
 	font-family: unset;
 }
 
