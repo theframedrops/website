@@ -4,9 +4,9 @@
 			<h2>{{dayjs(day.date).format("MMM. Do")}}</h2>
 
 			<ul>
-				<li v-for="event in day.events" :key="event.name">
+				<template v-for="event in day.events" :key="event.name">
 					<CalendarEvent :event="event" />
-				</li>
+				</template>
 			</ul>
 		</div>
 	</div>

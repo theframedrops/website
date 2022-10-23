@@ -1,13 +1,16 @@
 <template>
-	<div
-		class="event-container"
-		:style="{
+	<li 
+	class="event-container"
+	:style="{
 			height: `calc(${(hourEnd - hourStart) / 10} * .5rem)`,
 			top: `calc(${hourStart/10} * .5rem)`,
 			left: `calc(${props.event.indent} * .5rem)`,
 			right: `calc(-${props.event.indent} * .5rem)`,
 		}"
+	>
+	<button
 		@click="handleOpen"
+		class="event-container-button"
 	>
 		<div class="event">
 			<h3>{{props.event.name}}</h3>
@@ -15,13 +18,14 @@
 				{{eventStart}} &mdash; {{eventEnd}}
 			</p>
 		</div>
-	</div>
+	</button>
 
 	<CalendarModal
 		:modalOpen="modalOpen"
 		:event="props.event"
 		@close="handleClose"
 	/>
+	</li>
 </template>
 
 <script lang="ts" setup>
@@ -72,6 +76,23 @@ function handleClose() {
 	left: 0;
 	right: 0;
 	padding: 0.2rem 0.3rem;
+}
+
+.event-container-button {
+background: unset;
+    border: unset;
+    height: 100%;
+    width: 100%;
+    padding: unset;
+    border-radius: unset;
+    gap: unset;
+    font-size: unset;
+    align-items: unset;
+    display: unset;
+    color: unset;
+    appearance: none;
+    text-align: unset;
+	font-family: unset;
 }
 
 .event {
