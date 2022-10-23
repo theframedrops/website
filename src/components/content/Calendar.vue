@@ -306,8 +306,33 @@ const days = events.reduce((days, event) => {
 .map(day => {
 	day.events = day.events.map(event => {
 	
-		// event.left = `0`,
-		event.width = `${100 / (event.overlappingDays.length + 1)}%`;
+		const width = `${100 / (event.overlappingDays.length + 1)}%`;
+
+		const eventStartX = event.top;
+		const eventEndX = event.top + event.height;
+
+		let left = null;
+		for (let overlapDay of event.overlappingDays) {
+
+			const overlapStartX = overlapDay.top;
+			const overlapEndX = overlapDay.top + overlapDay.height;
+
+			// These overlap
+			if (eventStartX >= overlapStartX && eventStartX <= overlapEndX) {
+				if (left === null) {
+					left = `calc(${width} * 2)`;
+				} else {
+					left = `calc(${left} + ${width})`
+				}
+			}
+		}
+		
+		if (left) {
+			event.left = left;
+		}
+		
+		event.width = width;
+
 		return event;
 	})
 	return day;
