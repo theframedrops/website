@@ -4,8 +4,8 @@
 	:style="{
 			height: `calc(${(props.event.height)} * .5rem)`,
 			top: `calc(${props.event.top} * .5rem)`,
-			left: props.event.left,
-			width: props.event.width,
+			left: `${props.event.leftPercentage}%`,
+			width: `${props.event.widthPercentage}%`,
 			'--overlappingCount': props.event.overlappingDays.length,
 		}"
 	>

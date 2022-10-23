@@ -11,8 +11,8 @@ export interface Event {
 	description: string;
 	height: number;
 	top: number;
-	left: string;
-	width: string;
+	leftPercentage: number;
+	widthPercentage: number;
 	relative: Dayjs;
 };
 

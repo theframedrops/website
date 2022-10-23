@@ -281,8 +281,8 @@ const days = events
         ...event,
         height,
         top,
-        left: "0",
-        width: "100%",
+        leftPercentage: 0,
+        widthPercentage: 100,
         startRelative: eventDate,
         overlappingDays,
         relative,
@@ -310,39 +310,52 @@ const days = events
   }, [] as CalendarDay[])
   .map((day) => {
     day.events = day.events.map((event) => {
-      const widthPercentage = 100 / (event.overlappingDays.length + 1);
+      const getWidthPercentage = (event) =>
+        100 / (event.overlappingDays.length + 1);
 
-      const eventStartX = event.top;
-      const eventEndX = event.top + event.height;
+      const widthPercentage = getWidthPercentage(event);
 
-      let left = null;
+      let leftPercentage = null;
       for (let overlapDay of event.overlappingDays) {
+        const eventStartX = event.top;
+        const eventEndX = event.top + event.height;
+        const eventStartYPercentage = leftPercentage;
+        const eventEndYPercentage = leftPercentage + widthPercentage;
         const overlapStartX = overlapDay.top;
         const overlapEndX = overlapDay.top + overlapDay.height;
+        const overlapWidthPercentage = getWidthPercentage(overlapDay);
+        const overlapStartYPercentage = overlapDay.leftPercentage;
+        const overlapEndYPercentage =
+          overlapDay.leftPercentage + overlapWidthPercentage;
 
-        // These overlap
+        // These overlap on the X axis
         if (eventStartX >= overlapStartX && eventStartX <= overlapEndX) {
-			debugger;
-          let newLeft = 0;
-          if (left === null) {
-            newLeft = widthPercentage;
-          } else {
-            newLeft = left + widthPercentage;
-          }
+          // These overlap on the Y axis
+          if (
+            eventStartYPercentage >= overlapStartYPercentage &&
+            eventStartYPercentage <= overlapEndYPercentage
+          ) {
+            let newLeft = 0;
+            if (leftPercentage === null) {
+              newLeft = widthPercentage;
+            } else {
+              newLeft = leftPercentage + widthPercentage;
+            }
 
-          if (newLeft >= 100) {
-            left = null;
-          } else {
-            left = newLeft;
+            if (newLeft >= 100) {
+              leftPercentage = null;
+            } else {
+              leftPercentage = newLeft;
+            }
           }
         }
       }
 
-      if (left) {
-        event.left = left;
+      if (leftPercentage) {
+        event.leftPercentage = leftPercentage;
       }
 
-      event.width = `${widthPercentage}%`;
+      event.widthPercentage = widthPercentage;
 
       return event;
     });
