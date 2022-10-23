@@ -2,29 +2,32 @@
 	<li
 		class="event-container"
 		:style="{
-			height: `calc(${(hourEnd - hourStart) / 10} * .5rem)`,
-			top: `calc(${hourStart/10} * .5rem)`,
-			left: `calc(${props.event.indent} * .5rem)`,
-			right: `calc(-${props.event.indent} * .5rem)`,
+			height: `${props.event.height / 20}rem`,
+			top: `${props.event.top / 20}rem`,
+			left: `${props.event.leftPercentage}%`,
+			width: `${props.event.widthPercentage}%`,
+			zIndex: Math.round(props.event.leftPercentage) || `auto`,
 		}"
 	>
-	<button
-		@click="handleOpen"
-		class="event-container-button"
-	>
-		<div class="event">
-			<h3>{{props.event.name}}</h3>
-			<p>
-				{{eventStart}} &mdash; {{eventEnd}}
-			</p>
-		</div>
-	</button>
+		<button
+			@click="handleOpen"
+			class="event-container-button"
+		>
+			<div class="event">
+				<h3 :class="`event-name num-lines-${Math.ceil(props.event.height / 60)}`">
+					{{props.event.name}}
+				</h3>
+				<p>
+					{{eventStart}} &mdash; {{eventEnd}}
+				</p>
+			</div>
+		</button>
 
-	<CalendarModal
-		:modalOpen="modalOpen"
-		:event="props.event"
-		@close="handleClose"
-	/>
+		<CalendarModal
+			:modalOpen="modalOpen"
+			:event="props.event"
+			@close="handleClose"
+		/>
 	</li>
 </template>
 
@@ -44,10 +47,6 @@ dayjs.extend(dayjsTimezonePlugin);
 const props = defineProps<{
 	event: Event;
 }>();
-
-const relative = dayjs(props.event.startRelative || props.event.start);
-const hourStart = Math.max(dayjs(props.event.start).diff(relative, "minute"), 0);
-const hourEnd = Math.min(dayjs(props.event.end).diff(relative, "minute"), 24*60);
 
 const eventStart = dayjs(props.event.start).format("h:mm A");
 const eventEnd = dayjs(props.event.end).format("h:mm A z");
@@ -78,6 +77,10 @@ function handleClose() {
 	padding: 0.2rem 0.3rem;
 }
 
+.event-container:hover, .event-container:focus {
+	z-index: 99 !important;
+}
+
 .event-container-button {
 	background: unset;
 	border: unset;
@@ -99,7 +102,7 @@ function handleClose() {
 	width: 100%;
 	height: 100%;
 	min-height: 2rem;
-	padding: .4rem .6rem;
+	padding: .2rem .6rem;
 
 	border: 1px solid var(--theme-text-accent);
 	box-shadow: 0 3px .6rem hsla(var(--color-accent), 0.3);
@@ -108,6 +111,8 @@ function handleClose() {
 
 	cursor: pointer;
 	transition: background-color .2s, box-shadow .2s;
+	display: flex;
+	flex-direction: column;
 }
 
 .event h3 {
@@ -117,14 +122,21 @@ function handleClose() {
 	font-size: .8rem;
 	font-weight: 600;
 
-	white-space: nowrap;
+	white-space: break-spaces;
 	text-overflow: ellipsis;
 	overflow: hidden;
+	flex-basis: fit-content;
+	flex-shrink: 1;
+}
+
+.event h3.num-lines-1 {
+	white-space: nowrap;
 }
 
 .event p {
 	color: var(--theme-text-secondary);
 	font-size: .6rem;
+	flex-shrink: 0;
 }
 
 .event:hover h3 {

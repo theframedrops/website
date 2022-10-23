@@ -1,12 +1,18 @@
+import type { Dayjs } from "dayjs";
+
 export interface Event {
-	startRelative?: string;
-	start: string;
-	end: string;
-	indent?: number;
+	date: Dayjs;
+	start: string | Dayjs;
+	end: string | Dayjs;
+
 	name: string;
-	timed: boolean;
 	backgroundImage?: string;
 	description: string;
+
+	top?: number;
+	height?: number;
+	leftPercentage?: number;
+	widthPercentage?: number;
 };
 
 export function slugify(s: string) {
