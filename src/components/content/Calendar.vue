@@ -227,7 +227,12 @@ We'll be <a href="https://dreamteck.io">joined by the developers of Lifeslide</a
 	start: dayjs(start).utc(true).local().format("YYYY MM DD h:mm A"),
 	end: dayjs(end).utc(true).local().format("YYYY MM DD h:mm A"),
 	...rest,
-}));
+	// Fixes tab ordering
+})).sort((dayA, dayB) => {
+	const dayAStart = dayjs(dayA.start).utc(true);
+	const dayBStart = dayjs(dayB.start).utc(true);
+	return dayAStart.isAfter(dayBStart) ? 1 : -1;
+});
 
 type CalendarDay = {
 	date: string;
