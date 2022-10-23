@@ -335,11 +335,12 @@ const days = events
             eventStartYPercentage >= overlapStartYPercentage &&
             eventStartYPercentage <= overlapEndYPercentage
           ) {
+			debugger
             let newLeft = 0;
             if (leftPercentage === null) {
-              newLeft = widthPercentage;
+              newLeft = overlapWidthPercentage;
             } else {
-              newLeft = leftPercentage + widthPercentage;
+              newLeft = leftPercentage + overlapWidthPercentage;
             }
 
             if (newLeft >= 100) {
