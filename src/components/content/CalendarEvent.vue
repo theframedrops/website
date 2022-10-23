@@ -14,7 +14,9 @@
 			class="event-container-button"
 		>
 			<div class="event">
-				<h3 class="event-name">{{props.event.name}}</h3>
+				<h3 :class="`event-name num-lines-${Math.ceil(props.event.height / 60)}`">
+					{{props.event.name}}
+				</h3>
 				<p>
 					{{eventStart}} &mdash; {{eventEnd}}
 				</p>
@@ -76,7 +78,7 @@ function handleClose() {
 }
 
 .event-container:hover, .event-container:focus {
-	z-index: 1000 !important;
+	z-index: 99 !important;
 }
 
 .event-container-button {
@@ -125,6 +127,10 @@ function handleClose() {
 	overflow: hidden;
 	flex-basis: fit-content;
 	flex-shrink: 1;
+}
+
+.event h3.num-lines-1 {
+	white-space: nowrap;
 }
 
 .event p {
