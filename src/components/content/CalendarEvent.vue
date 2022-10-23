@@ -2,30 +2,30 @@
 	<li
 		class="event-container"
 		:style="{
-			height: `calc(${(props.event.height)} * .5rem)`,
-			top: `calc(${props.event.top} * .5rem)`,
+			height: `${props.event.height / 20}rem`,
+			top: `${props.event.top / 20}rem`,
 			left: `${props.event.leftPercentage}%`,
 			width: `${props.event.widthPercentage}%`,
-			zIndex: props.event.zIndex || `auto`,
+			zIndex: Math.round(props.event.leftPercentage) || `auto`,
 		}"
 	>
-	<button
-		@click="handleOpen"
-		class="event-container-button"
-	>
-		<div class="event">
-			<h3 class="event-name">{{props.event.name}}</h3>
-			<p>
-				{{eventStart}} &mdash; {{eventEnd}}
-			</p>
-		</div>
-	</button>
+		<button
+			@click="handleOpen"
+			class="event-container-button"
+		>
+			<div class="event">
+				<h3 class="event-name">{{props.event.name}}</h3>
+				<p>
+					{{eventStart}} &mdash; {{eventEnd}}
+				</p>
+			</div>
+		</button>
 
-	<CalendarModal
-		:modalOpen="modalOpen"
-		:event="props.event"
-		@close="handleClose"
-	/>
+		<CalendarModal
+			:modalOpen="modalOpen"
+			:event="props.event"
+			@close="handleClose"
+		/>
 	</li>
 </template>
 
