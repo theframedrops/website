@@ -86,13 +86,15 @@ const eventStart = dayjs(props.event.start).format("h:mm A");
 const eventEnd = dayjs(props.event.end).format("h:mm A (zzz)");
 
 function handleSave() {
-	const start = dayjs(props.event.start);
-	const end = dayjs(props.event.end);
+	const start = dayjs(props.event.start).utc();
+	const end = dayjs(props.event.end).utc();
 	const cal = createEvent({
 		title: props.event.name,
 		description: props.event.description,
-		start: [start.year(), start.month(), start.date(), start.hour(), start.minute()],
-		end: [end.year(), end.month(), end.date(), end.hour(), end.minute()],
+		start: [start.year(), start.month() + 1, start.date(), start.hour(), start.minute()],
+		startInputType: 'utc',
+		end: [end.year(), end.month() + 1, end.date(), end.hour(), end.minute()],
+		endInputType: 'utc',
 	});
 
 	if (cal.value) {
