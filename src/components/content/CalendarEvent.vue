@@ -1,11 +1,12 @@
 <template>
-	<li 
+	<li
 	class="event-container"
 	:style="{
-			height: `calc(${(hourEnd - hourStart) / 10} * .5rem)`,
-			top: `calc(${hourStart/10} * .5rem)`,
-			left: `calc(${props.event.indent} * .5rem)`,
-			right: `calc(-${props.event.indent} * .5rem)`,
+			height: `calc(${(props.event.height)} * .5rem)`,
+			top: `calc(${props.event.top} * .5rem)`,
+			left: props.event.left,
+			width: props.event.width,
+			'--overlappingCount': props.event.overlappingCount
 		}"
 	>
 	<button
@@ -44,10 +45,6 @@ dayjs.extend(dayjsTimezonePlugin);
 const props = defineProps<{
 	event: Event;
 }>();
-
-const relative = dayjs(props.event.startRelative || props.event.start);
-const hourStart = Math.max(dayjs(props.event.start).diff(relative, "minute"), 0);
-const hourEnd = Math.min(dayjs(props.event.end).diff(relative, "minute"), 24*60);
 
 const eventStart = dayjs(props.event.start).format("h:mm A");
 const eventEnd = dayjs(props.event.end).format("h:mm A z");
