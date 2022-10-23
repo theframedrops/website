@@ -325,9 +325,7 @@ const days = events.reduce((days, event) => {
 	opacity: .1;
 	z-index: -1;
 
-	background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='3rem' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='23' x1='0' y2='23' x2='24' stroke='currentColor' stroke-width='1'/%3E%3C/svg%3E");
-	background-repeat: repeat;
-	background-size: cover contain;
+	background: repeating-linear-gradient(transparent, transparent calc(3rem - 2px), currentColor calc(3rem - 2px), currentColor 3rem);
 }
 
 .schedule li {

@@ -87,8 +87,12 @@
 
 body {
 	background: var(--theme-bg);
-	background: linear-gradient(180deg, var(--theme-bg), hsla(var(--color-accent), 0.1));
+	background: linear-gradient(180deg, var(--theme-bg), hsl(var(--color-base-accent), 92%));
 	color: var(--theme-text);
+}
+
+:root.theme-dark body {
+	background: linear-gradient(180deg, var(--theme-bg), hsl(var(--color-base-accent), 5%));
 }
 
 :root.theme-dark {
