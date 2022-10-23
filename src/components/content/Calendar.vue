@@ -262,12 +262,6 @@ const days = events.reduce((days, event) => {
       }
     });
 
-    for (let overlappingDay of overlappingDays) {
-      overlappingDay.overlappingCount += 1;
-    }
-
-    const overlappingCount = overlappingDays.length;
-
     const relative = dayjs(eventDate || event.start);
     const hourStart = Math.max(dayjs(event.start).diff(relative, "minute"), 0);
     const hourEnd = Math.min(
@@ -277,23 +271,24 @@ const days = events.reduce((days, event) => {
 
 	const height = (hourEnd - hourStart) / 10;
 	const top = hourStart / 10;
-	function widthPercentage(this: Event) {
-		return 100 / (this.overlappingCount + 1);
-	}
 
-    // push the event into the day list
-    day.events.push({
+	const finalEvent = {
       ...event,
       height,
       top,
-	  left: `0`,
-      get width() {
-        return `${widthPercentage.call(this)}%`;
-      },
+	  left: '0',
+	  width: '100%',
       startRelative: eventDate,
-      overlappingCount,
+      overlappingDays,
       relative,
-    });
+    };
+
+	for (let overlappingDay of overlappingDays) {
+		overlappingDay.overlappingDays.push(finalEvent);
+	}
+
+    // push the event into the day list
+    day.events.push(finalEvent);
   };
 
   const eventDateStart = dayjs(event.start).format("YYYY-MM-DD");
@@ -307,7 +302,16 @@ const days = events.reduce((days, event) => {
   }
 
   return days;
-}, [] as CalendarDay[]);
+}, [] as CalendarDay[])
+.map(day => {
+	day.events = day.events.map(event => {
+	
+		// event.left = `0`,
+		event.width = `${100 / (event.overlappingDays.length + 1)}%`;
+		return event;
+	})
+	return day;
+});
 </script>
 
 <style>

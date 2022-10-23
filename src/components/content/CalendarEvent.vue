@@ -6,7 +6,7 @@
 			top: `calc(${props.event.top} * .5rem)`,
 			left: props.event.left,
 			width: props.event.width,
-			'--overlappingCount': props.event.overlappingCount
+			'--overlappingCount': props.event.overlappingDays.length,
 		}"
 	>
 	<button
