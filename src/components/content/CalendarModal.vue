@@ -3,7 +3,13 @@
 		<div class="modal-container" @click="(e) => e.target === e.currentTarget && $emit('close')">
 			<div class="modal">
 				<div class="modal-title">
-					<img v-if="props.event.backgroundImage" :src="props.event.backgroundImage" />
+					<div
+						v-if="props.event.backgroundImage"
+						class="modal-image"
+						:style="{
+							backgroundImage: `url('${props.event.backgroundImage}')`
+						}"
+					/>
 
 					<h1>
 						<span>{{props.event.name}}</span><br/>
@@ -133,11 +139,13 @@ function handleSave() {
 	min-height: 5.5rem;
 }
 
-.modal-title img {
+.modal-title .modal-image {
 	width: 100%;
 	vertical-align: bottom;
 	aspect-ratio: 16 / 9;
 	background-color: #000;
+	background-size: cover;
+	background-position: center;
 }
 
 .modal-title h1 {
@@ -159,7 +167,7 @@ function handleSave() {
 	font-weight: 600;
 }
 
-.modal-title img + h1 {
+.modal-title .modal-image + h1 {
 	color: #FFF;
 	background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, .8));
 }
