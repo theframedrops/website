@@ -1,15 +1,15 @@
 <template>
-  <div class="schedule">
-    <div class="day" v-for="day in days" :key="day.date">
-      <h2>{{ dayjs(day.date).format("MMM. Do") }}</h2>
+	<div class="schedule">
+		<div class="day" v-for="day in days" :key="day.date">
+			<h2>{{ dayjs(day.date).format("MMM. Do") }}</h2>
 
-      <ul>
-        <template v-for="event in day.events" :key="event.name">
-          <CalendarEvent :event="event" />
-        </template>
-      </ul>
-    </div>
-  </div>
+			<ul>
+				<template v-for="event in day.events" :key="event.name">
+					<CalendarEvent :event="event" />
+				</template>
+			</ul>
+		</div>
+	</div>
 </template>
 
 <script lang="ts" setup>
@@ -246,178 +246,178 @@ const events: Omit<Event, "height" | "width" | "top" | "relative" | "overlapping
 });
 
 type CalendarDay = {
-  date: string;
-  events: Event[];
+	date: string;
+	events: Event[];
 };
 
 const days = events
-  .reduce((days, event) => {
-    const pushEvent = (start: Dayjs, end: Dayjs) => {
-      const eventDate = start.format("YYYY-MM-DD");
+.reduce((days, event) => {
+	const pushEvent = (start: Dayjs, end: Dayjs) => {
+		const eventDate = start.format("YYYY-MM-DD");
 
-      // find/create a day for the event
-      let day = days.find((d) => d.date === eventDate);
-      if (!day) {
-        day = {
-          date: eventDate,
-          events: [],
-        };
-        days.push(day);
-      }
+		// find/create a day for the event
+		let day = days.find((d) => d.date === eventDate);
+		if (!day) {
+			day = {
+				date: eventDate,
+				events: [],
+			};
+			days.push(day);
+		}
 
-      // look for any previous intersecting events & find their overlappingCount
-      const overlappingDays = day.events.filter((e) => {
-        if (dayjs(e.start).isBefore(start)) {
-          return dayjs(e.end).isAfter(start);
-        } else {
-          return dayjs(e.start).isBefore(end);
-        }
-      });
+		// look for any previous intersecting events & find their overlappingCount
+		const overlappingDays = day.events.filter((e) => {
+			if (dayjs(e.start).isBefore(start)) {
+				return dayjs(e.end).isAfter(start);
+			} else {
+				return dayjs(e.start).isBefore(end);
+			}
+		});
 
-      const relative = dayjs(eventDate || event.start);
-      const hourStart = Math.max(
-        dayjs(event.start).diff(relative, "minute"),
-        0
-      );
-      const hourEnd = Math.min(
-        dayjs(event.end).diff(relative, "minute"),
-        24 * 60
-      );
+		const relative = dayjs(eventDate || event.start);
+		const hourStart = Math.max(
+		dayjs(event.start).diff(relative, "minute"),
+		0
+		);
+		const hourEnd = Math.min(
+		dayjs(event.end).diff(relative, "minute"),
+		24 * 60
+		);
 
-      const height = (hourEnd - hourStart) / 10;
-      const top = hourStart / 10;
+		const height = (hourEnd - hourStart) / 10;
+		const top = hourStart / 10;
 
-      const finalEvent = {
-        ...event,
-        height,
-        top,
-        leftPercentage: 0,
-        widthPercentage: 100,
-        startRelative: eventDate,
-        overlappingDays,
-        relative,
-		zIndex: 'auto' as const
-      };
+		const finalEvent = {
+			...event,
+			height,
+			top,
+			leftPercentage: 0,
+			widthPercentage: 100,
+			startRelative: eventDate,
+			overlappingDays,
+			relative,
+			zIndex: 'auto' as const
+		};
 
-      for (let overlappingDay of overlappingDays) {
-        overlappingDay.overlappingDays.push(finalEvent);
-      }
+		for (let overlappingDay of overlappingDays) {
+			overlappingDay.overlappingDays.push(finalEvent);
+		}
 
-      // push the event into the day list
-      day.events.push(finalEvent);
-    };
+		// push the event into the day list
+		day.events.push(finalEvent);
+	};
 
-    const eventDateStart = dayjs(event.start).format("YYYY-MM-DD");
-    const eventDateEnd = dayjs(event.end).format("YYYY-MM-DD");
+	const eventDateStart = dayjs(event.start).format("YYYY-MM-DD");
+	const eventDateEnd = dayjs(event.end).format("YYYY-MM-DD");
 
-    if (eventDateStart !== eventDateEnd && dayjs(event.end).hour() > 0) {
-      pushEvent(dayjs(event.start), dayjs(event.start).endOf("day"));
-      pushEvent(dayjs(event.end).startOf("day"), dayjs(event.end));
-    } else {
-      pushEvent(dayjs(event.start), dayjs(event.end));
-    }
+	if (eventDateStart !== eventDateEnd && dayjs(event.end).hour() > 0) {
+		pushEvent(dayjs(event.start), dayjs(event.start).endOf("day"));
+		pushEvent(dayjs(event.end).startOf("day"), dayjs(event.end));
+	} else {
+		pushEvent(dayjs(event.start), dayjs(event.end));
+	}
 
-    return days;
-  }, [] as CalendarDay[])
-  .map((day) => {
-    day.events = day.events.map((event) => {
-      const getWidthPercentage = (event) =>
-	  event.overlappingDays.length ? (100 / (event.overlappingDays.length + 1)) * 1.5 : 100;
+	return days;
+}, [] as CalendarDay[])
+.map((day) => {
+	day.events = day.events.map((event) => {
+		const getWidthPercentage = (event) =>
+		event.overlappingDays.length ? (100 / (event.overlappingDays.length + 1)) * 1.5 : 100;
 
-      const widthPercentage = getWidthPercentage(event);
+		const widthPercentage = getWidthPercentage(event);
 
-      let leftPercentage = null;
-      for (let overlapDay of event.overlappingDays) {
-        const eventStartX = event.top;
-        const eventEndX = event.top + event.height;
-        const eventStartYPercentage = leftPercentage;
-        const eventEndYPercentage = leftPercentage + widthPercentage;
-        const overlapStartX = overlapDay.top;
-        const overlapEndX = overlapDay.top + overlapDay.height;
-        const overlapWidthPercentage = getWidthPercentage(overlapDay);
-        const overlapStartYPercentage = overlapDay.leftPercentage;
-        const overlapEndYPercentage =
-          overlapDay.leftPercentage + overlapWidthPercentage;
+		let leftPercentage = null;
+		for (let overlapDay of event.overlappingDays) {
+			const eventStartX = event.top;
+			const eventEndX = event.top + event.height;
+			const eventStartYPercentage = leftPercentage;
+			const eventEndYPercentage = leftPercentage + widthPercentage;
+			const overlapStartX = overlapDay.top;
+			const overlapEndX = overlapDay.top + overlapDay.height;
+			const overlapWidthPercentage = getWidthPercentage(overlapDay);
+			const overlapStartYPercentage = overlapDay.leftPercentage;
+			const overlapEndYPercentage =
+			overlapDay.leftPercentage + overlapWidthPercentage;
 
-        // These overlap on the X axis
-        if (eventStartX >= overlapStartX && eventStartX <= overlapEndX) {
-          // These overlap on the Y axis
-          if (
-            eventStartYPercentage >= overlapStartYPercentage &&
-            eventStartYPercentage <= overlapEndYPercentage
-          ) {
-            let newLeft = 0;
-            if (leftPercentage === null) {
-              newLeft = (overlapWidthPercentage / 1.5);
-            } else {
-              newLeft = leftPercentage + (overlapWidthPercentage / 1.5);
-            }
+			// These overlap on the X axis
+			if (eventStartX >= overlapStartX && eventStartX <= overlapEndX) {
+				// These overlap on the Y axis
+				if (
+				eventStartYPercentage >= overlapStartYPercentage &&
+				eventStartYPercentage <= overlapEndYPercentage
+				) {
+					let newLeft = 0;
+					if (leftPercentage === null) {
+						newLeft = (overlapWidthPercentage / 1.5);
+					} else {
+						newLeft = leftPercentage + (overlapWidthPercentage / 1.5);
+					}
 
-			const maxLeft = 100 - widthPercentage;
+					const maxLeft = 100 - widthPercentage;
 
-			leftPercentage = Math.min(newLeft, maxLeft);
-          }
-        }
-      }
+					leftPercentage = Math.min(newLeft, maxLeft);
+				}
+			}
+		}
 
-      if (leftPercentage) {
-        event.leftPercentage = leftPercentage;
-		event.zIndex = leftPercentage;
-      }
+		if (leftPercentage) {
+			event.leftPercentage = leftPercentage;
+			event.zIndex = leftPercentage;
+		}
 
-      event.widthPercentage = widthPercentage;
+		event.widthPercentage = widthPercentage;
 
-      return event;
-    });
-    return day;
-  });
+		return event;
+	});
+	return day;
+});
 </script>
 
 <style>
 .schedule {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-  overflow-x: auto;
-  margin: 2rem 0;
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 1fr;
+	overflow-x: auto;
+	margin: 2rem 0;
 }
 
 .schedule ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+	list-style: none;
+	padding: 0;
+	margin: 0;
 
-  height: calc(24 * 6 * 0.5rem);
-  position: relative;
+	height: calc(24 * 6 * 0.5rem);
+	position: relative;
 }
 
 .schedule ul::after {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  opacity: 0.1;
-  z-index: -1;
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0.1;
+	z-index: -1;
 
 	background: repeating-linear-gradient(transparent, transparent calc(3rem - 2px), currentColor calc(3rem - 2px), currentColor 3rem);
 }
 
 .schedule li {
-  margin: 0;
+	margin: 0;
 }
 
 .day {
-  min-width: 14rem;
+	min-width: 14rem;
 }
 
 .day h2 {
-  all: unset;
-  display: block;
-  font-size: 1.2rem;
-  text-align: center;
-  border-bottom: 3px solid var(--theme-text-lighter);
+	all: unset;
+	display: block;
+	font-size: 1.2rem;
+	text-align: center;
+	border-bottom: 3px solid var(--theme-text-lighter);
 }
 </style>

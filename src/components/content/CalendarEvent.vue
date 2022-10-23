@@ -75,6 +75,10 @@ function handleClose() {
 	padding: 0.2rem 0.3rem;
 }
 
+.event-container:hover, .event-container:focus {
+	z-index: 1000 !important;
+}
+
 .event-container-button {
 	background: unset;
 	border: unset;
