@@ -98,6 +98,15 @@ export default [
 		`.trim()
 	},
 	{
+		start: '2022 11 04 10:30 PM',
+		end: '2022 11 05 12:00 AM',
+		name: "Minecraft with Fennifith",
+		backgroundImage: "/assets/minecraft.jpg",
+		description: `
+		<a href="https://twitch.tv/fennifith">@fennifith on Twitch</a> will be building random dungeon structures in creative mode and/or working on builds in a survival server!
+		`.trim()
+	},
+	{
 		start: '2022 11 06 6:00 PM',
 		end: '2022 11 06 9:00 PM',
 		name: "Xonotic DM/CA/CTF",
@@ -204,6 +213,16 @@ export default [
 		description: `
 		Minecraft BINGO is a team-based survival game in which players receive a card of random items. The teams must then compete to travel through the world and find lines on their card before the timer runs out!
 		<br><a href="https://twitch.tv/jademelodyca">@Jademelodyca on Twitch</a> is hosting this event and it is open to all.
+		`.trim()
+	},
+	{
+		start: '2022 11 05 1:00 PM',
+		end: '2022 11 05 6:00 PM',
+		name: "Minecraft Ice Boat Race and Variety Gaming",
+		backgroundImage: "/assets/mc_ice_boat_race.png",
+		description: `
+		Players will compete to race around a massive ice boat circuit, meticulously designed by Carmen_The_Frog! (to be followed by other various games and entertainment)
+		<br><a href="https://twitch.tv/Carmen_The_Frog">@Carmen_the_Frog on Twitch</a> is hosting this event and it is open to all.
 		`.trim()
 	},
 ].map(({ start, end, ...rest }) => ({
