@@ -100,6 +100,16 @@ export default [
 	{
 		start: '2022 11 04 10:30 PM',
 		end: '2022 11 05 12:00 AM',
+		name: "Code Golf Challenges",
+		backgroundImage: "/assets/code.jpg",
+		description: `
+		We'll be playing through a variety of code golf challenges, including <a href="https://www.codewars.com">Codewars</a> and <a href="https://www.codingame.com/multiplayer/clashofcode">Clash of Code</a> - and possibly some typing speed tests as well!
+		<br><a href="https://twitch.tv/fennifith">@fennifith on Twitch</a> is hosting this event and it is open to all.
+		`.trim()
+	},
+	{
+		start: '2022 11 06 10:30 PM',
+		end: '2022 11 07 1:00 AM',
 		name: "Minecraft with Fennifith",
 		backgroundImage: "/assets/minecraft.jpg",
 		description: `
