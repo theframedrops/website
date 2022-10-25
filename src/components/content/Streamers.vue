@@ -25,6 +25,7 @@ const streamers = ref([
 	"glitchbutsmol",
 	"godpandus",
 	"heckinchloe",
+	"jademelodyca",
 	"jutanium",
 	"ljtechdotca",
 	"nekooverflow",
