@@ -49,8 +49,8 @@ const streamers = ref([
 
 // hopefully this is an effective "don't run during SSR" check
 if (typeof globalThis.window !== 'undefined') (async () => {
-	const usernames = streamers.value.map(s => s.displayName).join('/');
-	const result = await fetch(`https://tfd-twitch-is-live.herokuapp.com/channels/${usernames}`).then(r => r.json());
+	const usernames = streamers.value.map(s => s.displayName).join(',');
+	const result = await fetch(`https://euphonious-gecko-c6734f.netlify.app/.netlify/functions/get-live?channels=${usernames}`).then(r => r.json());
 
 	streamers.value = streamers.value.map(s => ({
 		...s,
