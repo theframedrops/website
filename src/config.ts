@@ -66,6 +66,7 @@ export const SIDEBAR = {
 			{ text: 'Campaign Polls', link: 'en/streamer-setup/tiltify/polls' },
 			{ text: 'Donor Rewards', link: 'en/streamer-setup/tiltify/rewards' },
 			{ text: 'Event Targets', link: 'en/streamer-setup/tiltify/targets' },
+			{ text: 'Individual Campaigns', link: 'en/streamer-setup/tiltify/individual-campaigns' },
 		] },
 	],
 };

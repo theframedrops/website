@@ -1,0 +1,34 @@
+---
+title: Individual Campaigns
+layout: '@/layouts/MainLayout.astro'
+---
+
+import { DISCORD_URL } from '@/config';
+import current_charity from './current_charity.png';
+import campaign_type from './campaign_type.png';
+import current_campaign from './current_campaign.png';
+
+If you'd like to customize and configure all of these campaign options yourself, it is possible to link an individual campaign to our team on Tiltify. This involves a substantial amount of setup, but will allow you to change all of the overlays, redeems, and goals to your liking.
+
+As long as your campaign is linked to ours, it will still contribute to the group total and we'll be able to see the same donations.
+
+However, **individual campaigns will not contain any of the other rewards/goals declared in the team campaign** - so if you're joining any group events with their own donor rewards, it might be better to use the team campaign rather than creating your own.
+
+1. ##### Create a Campaign
+	Create or sign into an account on [Tiltify](https://tiltify.com/) - then [create a new fundraiser](https://tiltify.com/start) to set up your campaign.
+
+2. ##### Select the charity to support
+   Search for the "Cancer Research Institute" and select it as the cause to support.
+   <img src={current_charity} alt="The Cancer Research Institute"/>
+
+2. ##### Connect your campaign to the Frame Drops team
+   Select the "Individual Campaign" type, and check the "Support an existing campaign" box underneath.
+   <img src={campaign_type} width="400" alt="The two options for individual or team-based campaigns, with a selected check box for supporting an existing campaign."/>
+
+   Choose the "Mega Stream for Cancer Research / The Frame Drops" campaign in the list that appears below.
+   <img src={current_campaign} alt="The Frame Drops campaign"/>
+
+3. ##### Publish it!
+   While you can create the campaign without publishing, make sure your campaign is published before the event - otherwise users will not be able to donate through your link!
+
+If you run into any trouble during this process, feel free to ask for help <a href={DISCORD_URL}>in our Discord server</a>!
