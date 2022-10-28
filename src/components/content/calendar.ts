@@ -9,6 +9,16 @@ dayjs.extend(dayjsTimezonePlugin);
 // Event times are listed in UTC
 export default [
 	{
+		start: '2022 11 04 5:30 PM',
+		end: '2022 11 04 6:30 PM',
+		name: "Lunch w/ Crutch Day 1",
+		backgroundImage: "/assets/lunchroom.jpg",
+		description: `
+		Oh no! <a href="https://twitch.tv/crutchcorn">@crutchcorn on Twitch</a> accidentally bought too many Lunchables™️! He'll have to eat 15+ of them over the course of 3 days and put them in a ranking chart system from best to worst.
+		<br>This event is not sponsored, crutch is just a dork.
+		`.trim()
+	},
+	{
 		start: '2022 11 04 8:00 PM',
 		end: '2022 11 04 9:00 PM',
 		name: "Minecraft Minigolf",
@@ -233,6 +243,27 @@ export default [
 		description: `
 		Players will compete to race around a massive ice boat circuit, meticulously designed by Carmen_The_Frog! (to be followed by other various games and entertainment)
 		<br><a href="https://twitch.tv/Carmen_The_Frog">@Carmen_the_Frog on Twitch</a> is hosting this event and it is open to all.
+		`.trim()
+	},
+	{
+		start: '2022 11 05 5:00 PM',
+		end: '2022 11 05 6:00 PM',
+		name: "Lunch w/ Crutch Day 2",
+		backgroundImage: "/assets/lunchroom.jpg",
+		description: `
+		Oh no! <a href="https://twitch.tv/crutchcorn">@crutchcorn on Twitch</a> accidentally bought too many Lunchables™️! He'll have to eat 15+ of them over the course of 3 days and put them in a ranking chart system from best to worst.
+		<br>This event is not sponsored, crutch is just a dork.
+		`.trim()
+	},
+	
+	{
+		start: '2022 11 06 5:00 PM',
+		end: '2022 11 06 6:00 PM',
+		name: "Lunch w/ Crutch Day 3",
+		backgroundImage: "/assets/lunchroom.jpg",
+		description: `
+		Oh no! <a href="https://twitch.tv/crutchcorn">@crutchcorn on Twitch</a> accidentally bought too many Lunchables™️! He'll have to eat 15+ of them over the course of 3 days and put them in a ranking chart system from best to worst.
+		<br>This event is not sponsored, crutch is just a dork.
 		`.trim()
 	},
 	{
