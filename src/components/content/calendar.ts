@@ -235,6 +235,26 @@ export default [
 		<br><a href="https://twitch.tv/Carmen_The_Frog">@Carmen_the_Frog on Twitch</a> is hosting this event and it is open to all.
 		`.trim()
 	},
+	{
+		start: '2022 11 07 12:30 AM',
+		end: '2022 11 07 3:00 AM',
+		name: "Group Gaming",
+		backgroundImage: "/assets/jackbox.jpg",
+		description: `
+		We'll be playing a wide range of group games, such as Jackbox, Among Us, and more!
+		<br><a href="https://twitch.tv/crutchcorn">@crutchcorn on Twitch</a> is hosting this event and it is open to all.
+		`.trim()
+	},
+	{
+		start: '2022 11 05 2:00 AM',
+		end: '2022 11 05 8:00 AM',
+		name: "Crutchcorn Coding & Resume Review",
+		backgroundImage: "/assets/code.jpg",
+		description: `
+		<a href="https://twitch.tv/crutchcorn">@crutchcorn on Twitch</a> will be doing some programming, come ask questions and hang out while programming!
+		<br>Crutchcorn will also review your resume if you donate to the charity (even $1 is fine) and try to help you one-up your portfolio.
+		`.trim()
+	},
 ].map(({ start, end, ...rest }) => ({
 	// convert start/end times from UTC to local timezone
 	start: dayjs(start).utc(true).local().format("YYYY MM DD h:mm A"),
