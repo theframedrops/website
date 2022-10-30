@@ -105,7 +105,7 @@ function handleSave() {
 
 <style>
 .modal-container {
-	z-index: 100;
+	z-index: 1001;
 	position: fixed;
 	top: 0;
 	bottom: 0;
