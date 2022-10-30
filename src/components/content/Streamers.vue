@@ -17,6 +17,7 @@ const streamers = ref([
 	"bearikeen",
 	"boobookashoo",
 	"carmen_the_frog",
+	"catxsoho",
 	"cleaverechsd",
 	"crutchcorn",
 	"dolanproductionz",

@@ -78,16 +78,6 @@ export default [
 		`.trim()
 	},
 	{
-		start: '2022 11 05 10:30 PM',
-		end: '2022 11 06 12:00 AM',
-		name: "Tetris Effect: Connected",
-		backgroundImage: "/assets/tetris_effect.jpg",
-		description: `
-		Tetris Effect: Connected is the latest Tetris game with dazzling graphics, challenging game modes, and more.
-		<br>Join <a href="https://twitch.tv/techygrrrl">@techygrrrl on Twitch</a> to see her incredible capabilities in the game.
-		`.trim()
-	},
-	{
 		start: '2022 11 04 6:30 PM',
 		end: '2022 11 04 8:00 PM',
 		name: "Minecraft Chaotic Caving",
