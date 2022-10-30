@@ -9,6 +9,15 @@ dayjs.extend(dayjsTimezonePlugin);
 // Event times are listed in UTC
 export default [
 	{
+		start: '2022 11 04 12:00 PM',
+		end: '2022 11 04 7:00 PM',
+		name: "Co-working Stream with CatxSoho",
+		backgroundImage: "/assets/variety_gaming.png",
+		description: `
+		<a href="https://twitch.tv/catxsoho">@CatxSoho on Twitch</a> will be streaming co-working for charity!
+		`,
+	},
+	{
 		start: '2022 11 04 5:30 PM',
 		end: '2022 11 04 6:30 PM',
 		name: "Lunch w/ Crutch Day 1",
