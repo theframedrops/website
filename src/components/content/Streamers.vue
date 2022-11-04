@@ -21,6 +21,7 @@ const streamers = ref([
 	"cleaverechsd",
 	"crutchcorn",
 	"dolanproductionz",
+	"dosoconfidently",
 	"fennifith",
 	"garablacktail",
 	"glitchbutsmol",
