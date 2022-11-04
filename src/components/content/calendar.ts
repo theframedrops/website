@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 import dayjsFormatPlugin from "dayjs/plugin/advancedFormat";
-import dayjsUtcPlugin from "dayjs/plugin/utc";
 import dayjsTimezonePlugin from "dayjs/plugin/timezone";
+import dayjsUtcPlugin from "dayjs/plugin/utc";
 dayjs.extend(dayjsFormatPlugin);
 dayjs.extend(dayjsUtcPlugin);
 dayjs.extend(dayjsTimezonePlugin);
@@ -283,6 +283,16 @@ export default [
 		description: `
 		<a href="https://twitch.tv/crutchcorn">@crutchcorn on Twitch</a> will be doing some programming, come ask questions and hang out while programming!
 		<br>Crutchcorn will also review your resume if you donate to the charity (even $1 is fine) and try to help you one-up your portfolio.
+		`.trim()
+	},
+	{
+		start: '2022 11 04 7:00 PM',
+		end: '2022 11 05 1:00 AM',
+		name: "Lars builds a documentation website with Docusaurus",
+		backgroundImage: "/assets/nx-docusaurus.png",
+		description: `
+		<a href="https://twitch.tv/LayZeeDK">@LayZeeDK</a> thinks it's time to turn that 700 lines of code <code>README.md</code> file into a proper documentation website. He uses Docusaurus, Nx, GitHub Actions, and GitHub Pages to structure, build, and deploy a Markdown-based React static website.<br>
+		Tag along and ask questions to 🌟 GitHub Star, 🏆 Microsoft MVP, and 📗 author 📘 Lars Gyrup Brink Nielsen.
 		`.trim()
 	},
 ].map(({ start, end, ...rest }) => ({
