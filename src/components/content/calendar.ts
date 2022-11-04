@@ -286,8 +286,8 @@ export default [
 		`.trim()
 	},
 	{
-		start: '2022 11 04 7:00 PM',
-		end: '2022 11 05 1:00 AM',
+		start: '2022 11 04 8:00 PM',
+		end: '2022 11 05 0:00 AM',
 		name: "Lars builds a documentation website with Docusaurus",
 		backgroundImage: "/assets/nx-docusaurus.png",
 		description: `
