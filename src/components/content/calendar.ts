@@ -107,8 +107,8 @@ export default [
 		`.trim()
 	},
 	{
-		start: '2022 11 04 10:30 PM',
-		end: '2022 11 05 12:00 AM',
+		start: '2022 11 05 10:30 PM',
+		end: '2022 11 06 12:00 AM',
 		name: "Code Golf Challenges",
 		backgroundImage: "/assets/code.jpg",
 		description: `
