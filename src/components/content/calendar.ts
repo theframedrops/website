@@ -179,8 +179,8 @@ export default [
 		`.trim()
 	},
 	{
-		start: '2022 11 07 3:00 AM',
-		end: '2022 11 07 7:00 AM',
+		start: '2022 11 07 4:00 AM',
+		end: '2022 11 07 8:00 AM',
 		name: "Programming with OdatNurd #3",
 		backgroundImage: "/assets/code.jpg",
 		description: `
