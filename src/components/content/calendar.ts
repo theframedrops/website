@@ -117,15 +117,6 @@ export default [
 		`.trim()
 	},
 	{
-		start: '2022 11 06 10:30 PM',
-		end: '2022 11 07 1:00 AM',
-		name: "Minecraft with Fennifith",
-		backgroundImage: "/assets/minecraft.jpg",
-		description: `
-		<a href="https://twitch.tv/fennifith">@fennifith on Twitch</a> will be building random dungeon structures in creative mode and/or working on builds in a survival server!
-		`.trim()
-	},
-	{
 		start: '2022 11 06 6:00 PM',
 		end: '2022 11 06 9:00 PM',
 		name: "Xonotic DM/CA/CTF",
@@ -266,8 +257,8 @@ export default [
 		`.trim()
 	},
 	{
-		start: '2022 11 07 12:30 AM',
-		end: '2022 11 07 3:00 AM',
+		start: '2022 11 07 1:00 AM',
+		end: '2022 11 07 4:00 AM',
 		name: "Group Gaming",
 		backgroundImage: "/assets/jackbox.jpg",
 		description: `
@@ -283,6 +274,15 @@ export default [
 		description: `
 		<a href="https://twitch.tv/crutchcorn">@crutchcorn on Twitch</a> will be doing some programming, come ask questions and hang out while programming!
 		<br>Crutchcorn will also review your resume if you donate to the charity (even $1 is fine) and try to help you one-up your portfolio.
+		`.trim()
+	},
+	{
+		start: '2022 11 06 10:30 PM',
+		end: '2022 11 07 1:00 AM',
+		name: "Crutchcorn Coding",
+		backgroundImage: "/assets/code.jpg",
+		description: `
+		<a href="https://twitch.tv/crutchcorn">@crutchcorn on Twitch</a> will be doing some programming, come ask questions and hang out while programming!
 		`.trim()
 	},
 	{
